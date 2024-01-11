@@ -1,16 +1,21 @@
 ---
-
+import Main from '@layouts/Main.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Main>
+    <div class = "post-content">
+		<div class = "box">
+			<h1 class = "title">about</h1>
+			<p>a collection of survival guides for classes ive taken at rutgers.</p>
+		</div>
+		<div class = "box">
+			<h1 class = "title">how to use</h1>
+			<p>either search for a class up top or explore the class tabs at the bottom.</p>
+		</div>
+		<div class = "box">
+			<h1 class = "title" >prefer video?</h1>
+			<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
+		</div>
+	</div>
+
+</Main>

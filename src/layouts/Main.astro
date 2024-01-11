@@ -1,0 +1,51 @@
+---
+import BottomNav from "@components/BottomNav.astro";
+import TopNav from '@components/TopNav.astro';
+
+import '@styles/Global.css';
+---
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<div class = "container">
+            <div class = "screen"> 
+               <TopNav/>
+                
+                <div class = "content">
+                    <slot>
+                </div>
+                <BottomNav/>
+                
+            </div>
+		</div>
+	</body>
+</html>
+
+
+<style>
+    body{
+        height:100vh;
+        border:5px solid green;
+    }
+
+	.container{
+        height:100%;
+	}
+	.screen{
+        height:100%;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 80px 1fr 60px;
+        border: var(--border);
+	}
+    .content{
+        border:5px solid yellow;
+    }
+	
+</style>

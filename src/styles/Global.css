@@ -1,0 +1,29 @@
+
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root{
+    --border: 1px solid black;
+    --primaryFont: 'PT Serif', serif;
+    --secondaryFont: None;
+    --primaryColor: black;
+    --secondaryColor: None;
+    --text-body-size: 1em;
+    /* type scale */
+    --text-scale-ratio: 1.2;
+    --text-xs: calc((1em / var(--text-scale-ratio)) / var(--text-scale-ratio));
+    --text-sm: calc(var(--text-xs) * var(--text-scale-ratio));
+    --text-md: calc(var(--text-sm) * var(--text-scale-ratio) * var(--text-scale-ratio));
+    --text-lg: calc(var(--text-md) * var(--text-scale-ratio));
+    --text-xl: calc(var(--text-lg) * var(--text-scale-ratio));
+    --text-xxl: calc(var(--text-xl) * var(--text-scale-ratio));
+    --text-xxxl: calc(var(--text-xxl) * var(--text-scale-ratio));
+    --text-title: min(10vmin, calc(6em + 6vmax));
+    --text-heading: min(6vmin, calc(6em + 6vmax));
+    --text-subheading: min(5vmin, calc(6em + 6vmax));
+}
+
+*{
+    margin:0;
+    padding:0; 
+    box-sizing:border-box;
+} 

@@ -1,0 +1,40 @@
+---
+import x from "@assets/icons/x.svg";
+import {Image} from "astro:assets";
+import Search from '../components/Search.astro';
+
+---
+
+<div class = "topNav">
+    <div class = "row1">
+        <h1 id = "logo"> sarai studies </h1>
+        <Image id = "navItem" src = {x} alt = ""/> 
+    </div>
+    <div class = "row2">
+        <Search/>
+    </div>
+
+</div>
+
+
+<style>
+    .topNav{
+        border:5px solid red;
+    }
+    #logo{
+        font-family: var(--primaryFont);
+        font-weight: 400;
+    }
+    .row1{
+        width:100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:0 20px;
+
+    }
+
+    .row2{
+        width:100%;
+    }
+</style>
