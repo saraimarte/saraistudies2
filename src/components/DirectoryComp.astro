@@ -1,42 +1,14 @@
 ---
-import Main from '../layouts/Main.astro';
-
-
-const { frontmatter } = Astro.props;
-const {title, date, author} = frontmatter;
+const {className,classCode} = Astro.props;
 ---
 
-<Main>
-   <div class = "post-content">
-        <div class = "header">
-            <h1 class = "title">{title}</h1>
-            <h1 class = "date">{date}</h1>
-        </div>
-
-        <div class="content">
-            <slot></slot>
-        </div>
-   </div>
-  
-</Main2>
+<div class = "container">
+        <h1 id = "className">{className}</h1>
+        <div class = "hide icon"></div>
+        <h1 id = "classCode">{classCode}</h1>
+</div>
 
 <style>
-    .post-content{
-        display: flex;
-        flex-direction: column;
-        gap:1em;
-    }
-    .date{
-        font-size:medium
-    }
-    .header{
-        display: flex;
-        flex-direction: column;
-    }
-    h1{
-        font-family: var(--primaryFont);
-        font-weight: 400;
-    }
     .container{
         display: flex;
         flex-direction: row;
@@ -44,7 +16,7 @@ const {title, date, author} = frontmatter;
         gap:1em;
         flex-wrap: wrap;
     }
-    .title, .date{
+    #className, #classCode{
         font-family: var(--primaryFont);
         font-weight: 400;
         margin-top:20px;
@@ -60,10 +32,9 @@ const {title, date, author} = frontmatter;
 
     }
     
-
     /*for mobile*/
     @media only screen and (max-width:850px){
-        .title, .date{
+        #className, #classCode{
             font-size:larger;
         }
         .hide{

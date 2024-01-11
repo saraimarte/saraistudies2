@@ -1,21 +1,57 @@
 ---
 import Main from '@layouts/Main.astro';
+import TopNav from '@components/TopNav.astro';
+
+const path1 = 'classes/financialAccounting/home';
+const path2 = 'classes/managerialAccounting/home';
+const path3 = 'classes/calc1/home';
+const path4 = 'classes/calc2/home';
+const path5 = 'classes/micro/home';
+const path6 = 'classes/macro/home';
+const path7 = 'classes/stats/home';
+
+
 ---
 
-<Main>
-    <div class = "post-content">
-		<div class = "box">
-			<h1 class = "title">about</h1>
+<Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
+    <div class = 'post-content'>
+		<div class = 'box'>
+			<h1 class = 'title'>about</h1>
 			<p>a collection of survival guides for classes ive taken at rutgers.</p>
 		</div>
-		<div class = "box">
-			<h1 class = "title">how to use</h1>
+		<div class = 'box'>
+			<h1 class = 'title'>how to use</h1>
 			<p>either search for a class up top or explore the class tabs at the bottom.</p>
 		</div>
-		<div class = "box">
-			<h1 class = "title" >prefer video?</h1>
+		<div class = 'box'>
+			<h1 class = 'title' >prefer video?</h1>
 			<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
 		</div>
 	</div>
 
 </Main>
+
+<style>
+	.post-content{
+		width:90%;
+        display: flex;
+        flex-direction: column;
+        gap:48px;
+        width:100%;
+	}
+	
+	#logo, h1{
+        font-family: var(--primaryFont);
+        font-weight: 400;
+    }
+
+    .title{
+        font-family: var(--primaryFont);
+        text-decoration: underline;
+        font-size: var(--text-md);
+    }
+
+    p{
+        font-size: var(--text-lg);
+    }
+</style>
