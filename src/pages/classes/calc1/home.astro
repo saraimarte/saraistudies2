@@ -2,16 +2,15 @@
 import Main from '@layouts/Main.astro';
 import DirectoryComp from '../../../components/DirectoryComp.astro';
 
-const path1 = '../financialAccounting/home.astro';
-const path2 = '../managerialAccounting/home';
-const path3 = '../calc1/home';
-const path4 = '../calc2/home.astro'
-const path5 = '../micro/home';
-const path6 = '../macro/home';
-const path7 = '../stats/home';
+const path1 = '../../classes/financialAccounting/home';
+const path2 = '../../classes/managerialAccounting/home';
+const path3 = '../../classes/calc1/home';
+const path4 = '../../classes/calc2/home';
+const path5 = '../../classes/micro/home';
+const path6 = '../../classes/macro/home';
+const path7 = '../../classes/stats/home';
 
 const blogs = await Astro.glob('./*.md');
-import testt from '@classes/calc1/post-1.md';
 
 ---
 
@@ -20,7 +19,6 @@ import testt from '@classes/calc1/post-1.md';
     <ol>
         {blogs.map((post) => <li><a href = {post.url}>{post.frontmatter.title}</a></li>)}
     </ol>
-    <test></test>
 </Main>
 
 <style>
