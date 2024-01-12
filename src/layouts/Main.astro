@@ -37,6 +37,7 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
 	.container{
         height:100%;
         width:100%;
+        padding:20px;
 	}
 	.screen{
         display:grid;
@@ -45,9 +46,11 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
         border: var(--border);
         width:100%;
         height:100%;
+        overflow-y:hidden;
+        min-height:300px;
+
 	}
     .content{
-        border:5px solid yellow;
         display: flex;
         flex-direction: column;
         width: 100%;
