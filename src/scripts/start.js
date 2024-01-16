@@ -19,7 +19,7 @@ scene.add(mesh)
 const webpageWidth = 20; // Increase the width
 const webpageHeight = 10; // Increase the height
 const webpageGeometry = new THREE.PlaneGeometry(webpageWidth, webpageHeight);
-const webpageTexture = new THREE.TextureLoader().load('../../public/website.png'); // Updated image path
+const webpageTexture = new THREE.TextureLoader().load('/website.png'); // Updated image path
 const webpageMaterial = new THREE.MeshBasicMaterial({ map: webpageTexture, side: THREE.DoubleSide });
 const webpagePlane = new THREE.Mesh(webpageGeometry, webpageMaterial);
 scene.add(webpagePlane);
@@ -75,6 +75,19 @@ function onClick(event) {
     var intersects = raycaster.intersectObject(webpagePlane);
 
     if (intersects.length > 0) {
-        window.location.href = '/';
+        window.location.href = '../home';
     }
 }
+
+
+//'./main/home';
+
+/*const path0 ='./home';
+const path1 = '../classes/financialAccounting/home';
+const path2 = '../classes/managerialAccounting/home';
+const path3 = '../classes/calc1/home';
+const path4 = '../classes/calc2/home';
+const path5 = '../classes/micro/home';
+const path6 = '../classes/macro/home';
+const path7 = '../classes/stats/home';
+*/

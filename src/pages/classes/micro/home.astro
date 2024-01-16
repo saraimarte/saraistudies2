@@ -2,7 +2,7 @@
 import Main from '@layouts/Main.astro';
 import DirectoryComp from '../../../components/DirectoryComp.astro';
 
-
+const path0 = '../../home';
 const path1 = '/classes/financialAccounting/home';
 const path2 = '/classes/managerialAccounting/home';
 const path3 = '/classes/calc1/home';
@@ -13,7 +13,7 @@ const path7 = '/classes/stats/home';
 const blogs = await Astro.glob('./*.md');
 ---
 
-<Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
+<Main path0 = {path0} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
     <DirectoryComp className = "Introduction to Microeconomics" classCode = '01:220:102' ></DirectoryComp>
     <ol>
         {blogs.map((post) => <li><a href = {post.url}>{post.frontmatter.title}</a></li>)}
