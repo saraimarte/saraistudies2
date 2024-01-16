@@ -14,6 +14,7 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
 		<title>Sarai Studies</title>
 	</head>
 	<body>
+        <canvas class="webgl"></canvas>
 		<div class = "container">
             <div class = "screen"> 
                <TopNav/>
@@ -23,7 +24,7 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
                 <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
             </div>
 		</div>
-        <canvas class="webgl"></canvas>
+       
         <script>
 			import '../scripts/start.js'
 		</script>
