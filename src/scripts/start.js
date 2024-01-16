@@ -75,6 +75,6 @@ function onClick(event) {
     var intersects = raycaster.intersectObject(webpagePlane);
 
     if (intersects.length > 0) {
-        window.location.href = 'https://comforting-heliotrope-ab0997.netlify.app/classes/calc1/home/';
+        window.location.href = '/';
     }
 }
