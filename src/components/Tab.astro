@@ -1,0 +1,24 @@
+---
+import x from '@assets/icons/x.svg';
+import {Image} from "astro:assets";
+---
+<div class = "addTab">
+    <Image class = "x" src = {x} alt = ""></Image>
+</div>
+
+<style>
+    .addTab{
+        border:var(--border);
+        width: 400px;
+        height:200px;
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr;
+
+    }
+    .x{
+        grid-area: 1 / 5 / 1 / 5;
+        margin:5px;
+    }
+
+</style>
