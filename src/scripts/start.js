@@ -30,7 +30,7 @@ console.log('Texture loaded successfully:', webpageTexture);
 
 // Sizes
 const sizes = {
-    width: 800,
+    width: 1000,
     height: 600
 };
 
@@ -79,15 +79,3 @@ function onClick(event) {
     }
 }
 
-
-//'./main/home';
-
-/*const path0 ='./home';
-const path1 = '../classes/financialAccounting/home';
-const path2 = '../classes/managerialAccounting/home';
-const path3 = '../classes/calc1/home';
-const path4 = '../classes/calc2/home';
-const path5 = '../classes/micro/home';
-const path6 = '../classes/macro/home';
-const path7 = '../classes/stats/home';
-*/
