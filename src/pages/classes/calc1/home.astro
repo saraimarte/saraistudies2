@@ -2,8 +2,6 @@
 import Main from '@layouts/Main.astro';
 import DirectoryComp from '../../../components/DirectoryComp.astro';
 
-
-
 const path1 = '/classes/financialAccounting/home';
 const path2 = '/classes/managerialAccounting/home';
 const path3 = '/classes/calc1/home';
@@ -12,34 +10,7 @@ const path5 = '/classes/micro/home';
 const path6 = '/classes/macro/home';
 const path7 = '/classes/stats/home';
 
-/*
-const path1 = '../../../pages/classes/financialAccounting/home';
-const path2 = '../../../pages/classes/managerialAccounting/home';
-const path3 = '../../../pages/classes/calc1/home';
-const path4 = '../../../pages/classes/calc2/home';
-const path5 = '../../../pages/classes/micro/home';
-const path6 = '../../../pages/classes/macro/home';
-const path7 = '../../../pages/classes/stats/home';
-
-*/
-
-/*const path1 = '../../../classes/financialAccounting/home';
-const path2 = 'classes/managerialAccounting/home';
-const path3 = 'classes/calc1/home';
-const path4 = 'classes/calc2/home';
-const path5 = 'classes/micro/home';
-const path6 = 'classes/macro/home';
-const path7 = 'classes/stats/home';*/
-/*
-const path1 = '../../classes/financialAccounting/home';
-const path2 = '../../classes/managerialAccounting/home';
-const path3 = '../../classes/calc1/home';
-const path4 = '../../classes/calc2/home';
-const path5 = '../../classes/micro/home';
-const path6 = '../../classes/macro/home';
-const path7 = '../../classes/stats/home';*/
-
-const blogs = await Astro.glob('./*.md');
+const blogs = await Astro.glob('./*.mdx');
 
 ---
 

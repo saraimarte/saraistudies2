@@ -2,7 +2,6 @@
 import Main from '@layouts/Main.astro';
 import DirectoryComp from '../../../components/DirectoryComp.astro';
 
-
 const path1 = '/classes/financialAccounting/home';
 const path2 = '/classes/managerialAccounting/home';
 const path3 = '/classes/calc1/home';
@@ -10,7 +9,7 @@ const path4 = '/classes/calc2/home';
 const path5 = '/classes/micro/home';
 const path6 = '/classes/macro/home';
 const path7 = '/classes/stats/home';
-const blogs = await Astro.glob('./*.md');
+const blogs = await Astro.glob('./*.mdx');
 ---
 
 <Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
