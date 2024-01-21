@@ -75,7 +75,7 @@ function onClick(event) {
     var intersects = raycaster.intersectObject(webpagePlane);
 
     if (intersects.length > 0) {
-        window.location.href = '../home';
+        window.location.href = '../pages/start/home.astro';
     }
 }
 
