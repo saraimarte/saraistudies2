@@ -20,6 +20,7 @@ const {className,classCode} = Astro.props;
     <ol>
         {blogs.map((post) => <li><a href = {post.url}>{post.frontmatter.title}</a></li>)}
     </ol>
+    <slot></slot>
 </Main>
 
 <style>
