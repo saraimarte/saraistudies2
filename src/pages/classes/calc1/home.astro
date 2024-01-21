@@ -1,7 +1,10 @@
 ---
 import ClassHome from '@layouts/ClassHome.astro'
+const blogs = await Astro.glob('./*.mdx');
 
 ---
 <ClassHome className = "Calc1" classCode = "01:301:135">
-    hello
+    <ol>
+        {blogs.map((post) => <li><a href = {post.url}>{post.frontmatter.title}</a></li>)}
+    </ol>
 </ClassHome>
