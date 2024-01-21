@@ -2,7 +2,7 @@
 import Main from '@layouts/Main.astro';
 import '@styles/Global.css';
 
-//const pathHome = '#';
+const pathHome =  './';
 const path1 = '/classes/financialAccounting/home';
 const path2 = '/classes/managerialAccounting/home';
 const path3 = '/classes/calc1/home';
@@ -10,10 +10,10 @@ const path4 = '/classes/calc2/home';
 const path5 = '/classes/micro/home';
 const path6 = '/classes/macro/home';
 const path7 = '/classes/stats/home';
-// pathHome = {pathHome}
+
 ---
 
-<Main path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
+<Main pathHome = {pathHome} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}>
     <div class = 'post-content'>
 		<div class = 'box'>
 			<h1 class = 'title'>about</h1>
