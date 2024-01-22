@@ -27,3 +27,10 @@
     padding:0; 
     box-sizing:border-box;
 } 
+
+::selection {
+    /* Change highlight background color to black */
+    background:rgb(145, 202, 204);
+    /* Change highlight text color to red */
+    color: black;
+  }
