@@ -67,9 +67,23 @@ const mouse = new THREE.Vector2();
 // Click event listener
 window.addEventListener('click', onClick);
 
+// Touch event listener
+window.addEventListener('touchstart', onTouchStart);
+
 function onClick(event) {
-    mouse.x = (event.clientX / window.innerWidth) * 2 - 1;
-    mouse.y = - (event.clientY / window.innerHeight) * 2 + 1;
+    handleRaycast(event.clientX, event.clientY);
+}
+
+function onTouchStart(event) {
+    if (event.touches.length > 0) {
+        const touch = event.touches[0];
+        handleRaycast(touch.clientX, touch.clientY);
+    }
+}
+
+function handleRaycast(clientX, clientY) {
+    mouse.x = (clientX / window.innerWidth) * 2 - 1;
+    mouse.y = - (clientY / window.innerHeight) * 2 + 1;
 
     raycaster.setFromCamera(mouse, camera);
     var intersects = raycaster.intersectObject(webpagePlane);
@@ -78,4 +92,3 @@ function onClick(event) {
         window.location.href = '../home';
     }
 }
-
