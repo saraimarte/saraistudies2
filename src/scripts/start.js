@@ -1,4 +1,21 @@
-import * as THREE from 'three';
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
+
+/**
+ * Loaders
+ */
+// Texture loader
+const textureLoader = new THREE.TextureLoader()
+
+// Draco loader
+const dracoLoader = new DRACOLoader()
+dracoLoader.setDecoderPath('draco/')
+
+// GLTF loader
+const gltfLoader = new GLTFLoader()
+gltfLoader.setDRACOLoader(dracoLoader)
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl');
@@ -9,12 +26,48 @@ const scene = new THREE.Scene();
 const ambientLight = new THREE.AmbientLight(0xffffff, 0.5); // Adjust intensity as needed
 scene.add(ambientLight);
 
+/*
 //Add cube
 const geometry = new THREE.BoxGeometry(1, 1, 1)
 const material = new THREE.MeshBasicMaterial({'color': 0xff0000})
 const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
+*/
 
+//!SECTION
+/**
+ * Model
+ */
+gltfLoader.load(
+    '../../public/computer.glb',
+    (gltf) =>
+    {
+        console.log(gltf.scene)
+    }
+)
+
+/**
+ * Materials
+ */
+// Baked material
+const bakedMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
+const monitorMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+gltfLoader.load(
+    '../../public/computer.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+
+
+        const monitor = gltf.scene.children.find((child) => child.name === 'monitor')
+        // Apply materials
+        monitor.material = monitorMaterial
+    }
+)
 // Webpage Plane
 const webpageWidth = 20; // Increase the width
 const webpageHeight = 10; // Increase the height
