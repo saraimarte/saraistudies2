@@ -35,6 +35,19 @@ gltfLoader.setDRACOLoader(dracoLoader)
 /**
  * Object
  */
+
+
+// Webpage Plane
+const webpageWidth = 0.86; // Increase the width
+const webpageHeight = 0.64; // Increase the height
+const webpageGeometry = new THREE.PlaneGeometry(webpageWidth, webpageHeight);
+const webpageTexture = new THREE.TextureLoader().load('/website.png'); // Updated image path
+const webpageMaterial = new THREE.MeshBasicMaterial({ map: webpageTexture, side: THREE.DoubleSide });
+const webpagePlane = new THREE.Mesh(webpageGeometry, webpageMaterial);
+scene.add(webpagePlane);
+
+// Set the position of the webpage plane
+webpagePlane.position.set(0.03, 0.28, 0.05);
 gltfLoader.load(
     '../../public/computer.glb',
     (gltf) =>
@@ -102,7 +115,7 @@ window.addEventListener('resize', () =>
  * Camera
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(45, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(15, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 4
 camera.position.y = 2
 camera.position.z = 4
