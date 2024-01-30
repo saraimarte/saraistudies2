@@ -35,8 +35,6 @@ gltfLoader.setDRACOLoader(dracoLoader)
 /**
  * Object
  */
-
-
 // Webpage Plane
 const webpageWidth = 0.86; // Increase the width
 const webpageHeight = 0.64; // Increase the height
@@ -48,24 +46,89 @@ scene.add(webpagePlane);
 
 // Set the position of the webpage plane
 webpagePlane.position.set(0.03, 0.28, 0.05);
+
+const bakedTexture = textureLoader.load('../../public/textures/desk.png')
+bakedTexture.flipY = false
+bakedTexture.colorSpace = THREE.SRGBColorSpace
+const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
+
+//Computer
+const compTexture = textureLoader.load('../../public/textures/computer.png')
+compTexture.flipY = false
+compTexture.colorSpace = THREE.SRGBColorSpace
+const compTextureMaterial = new THREE.MeshBasicMaterial({ map: compTexture })
+
+//Poweron
+const bakedPowerOn = textureLoader.load('../../public/textures/poweron.png')
+bakedPowerOn.flipY = false
+bakedPowerOn.colorSpace = THREE.SRGBColorSpace
+const powerOnMaterial = new THREE.MeshBasicMaterial({ map: bakedPowerOn })
+
+gltfLoader.load(
+    '../../public/desk.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+    }
+)
+
+/*
 gltfLoader.load(
     '../../public/computer.glb',
     (gltf) =>
     {
-        console.log(gltf.scene)
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+    }
+)
+*/
+gltfLoader.load(
+    '../../public/mouse.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
     }
 )
 
+gltfLoader.load(
+    '../../public/paper.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+    }
+)
 
-/**
- * Materials
- */
-// Baked material
-const bakedMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
-const monitorMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
-const whiteMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+const bgMaterial = new THREE.MeshBasicMaterial({color: 0x1E2019})
 
+gltfLoader.load(
+    '../../public/floor.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bgMaterial
+        })
+        scene.add(gltf.scene)
+    }
+)
 
+const monitorMaterial = new THREE.MeshBasicMaterial({ color: 0xfff6e5 })
+const glassMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
 gltfLoader.load(
     '../../public/computer.glb',
     (gltf) =>
@@ -76,18 +139,91 @@ gltfLoader.load(
         })
         scene.add(gltf.scene)
 
-
+        // Get each object
+  
         const monitor = gltf.scene.children.find((child) => child.name === 'monitor')
+        const powerbtn = gltf.scene.children.find((child) => child.name === 'powerbtn')
+
+        const glass = gltf.scene.children.find((child) => child.name === 'glass' )
+        // Apply materials
+        monitor.material = monitorMaterial
+        glass.material = glassMaterial
+        powerbtn.material = glassMaterial
+    
+    }
+)
+
+
+/**
+ * Materials
+ */
+// Baked material
+/*
+const bakedMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
+const whiteMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
+const bakedTexture = textureLoader.load('../../public/website.png')
+const DeskTextureLoad = textureLoader.load('../../public/textures/desk.hdr')
+DeskTexture.flipY = false
+const DeskTexture = new THREE.MeshBasicMaterial({ map: DeskTextureLoad })
+
+const screenMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
+gltfLoader.load(
+    '../../public/desk.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+        
+        const left = gltf.scene.children.find((child) => child.name === 'left')
+        // Apply materials
+        left.material = DeskTexture
+    }
+)
+*/
+/*
+gltfLoader.load(
+    '../../public/floor.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = whiteMaterial
+        })
+        scene.add(gltf.scene)
+
+        const left = gltf.scene.children.find((child) => child.name === 'left')
+        // Apply materials
+        left.material = whiteMaterial
+    }
+)
+*/
+/*
+gltfLoader.load(
+    '../../public/computer.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+
         const stand = gltf.scene.children.find((child) => child.name === 'stand')
         const stem = gltf.scene.children.find((child) => child.name === 'stem')
         const postit = gltf.scene.children.find((child) => child.name === 'postit')
+        const screen = gltf.scene.children.find((child) => child.name === 'screen' )
         // Apply materials
-        monitor.material = monitorMaterial
         stand.material = whiteMaterial
-        stem.material = whiteMaterial;
-        postit.material = whiteMaterial;
+        stem.material = whiteMaterial
+        postit.material = whiteMaterial
+        screen.material = screenMaterial
     }
 )
+
+*/
 /**
  * Sizes
  */
