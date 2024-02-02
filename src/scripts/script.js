@@ -18,6 +18,18 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
+// Webpage Plane
+const webpageWidth = 0.86; // Increase the width
+const webpageHeight = 0.64; // Increase the height
+const webpageGeometry = new THREE.PlaneGeometry(webpageWidth, webpageHeight);
+const webpageTexture = new THREE.TextureLoader().load('/website.png'); // Updated image path
+const webpageMaterial = new THREE.MeshBasicMaterial({ map: webpageTexture, side: THREE.DoubleSide });
+const webpagePlane = new THREE.Mesh(webpageGeometry, webpageMaterial);
+scene.add(webpagePlane);
+
+// Set the position of the webpage plane
+webpagePlane.position.set(0.03, 0.28, 0.05);
+
 /**
  * Loaders
  */
@@ -32,37 +44,13 @@ dracoLoader.setDecoderPath('draco/')
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
-/**
- * Object
- */
-// Webpage Plane
-const webpageWidth = 0.86; // Increase the width
-const webpageHeight = 0.64; // Increase the height
-const webpageGeometry = new THREE.PlaneGeometry(webpageWidth, webpageHeight);
-const webpageTexture = new THREE.TextureLoader().load('/website.png'); // Updated image path
-const webpageMaterial = new THREE.MeshBasicMaterial({ map: webpageTexture, side: THREE.DoubleSide });
-const webpagePlane = new THREE.Mesh(webpageGeometry, webpageMaterial);
-scene.add(webpagePlane);
 
-// Set the position of the webpage plane
-webpagePlane.position.set(0.03, 0.28, 0.05);
 
-const bakedTexture = textureLoader.load('../../public/textures/desk.png')
+//Desk
+const bakedTexture = textureLoader.load('../../public/textures/deskNew.png')
 bakedTexture.flipY = false
 bakedTexture.colorSpace = THREE.SRGBColorSpace
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
-
-//Computer
-const compTexture = textureLoader.load('../../public/textures/computer.png')
-compTexture.flipY = false
-compTexture.colorSpace = THREE.SRGBColorSpace
-const compTextureMaterial = new THREE.MeshBasicMaterial({ map: compTexture })
-
-//Poweron
-const bakedPowerOn = textureLoader.load('../../public/textures/poweron.png')
-bakedPowerOn.flipY = false
-bakedPowerOn.colorSpace = THREE.SRGBColorSpace
-const powerOnMaterial = new THREE.MeshBasicMaterial({ map: bakedPowerOn })
 
 gltfLoader.load(
     '../../public/desk.glb',
@@ -76,19 +64,6 @@ gltfLoader.load(
     }
 )
 
-/*
-gltfLoader.load(
-    '../../public/computer.glb',
-    (gltf) =>
-    {
-        gltf.scene.traverse((child) =>
-        {
-            child.material = bakedMaterial
-        })
-        scene.add(gltf.scene)
-    }
-)
-*/
 gltfLoader.load(
     '../../public/mouse.glb',
     (gltf) =>
@@ -127,8 +102,58 @@ gltfLoader.load(
     }
 )
 
-const monitorMaterial = new THREE.MeshBasicMaterial({ color: 0xfff6e5 })
-const glassMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
+
+
+//Glass
+const bakedGlass = textureLoader.load('../../public/textures/glassNew.png')
+const glassMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
+
+//Screen
+const bakedScreen = textureLoader.load('../../public/textures/monitor.png')
+bakedScreen.flipY = false
+bakedScreen.colorSpace = THREE.SRGBColorSpace
+const screenMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
+
+//Computer
+const compTexture = textureLoader.load('../../public/textures/comp.jpg')
+compTexture.flipY = false
+compTexture.colorSpace = THREE.SRGBColorSpace
+const compTextureMaterial = new THREE.MeshBasicMaterial({ map: compTexture })
+
+//Poweron
+const bakedPowerOn = textureLoader.load('../../public/textures/poweron.jpg')
+bakedPowerOn.flipY = false
+bakedPowerOn.colorSpace = THREE.SRGBColorSpace
+const powerOnMaterial = new THREE.MeshBasicMaterial({ map: bakedPowerOn })
+
+
+gltfLoader.load(
+    '../../public/computer.glb',
+    (gltf) =>
+    {
+        gltf.scene.traverse((child) =>
+        {
+            child.material = bakedMaterial
+        })
+        scene.add(gltf.scene)
+    // Get each object
+    const screen = gltf.scene.children.find((child) => child.name === 'screen' )
+    const powerbtn = gltf.scene.children.find((child) => child.name === 'powerbtn')
+    const glass = gltf.scene.children.find((child) => child.name === 'glass' )
+    // Apply materials
+    glass.material = glassMaterial
+    powerbtn.material = powerOnMaterial
+    screen.material = screenMaterial
+
+    }
+)
+
+
+
+/*
+
+
+
 gltfLoader.load(
     '../../public/computer.glb',
     (gltf) =>
@@ -153,6 +178,7 @@ gltfLoader.load(
     }
 )
 
+*/
 
 /**
  * Materials
