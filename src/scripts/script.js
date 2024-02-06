@@ -47,7 +47,7 @@ gltfLoader.setDRACOLoader(dracoLoader)
 
 
 //Desk
-const bakedTexture = textureLoader.load('../../public/textures/deskNew.png')
+const bakedTexture = textureLoader.load('../../public/textures/deskNew4.png')
 bakedTexture.flipY = false
 bakedTexture.colorSpace = THREE.SRGBColorSpace
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
