@@ -40,14 +40,84 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
         <div class = "tab">
             <a href={path7}> <Image src={stats} alt="" /> </a>
         </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
+        <div class = "tab">
+        </div>
 </div>
 
 <style>
-.bottomNav{
+.bottomNav {
     display: flex;
-    width:100%;
+    width: 100%;
     background-color: white;
-    
+    overflow-x: auto; /* Allow horizontal scrollbar if needed */
+    overflow-y: hidden;
+    white-space: nowrap; /* Prevent line breaks for the child elements */
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+    /* Hide scrollbar on Webkit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 0.1rem; /* Adjust as needed */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    /* Add any other styling properties you need */
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 600px) {
+    .bottomNav {
+        flex-wrap: nowrap; /* Prevent items from wrapping to the next line */
+    }
 }
 
 .tab{
@@ -57,7 +127,7 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
     justify-content: center;
     align-items: center;
     padding:5px;
-    width:60px;
+    min-width:60px;
     height:50px;
 
 }

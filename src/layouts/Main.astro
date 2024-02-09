@@ -12,7 +12,7 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>Sarai Studies</title>
-	</head>
+    </head>
 	<body>
 		<div class = "container">
             <div class = "screen"> 
@@ -20,10 +20,10 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
                 <div class = "content">
                     <slot>
                 </div>
-                <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
             </div>
 		</div>
-    
+        <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7}></BottomNav>
+
 	</body>
 </html>
 
@@ -34,22 +34,26 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
         background-size: cover;
     }
     body{
-        /* This svh makes it so that the bottomNav is on top of the apple search component*/
-        height:100svh; /*SKKSKSK it works!*/
+        height:100svh; 
         width:100%;
         overflow-y: hidden;
+        display:flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
     }
 
 	.container{
         height:100%;
         width:100%;
-        padding:20px;
+        padding:20px 20px 20px 20px;
+   
 	}
 	.screen{
         background-color: white;
         display:grid;
         grid-template-columns: 100%;
-        grid-template-rows: 80px 1fr 50px;
+        grid-template-rows: 80px 1fr;
         border: var(--border);
         width:100%;
         height:100%;
@@ -89,4 +93,19 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
 
     }
 	
+/*max-width these styles will apply up until the width is 768px
+min-width these styles will stop applying once the width reaches 768px.
+*/
+@media only screen and (max-width:768px){
+    .container{
+        height:85%;
+    }
+
+    .screen{
+        height:560px;
+    }
+
+
+}
+
 </style>
