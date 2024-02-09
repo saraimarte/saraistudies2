@@ -19,7 +19,6 @@ const {title, date, author} = frontmatter;
             <h1 class = "title">{title}</h1>
             <h1 class = "date">{date}</h1>
         </div>
-
         <div class="content">
             <slot></slot>
         </div>
@@ -34,13 +33,14 @@ const {title, date, author} = frontmatter;
         gap:1em;
     }
     .date{
-        font-size:medium
+        font-size:medium;
     }
     .header{
         display: flex;
         flex-direction: column;
     }
     h1{
+        font-size:large;
         font-family: var(--primaryFont);
         font-weight: 400;
     }
