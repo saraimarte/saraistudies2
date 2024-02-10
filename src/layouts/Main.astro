@@ -60,8 +60,10 @@ const {path1, path2, path3, path4, path5, path6, path7} = Astro.props;
         overflow-y:hidden;
         min-height:300px;
         padding: 20px 0px 0px 0px;
+        grid-gap:1em;
 
 	}
+    
     .content{
         display: flex;
         flex-direction: column;
@@ -108,4 +110,40 @@ min-width these styles will stop applying once the width reaches 768px.
 
 }
 
+
+
+
+.content{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    overflow-y: auto; /* Allow horizontal scrollbar if needed */
+    overflow-x: hidden;
+    scrollbar-width: thin; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+
+    /* Hide scrollbar on Webkit browsers (Chrome, Safari) */
+    &::-webkit-scrollbar {
+        width: 0.1rem; /* Adjust as needed */
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background-color: transparent;
+    }
+
+    /* Add any other styling properties you need */
+
+
+}
+
+
+@media only screen and (min-width:768px){
+ 
+ .content{
+   margin: 0 auto;
+   width:50%;
+ }
+
+
+}
 </style>
