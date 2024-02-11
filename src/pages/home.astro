@@ -1,7 +1,7 @@
 ---
 import Main from '@layouts/Main.astro';
 import '@styles/Global.css';
-
+import Content from '../components/Content.astro';
 const pathHome =  './';
 const path1 = '/classes/financialAccounting/home';
 const path2 = '/classes/managerialAccounting/home';
@@ -28,6 +28,9 @@ const path7 = '/classes/stats/home';
 			<p>if you don't like reading and rather watch how i do things, check out my videos on sarai studies.</p>
 		</div>
 	</div>
+	<Content client:load>
+		
+	</Content>
 	<div class = "skipBtn">
 		Skip
 	</div>
