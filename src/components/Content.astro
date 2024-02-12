@@ -3,32 +3,36 @@ import '../styles/Global.css';
 import { Image } from 'astro:assets';
 import x from '@assets/icons/x.svg';
 
-
-var costs = [
-	
-    {
-        "name" : "Total Cost of Tires", 
+const costs = [
+      {
+        "name": "Total Cost of Tires",
         "answers": ["Direct", "Variable"]
-    },
-    {
-        "name" : "Total Cost of Rent", 
+      },
+      {
+        "name": "Total Cost of Rent",
         "answers": ["Indirect", "Fixed"]
-    }
-]
-
-const { randomCostIndex } = Astro.props;
-const randomIndex = Math.floor(Math.random() * costs.length);
-
+      },
+      {
+        "name": "Cost of Rent Per Unit",
+        "answers": ["Indirect", "Variable"]
+      },
+      {
+        "name": "Cost of Tires Per Unit",
+        "answers": ["Direct", "Fixed"]
+      }
+    ];
+  
+const randomIndex = 0;
 
 ---
 
-<div class = "container" data-random-index={randomIndex}>
+<div class = "container" x-data = "{ open: false }" data-random-index={randomIndex}>
     <!-- <Image class = "x" src = {x} alt = ""></Image>-->
     <div class = "a">
-        {0 !== null ? (
+        {randomIndex !== null ? (
             <div>
               <p class="selected">
-                {costs[0].name}
+                {costs[randomIndex].name}
               </p>
             </div>
           ) : (
@@ -37,131 +41,213 @@ const randomIndex = Math.floor(Math.random() * costs.length);
     </div>
     <form class="b">
         <div class="left">
-            <div class = "btn">
+            <div class = "options">
                 <input class = "option" type="radio" id="direct" name="classA" value="Direct">
                 <label for="direct">Direct</label><br>
             </div>
-            <div class = "btn">
+            <div class = "options">
                 <input  class = "option" type="radio" id="indirect" name="classA" value="Indirect">
                 <label for="indirect">Indirect</label><br>
             </div>     
-
-          
         </div>
     
         <div class="right">
-            <div class = "btn">
+            <div class = "options">
                 <input  class = "option" type="radio" id="fixed" name="classB" value="Fixed">
                 <label for="fixed">Fixed</label><br>
             </div>     
-            <div class = "btn">
+            <div class = "options">
                 <input  class = "option" type="radio" id="variable" name="classB" value="Variable">
                 <label for="variable">Variable</label><br>
             </div>     
         </div>
     </form>
-    
 
     
-    <div class = "c">
-        <div class = "controls question"></div>
-        <div class = "controls leftBtn" id = "submitBtn">Check</div>
-        <div class = "controls rightBtn" id = "nextBtn"></div>   
-        <div id="grade"></div>
-        <button onclick="location.reload()">Next</button>
-
+    <div  class = "c">
+        <button @click = "open = ! open" class = "controls question" id = "hint"> Hint </button>
+        <button class = "controls leftBtn" id = "submitBtn"> Check</button>
+        <button class = "controls" id = "solution"> </button>
+        <button class = "controls" id = "restart"> Restart </button>
+        <button class = "controls" id = "nextBtn">Next</button>
     </div>
 
-    
+    <div x-show = "open" class = "modal">hello</div>
+
 
 </div>
-<script>
-    var costs = [
-        {
-            "name": "Total Cost of Tires",
-            "answers": ["Direct", "Variable"]
-        },
-        {
-            "name": "Total Cost of Rent",
-            "answers": ["Indirect", "Fixed"]
-        }
-    ];
 
-    // Initialize the index tracker
-    var costChosen = -1;
+<script>
+    const submitButton = document.getElementById("submitBtn");
+    const nextButton = document.getElementById("nextBtn");
+    const controls = document.querySelector(".controls");
+    const restartButton = document.getElementById("restart");
+    const hint = document.getElementById("hint");
+
+
+
+    const costs = [
+      {
+        "name": "Total Cost of Tires",
+        "answers": ["Direct", "Variable"]
+      },
+      {
+        "name": "Total Cost of Rent",
+        "answers": ["Indirect", "Fixed"]
+      },
+      {
+        "name": "Cost of Rent Per Unit",
+        "answers": ["Indirect", "Variable"]
+      },
+      {
+        "name": "Cost of Tires Per Unit",
+        "answers": ["Direct", "Fixed"]
+      }
+    ];
+  
+    let chosenIndices = [0];
+    let costChosen = 0; // Initialize the index tracker with 0 for the initial prompt
 
     function getRandomIndex() {
-        // Generate a random index
-        return Math.floor(Math.random() * costs.length);
+    // Generate a random index excluding the current ones and past ones
+    let availableIndices = Array.from({ length: costs.length }, (_, index) => index)
+        .filter(index => !chosenIndices.includes(index) && index !== costChosen);
+
+    if (availableIndices.length === 0) {
+        // No more prompts available
+            const submitButton = document.getElementById("submitBtn");
+            const nextButton = document.getElementById("nextBtn");
+            const restartButton = document.getElementById("restart");
+            const hint = document.getElementById("hint");
+
+            restartButton.style.display = "block";
+            nextButton.style.display = "none";
+            hint.style.display = "none";
+            submitButton.style.display = "none";
+
+            restartButton.addEventListener("click", () =>{
+
+                nextButton.style.display = "block";
+                restartButton.style.display = "none";
+                nextButton.style.display = "block";
+                hint.style.display = "block";
+                submitButton.style.display = "block";
+
+                //restartButton.remove();
+                costChosen = null;
+                chosenIndices = [0];
+                const radioA = document.querySelector('input[name="classA"]:checked') as HTMLInputElement;
+                const radioB = document.querySelector('input[name="classB"]:checked') as HTMLInputElement;
+    
+                if (radioA) {
+                    radioA.checked = false;
+                }
+            
+                if (radioB) {
+                    radioB.checked = false;
+                }
+
+                nextButton.style.backgroundColor = "rgb(195, 199, 199)";
+;
+             })
+
+      //  costChosen = null; // Set costChosen to null to indicate no more prompts
+        return null;
     }
 
+    const randomIndex = availableIndices[Math.floor(Math.random() * availableIndices.length)];
+    chosenIndices.push(randomIndex);
+    return randomIndex;
+    }
+
+  
+    function updateUI() {
+      // Display the current cost based on the random index
+      const promptElement = document.querySelector('.a p.selected');
+      if (promptElement) {
+        promptElement.textContent = costs[costChosen].name;
+      }
+    }
+  
     function resetUI() {
-        // Reset UI elements as needed
-        // For example, clear radio button selections
-        const radioA = document.querySelector('input[name="classA"]:checked') as HTMLInputElement;
-        const radioB = document.querySelector('input[name="classB"]:checked') as HTMLInputElement;
+      // Reset UI elements as needed
+      // For example, clear radio button selections
+      const radioA = document.querySelector('input[name="classA"]:checked') as HTMLInputElement;
+      const radioB = document.querySelector('input[name="classB"]:checked') as HTMLInputElement;
+  
+      if (radioA) {
+        radioA.checked = false;
+      }
+  
+      if (radioB) {
+        radioB.checked = false;
+      }
+  
 
-        if (radioA) {
-            radioA.checked = false;
-        }
-
-        if (radioB) {
-            radioB.checked = false;
-        }
-
-        // Additional UI reset logic...
-
-        // Get a new random index
-        costChosen = getRandomIndex();
-        
-        // Display the new cost based on the random index
-        console.log("Current cost: ", costs[costChosen].name);
+      // Get a new random index
+      costChosen = getRandomIndex();
+  
+      // Update the displayed prompt
+      updateUI();
     }
+  
 
-    var submitButton = document.getElementById("submitBtn");
-    var nextButton = document.getElementById("nextBtn");
-
-    // Attach a click event handler to the submit button
     submitButton.addEventListener("click", function () {
-        var selectedRadioButton = document.querySelector('input[name="classA"]:checked') as HTMLInputElement;
-        var selectedRadioButton2 = document.querySelector('input[name="classB"]:checked') as HTMLInputElement;
+        const selectedRadioButton = document.querySelector('input[name="classA"]:checked') as HTMLInputElement;
+        const selectedRadioButton2 = document.querySelector('input[name="classB"]:checked') as HTMLInputElement;
 
-        // Check if any radio button is selected
         if (selectedRadioButton && selectedRadioButton2) {
-            // Access the value property of the selected radio buttons
             const selectedValueA = selectedRadioButton.value;
             const selectedValueB = selectedRadioButton2.value;
-
-            // Compare the selected values with the correct answers
+            const nextButton = document.getElementById("nextBtn") as HTMLButtonElement;
+            nextButton.disabled = true;
             if (selectedValueA === costs[costChosen].answers[0] && selectedValueB === costs[costChosen].answers[1]) {
-                alert('Correct!');
+                //If answers are correct
+                //alert('Correct!');
+                nextButton.style.backgroundColor = "rgb(145, 202, 204)";      
+                nextButton.disabled = false;  // Enable the "Next" button
+                nextButton.textContent = "Next"  // Disable the "Next" button
+                nextButton.addEventListener("click", () => {
+                    resetUI(); 
+                });
             } else {
-                alert('Incorrect!');
+                //If answers are not correct
+                nextButton.style.backgroundColor = "#cc9391";
+                nextButton.textContent = "Try Again" ; // Disable the "Next" button
+                nextButton.disabled = true;   // Disable the "Next" button
+                nextButton.style.color = "black";
             }
         } else {
-            alert('No option selected.');
+            alert('You missed one or more answers.');
         }
     });
 
-    // Attach a click event handler to the next button
-    nextButton.addEventListener("click", function () {
-        resetUI();
-    });
-
+  
     // Initial setup when the page loads
-    resetUI();
+    updateUI();
 </script>
-
-
+  
 
 <style>
-    #submitBtn{
-
+    .modal{
+        padding:20px;
+        width:100%;
+        height:100%;
+        background-color: rgb(240, 240, 240);
     }
+    .container{
+        font-family: var(--primaryFont);
+        font-size: var(--text-md);
+    }
+    .selected{
+        font-size: var(--text-lg);
+    }
+
+
     .container{
         border: var(--border);
         width:100%;
-        height:50%;
+        height:min-content;
         display: flex;
         flex-direction: column;
         gap:1em;
@@ -169,7 +255,8 @@ const randomIndex = Math.floor(Math.random() * costs.length);
 
     }
     .a {
-        border: var(--border);
+        background-color: rgb(240, 240, 240);
+        padding:20px;
         width:100%;
         height:20%;
         display: flex;
@@ -179,40 +266,75 @@ const randomIndex = Math.floor(Math.random() * costs.length);
         align-items: center;
     }
     .b{
-        border: var(--border);
         display: flex;
         height:50%;
         width:100%;
         justify-content: center;
         align-items: center;
+        background-color: rgb(240, 240, 240);
+
     }
 
-    .c{
-        border: var(--border);
-        display: flex;
-        height:20%;
-        width:100%;
-        justify-content: center;
-        align-items: center; 
-        gap:1em;
-    }
     .left, .right {
         width:50%;
-        border: var(--border);
         display: flex;
         height:100%;
         flex-direction: column;
         padding:10px;
         gap:1em;
+        justify-content: center;
+        align-items: center;
+
     }
 
-    
-
     .controls{
-        border: var(--border);
-        border-radius:50%;
-        height:30px;
-        width:30px;
+        height:50px;
+        width:33%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(240, 240, 240);
+        font-size:var(--text-md);
+        border:none;
+    }
+    .controls:hover{
+        background-color: rgb(189, 189, 189);
+    }
+    .c{
+        display: flex;
+        height:min-height;
+        width:100%;
+        justify-content: center;
+        align-items: center; 
+        gap:0.2em;
+    }
+  
+
+    .options{
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap:1em;
+        width:150px;
+    }
+
+    input{
+        width:20px;
+        height:20px;
+    }
+    label{
+        font-size: 25px;
+    }
+    #restart{
+        display: none;
+        width:100%;
+    }
+    #solution{
+        display: none;
+    }
+    #nextBtn{
+        background-color: rgb(195, 199, 199);
+
     }
 </style>
 
