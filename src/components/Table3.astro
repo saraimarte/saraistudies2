@@ -1,0 +1,37 @@
+---
+
+const {typee} = Astro.props;
+---
+
+<table>
+    <tr>
+      <th>STEP</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>B</td>
+      <td>Write the {typee} <b>B</b>alances of each account</td>
+    </tr>
+    <tr>
+      <td>E</td>
+      <td>Find the % of the total {typee} balance <b>E</b>ach account takes up</td>
+    </tr>
+    <tr>
+      <td>D</td>
+      <td><b>D</b>istribute under/over to each account based on that %</td>
+    </tr>
+  </table>
+  
+  
+  <style>
+    td{
+        border:1px solid black;
+        text-align: center;
+        padding:10px;
+    }
+
+    th{
+        border:1px solid black;
+        padding:10px;
+    }
+  </style>

@@ -1,10 +1,446 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Chapter 4| How do we deal with over/under allocated OH?
-date: 02/09/2024
+title: Chapter 4 | Why and How do we allocate OH? How do we deal with under/overallocation?
+date: 02/16/2024
 author: Sarai Marte
 ---
-<span style=" font-family: var(--primaryFont);">
+import imgurl1 from "../../../../public/Images/KrispyPizza.png";
+import imgurl2 from '../../../../public/Images/2751.png';
+import imgurl3 from '../../../../public/Images/2758.png';
+import imgurl4 from '../../../../public/Images/2759.png';
+import imgurl5 from '../../../../public/Images/27510.png';
+import imgurl6 from '../../../../public/Images/27511.png';
+import imgurl7 from '../../../../public/Images/27512.png';
+import imgurl8 from '../../../../public/Images/27513.png';
+import Table1 from '../../../components/Table1.astro';
+import Table2 from '../../../components/Table2.astro';
+import Table3 from '../../../components/Table3.astro';
+
+<span style="font-family: var(--primaryFont)">
+
+The main concept of this class is that when a business is in the production phase of a product they are in the process of manufacturing that product and with manufacturing comes manufacturing costs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are three types of manufacturing costs: 
+
+<li> Direct Materials </li>
+<li> Direct Labor </li>
+<li> Manufacturing Overhead (aka indirect costs) </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl2.src} alt="img2" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you go to Rutgers, you have seen Krispy Pizza at the Yard in College Avenue, so let's take them as an example. (If you havent just think of your favorite pizza place).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl1.src} alt="img1" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, at Krispy Pizza:
+
+<li> Cost Object (the product): The pizza. </li>
+<li> Direct Materials: Sauce, Cheese, Pepperoni. </li>
+<li> Direct Labor: The workers directly making the pizza. </li>
+<li> Manufacturing Overhead: cleaning supplies, rent, electricity.</li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, all these costs have to get paid. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How do businesses pay their costs?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Through the revenue they earn from selling their product.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, Krispy Pizza pays all their manufacturing costs from the revenue they make from selling their pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This means that the price of the pizza they sell <i>has</i> to include the costs of making that pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But how do we properly assign costs to a pizza?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Cost Assignment
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Cost Assignment is the process in which we assign costs to a product.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We assign costs in two ways: 
+
+<li> Direct Tracing (for direct costs) or </li>
+<li> Cost Allocation (for indirect costs). </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Remember that the costs of a pizza are DM + DL + MOH.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Direct Costs (DM and DL) can be directly traced by quantifiable amounts of sauce, cheese, and labor per pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We <i> can </i> say: $0.50 worth of sauce went into making this specific pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We <i> can </i> say: $1 worth of worker x's wages went into making this specific pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hence, we can directly trace these costs to a specific pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Indirect Costs (MOH) can <i> not </i> be directly traced back to a specific pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We <i> can't </i> say: $200 worth of rent went into making this specific pizza. We can't possibly know that.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hence, we assign the total cost of rent by allocating (distributing) it across <i>all</i> pizzas in a fair way.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+That way, even though we don't know how much of the rent each pizza takes up, the cost of rent is still being covered because we're simply allocating (distributing) it amongst all the pizzas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Simply, each pizza takes it's fair share in covering the cost of rent.
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But how do we make sure the indirect costs (MOH) are allocated fairly?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Cost Allocation
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We allocate indirect costs (MOH) using a Budgeted Overhead Rate.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### What is a budgeted Overhead Rate?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl3.src} alt="img3" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Budgeted = Estimated
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+MOH = OH
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Driver = What drives up or down the costs. (Sometimes known as the cost allocation base- what the costs are based on.)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+At Krispy Pizza, our pizza's OH costs will be based on the amount of pizzas we make.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Budgeted OH rate = the total estimated OH costs for the year divided by the total esitmated driver of those costs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It is a <i> budgeted </i> OH rate because it is based of of <i> budgeted </i> numbers.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We don't know what our <i> actual </i> OH costs are going to be at the beginning of the year, nor do we know how many pizzas we will <i> actually </i> end up making.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because of that, we need to estimate these numbers.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Alright, so if we are managers at Krispy Pizza, at the beginning of the year, it is our job to set estimate some numbers. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We estimate we will make 5000 pizzas and that our OH costs will be $10,000. So, the Budgeted OH rate will be $2.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div style = "object-fit:contain" >
+    <img src={imgurl4.src} alt="img4" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This means that for every pizza Krispy Pizza makes this year, we will allocate $2 of OH to the pizzas and that is how we fairly allocate the indirect costs (OH) to the pizzas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, if we planned to make 5000 pizzas and our BOHR is $2, you would think your allocated OH would be $2 OH x 5000 pizzas = <b>$10,000</b> allocated OH at the end of the year. Wrong. This is your <b> budgeted (planned/estimated) allocated OH </b> This is what you plan to allocate.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl7.src} alt="img5" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But not everything goes as planned.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note, we said that at the <i> beginning </i> of the year, we don't know how many pizzas we'll actually end up making but <i> throughout the year</i>, we <i> do </i> know how many pizzas we are <i> actually </i> making and maybe we didn't make 5000 pizzas and instead we <i> actually </i> made 2000 pizzas.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl5.src} alt="img5" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl6.src} alt="img5" width="100%" height="auto" /> 
+</div>
+So what we really did, is for each of the 2000 pizzas Krispy Pizza made throughout the year, we allocated $2 of OH to the pizzas, making the total OH we <i> actually </i> ended up allocating to be $2 OH x 2000 pizzas = <b> $4000 allocated OH </b> at the end of the year.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But by the end of the year, we have our actual numbers and we find our actual OH rate and we know how many pizzas we actually ended up making so let's say our actual rate ended up being $3 and we ended up making 2000 pizzas so our actual OH is $3 OH x 2000 pizzas = <b>$6000 actual OH.</b>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl8.src} alt="img1" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Notice how it's impossible to know what your actual OH is going to be at the end of the year at the start, because it's based on what your actual driver is and what your actual costs are going to be at the end of the year which you <i> also </i> don't know. Which is why we estimate these numbers in the beginning and then at the end of the year we adjust for any differences.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When people use 'actual' numbers they use previous years numbers and we call this actual costing when you use actual numbers. Normal costing is when we use budgeted numbers to get the BOHR.
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So to summarize, 
+
+<li> Start of the Year: $2 x 5000 pizzas = $ 10,000 budgeted OH allocated </li>
+<li> Throughout the Year: $2 x 2000 pizzas = $4,000 OH allocated (what we put in the books/WIP account) </li>
+<li> End of the Year: $3 x 2000 pizzas = $6,000 actual OH </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, there is clearly a difference between how much OH we ended up allocating in our books and the actual OH we accumalted at the end of the year.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+$4,000 (allocated) vs $ 6,000 (actual).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We clearly underallocated OH by $2,000 (6000-4000), meaning we failed to allocate $2,000 worth of OH.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So we have to make up for this OH we failed to allocate properly. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How do we do that?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Fixing Under/Over allocation of OH
+
+There are three methods to do this. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you have Fong- he does not test you on the first because he thinks it's too easy.
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### (1) Direct Write of to Cost of Goods Sold (COGS)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, you simply take the ending balance of your COGS account and add the under/over to it.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+*under/over refers to the amount of underallocated OH you failed to allocate or Overallocated OH you over allocated.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In our case, we are under by $2,000.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So take the EB of COGS: $3000.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+And add the under to it. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+$3,000 + $2,000 = $5,000.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+$5,000 is now the adjusted ending balance for COGS.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Voila! You fixed the books!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### (2) Proration Based on Ending Balances 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Proration is just a fancy way of saying distribution.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are just distributing the under across all accounts based on how much of the total ending balance they take up.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For these problems you need to be given the ending balances (EB) of all the accounts that could have been affected by the lack or surplus of OH.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Those accounts would be WIP, FG, and COGS.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+DM is not an account we consider because there is no OH in DM. OH starts in WIP and is carried through FG and finally COGS once its out of the inventory system.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+| Account 	| EB	    |
+|---------	|-------	|
+| WIP     	| 1000   	|
+| FG      	| 2000  	|
+| COGS    	| 3000  	|
+| Total   	| 6000   	|
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So use the BED method.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<Table3 typee = "ending"> </Table3>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<Table2/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### (3) Proration Based on OH 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, we are  distributing the under across all accounts based on how much of the total OH they each take up. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, we need to be given the OH balances of each account.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+| Account 	| OH  	|
+|---------	|-----	|
+| WIP     	| 500 	|
+| FG      	| 100 	|
+| COGS    	| 200 	|
+| Total   	| 800 	|
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<Table3 typee = "OH"> </Table3>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<Table1/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### When to use each method?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If under/over is inmaterial: Direct Writeoff to COGS.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If under/over is material: Either Proration Methods.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### What does a cost being material mean?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+Material = Significant.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the under/over is signficant in comparison to all the other costs then the under/over is material.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For example, if all the costs of Krispy Pizza are in the range of $500,000 or $100,000 and we get an under/over of $5 then that $5 is obviously not signficant hence not material so we just write it off to COGS because it's really not that important to be more precise in distributing the $5. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the under/over is $100,000 then is is sigficant/material in comparison with the rest of the costs of Krispy Pizza.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Job Costing vs Process Costing
+
 
 
 </span>
