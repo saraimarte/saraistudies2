@@ -8,7 +8,7 @@ import Search from '../components/Search.astro';
 <div class = "topNav">
     <div class = "row1">
         <h1 id = "logo"> sarai studies </h1>
-        <Image id = "navItem" src = {x} alt = ""/> 
+        <Image x-on:click = "closedScreen=true" id = "navItem" src = {x} alt = ""/> 
     </div>
     <div class = "row2">
         <Search/>
