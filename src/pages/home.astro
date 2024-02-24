@@ -11,11 +11,28 @@ const path6 = '/classes/macro/home';
 const path7 = '/classes/stats/home';
 const path8 = '/classes/compsci/home';
 
-import Example from '../components/Example.astro';
+import Slider from '../components/displayComponents/Slider.astro';
+
+//Import Slides
+import slide1 from '../assets/icons/calc1.svg';
+import slide2 from '../assets/icons/calc1.svg';
+import slide3 from '../assets/icons/calc1.svg';
+import slide4 from '../assets/icons/calc1.svg';
+import slide5 from '../assets/icons/calc1.svg';
+import slide6 from '../assets/icons/calc1.svg';
+import slide7 from '../assets/icons/calc1.svg';
+import slide8 from '../assets/icons/calc1.svg';
+import slide9 from '../assets/icons/calc1.svg';
+import slide10 from '../assets/icons/calc1.svg';
+
+
+import sliderData from '../data/slider.json';
+
+
 ---
 
 <Main pathHome = {pathHome} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}>
-<Example></Example>
+<Slider data = {sliderData}></Slider>
 	<div class = 'post-content'>
 		<div class = 'box'>
 			<h1 class = 'title'>about</h1>

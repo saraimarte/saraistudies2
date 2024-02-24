@@ -1,0 +1,18 @@
+[
+    {
+      "name": "Total Cost of Tires for a car manufacture",
+      "answers": ["Direct", "Variable"]
+    },
+    {
+      "name": "Total Cost of Rent for a pizza store",
+      "answers": ["Indirect", "Fixed"]
+    },
+    {
+      "name": "Total cost of sause for a pizza store",
+      "answers": ["Direct", "Variable"]
+    },
+    {
+      "name": "Cost per unit of sause for a pizza store",
+      "answers": ["Direct", "Fixed"]
+    }
+  ]

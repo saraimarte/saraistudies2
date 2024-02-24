@@ -6,6 +6,8 @@
     --primaryFont: 'PT Serif', serif;
     --secondaryFont: None;
     --primaryColor: black;
+    --pColor:  rgb(145, 202, 204);
+    --pColorHover:#94bdbf; 
     --secondaryColor: None;
     --text-body-size: 1em;
     /* type scale */
