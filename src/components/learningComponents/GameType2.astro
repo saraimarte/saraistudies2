@@ -25,21 +25,14 @@ console.log(data)
                 <input class = "option" type="radio" id="direct" name="classA" value={answer1A}>
                 <label for="direct">{answer1A}</label><br>
             </div>
-            <div class = "options">
-                <input  class = "option" type="radio" id="indirect" name="classA" value={answer2A}>
-                <label for="indirect">{answer2A}</label><br>
-            </div>     
         </div>
     
         <div class="right">
             <div class = "options">
-                <input  class = "option" type="radio" id="fixed" name="classB" value={answer1B}>
+                <input  class = "option" type="radio" id="fixed" name="classA" value={answer1B}>
                 <label for="fixed">{answer1B}</label><br>
             </div>     
-            <div class = "options">
-                <input  class = "option" type="radio" id="variable" name="classB" value={answer2B}>
-                <label for="variable">{answer2B}</label><br>
-            </div>     
+   
         </div>
     </form>
 
@@ -52,7 +45,7 @@ console.log(data)
         <button class = "controls" id = "nextButton">Next</button>
     </div>
 
-    <div x-show = "open" class = "modal"> {hint} </div>
+    <div x-show = "open" class = "modal">{hint}</div>
 
 
 </div>
@@ -180,22 +173,15 @@ console.log(data)
 
         //Find the selected answers
         const selectedAnswer1 = document.querySelector('input[name="classA"]:checked');
-        const selectedAnswer2 = document.querySelector('input[name="classB"]:checked');
         //See if they exist
         //If they do exist...
-        if (selectedAnswer1 && selectedAnswer2) {
+        if (selectedAnswer1) {
             //Get their values
 
             const selectedValueA = document.querySelector('input[name="classA"]:checked').value;
-            const selectedValueB = document.querySelector('input[name="classB"]:checked').value;
 
-            //If BOTH selections are right
-            console.log(selectedValueA)
-            console.log(selectedValueB)
-            console.log(data[costChosen].answers[0])
-            console.log(data[costChosen].answers[1])
-
-            if (selectedValueA === data[costChosen].answers[0] && selectedValueB === data[costChosen].answers[1]) {
+    
+            if (selectedValueA === data[costChosen].answers[0]) {
                 //remove the check button
                 checkButton.style.display = "none"; 
                 //add the next button

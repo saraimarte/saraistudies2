@@ -1,0 +1,74 @@
+[
+    {
+        "name": "The government should increase spending on education.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "Income inequality is unfair, and policies should be implemented to reduce it.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "When taxes are reduced, consumers tend to increase spending.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "Inflation increased by 2% last year.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "Environmental regulations should be strengthened to protect natural resources.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "It is better for the government to intervene in the economy during a recession.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "The unemployment rate is currently 4.5%.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "The government should provide free healthcare for all citizens.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "The demand for electric cars will increase as government incentives are introduced.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "A tax on sugary drinks will discourage unhealthy consumption.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "The national debt has reached $25 trillion.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "The government should subsidize renewable energy to combat climate change.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "Technology advancements lead to increased labor productivity.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "It is ethical for companies to prioritize environmental sustainability in their business practices.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "The minimum wage should be determined by the cost of living in each region.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "Cutting corporate taxes will stimulate job creation.",
+        "answers": ["Positive"]
+    },
+    {
+        "name": "Public transportation should be free to reduce traffic congestion.",
+        "answers": ["Normative"]
+    },
+    {
+        "name": "The government should implement tariffs to protect domestic industries.",
+        "answers": ["Normative"]
+    }
+]
