@@ -1,0 +1,12 @@
+[
+    {
+      "name": "slide1",
+      "caption": "Demand Curve always goes down. It represents how much consumers are demanding. The negative slope tells us that price and quantity demanded are negatively coorelated. Meaning when price demanded goes up, quantity demanded goes down. Makes sense right? If the price of houses go up, what do people do? Buy more houses? No. They demand less houses. ",
+      "image": "../../public/sliders/103/slider2/1031.png"
+    },
+    {
+    "name": "slide2",
+    "caption": "Supply Curve always goes up. It represents how much producers are willing to supply at any given price. The positive slope tells us that price and quantity supplied are positively coorelated.",
+    "image": "../../public/sliders/103/slider2/1032.png"
+    }
+  ]
