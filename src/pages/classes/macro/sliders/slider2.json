@@ -1,12 +1,58 @@
 [
     {
       "name": "slide1",
-      "caption": "Demand Curve always goes down. It represents how much consumers are demanding. The negative slope tells us that price and quantity demanded are negatively coorelated. Meaning when price demanded goes up, quantity demanded goes down. Makes sense right? If the price of houses go up, what do people do? Buy more houses? No. They demand less houses. ",
+      "caption": "(1) First, Demand Curve goes down. D for down. Supply curve goes up. Remember, the demand curve represents the quantity of a good demanded at various prices. Supply curve represents the quantity of a good supplied at various prices.",
       "image": "../../public/sliders/103/slider2/1031.png"
     },
     {
     "name": "slide2",
-    "caption": "Supply Curve always goes up. It represents how much producers are willing to supply at any given price. The positive slope tells us that price and quantity supplied are positively coorelated.",
+    "caption": "(2) There is a point called the equilibrium point E. It is called the eqilibrium point because...",
     "image": "../../public/sliders/103/slider2/1032.png"
+    },
+    {
+        "name": "slide3",
+        "caption": "(3) at that point, there is the eqilibirum quantity where quantity demanded by the consumers is the same (equal to the) quantity that is supplied by the producers. At that point there is also the equilibirum price where the price demanded by consumers for a good is the same as the price supplied (set) by the producers.",
+        "image": "../../public/sliders/103/slider2/1033.png"
+    },
+    {
+        "name": "slide4",
+        "caption": "(4) At that point there is also the equilibirum price where the price demanded by consumers for a good is the same as the price supplied (set) by the producers.",
+        "image": "../../public/sliders/103/slider2/1034.png"
+    },
+    {
+        "name": "slide5",
+        "caption": "(5) Above the price and below the demand curve is what we call consumer surplus.",
+        "image": "../../public/sliders/103/slider2/1035.png"
+    },
+    {
+        "name": "slide6",
+        "caption": "(6) Below the price and above the supply curve is what we call the producers surplus.",
+        "image": "../../public/sliders/103/slider2/1036.png"
+    },
+    {
+        "name": "slide7",
+        "caption": "(7) The equilibirum price is also known as the price the good is being selled at. Let's say i'm willing to pay more than what that good is selling for- that means I value the good more than what it's worth. Regardless, I will buy the good.",
+        "image": "../../public/sliders/103/slider2/1037.png"
+    },
+    {
+        "name": "slide8",
+        "caption": "(8) But let's say you don't think the good is worth the price it's selling for- so you value the good less and hence are only willing to pay less for it but that's not the price it's selling at so you won't buy it. ",
+        "image": "../../public/sliders/103/slider2/1038.png"
+    },
+    {
+        "name": "slide9",
+        "caption": "(9) Notice, all the consumers or customers who value the good to be more than what it's selling at- we are willing to buy the good. We think it's a steal because we think it's worth more but we're getting it for less than what we think it's worth.",
+        "image": "../../public/sliders/103/slider2/1039.png"
+    },
+    {
+        "name": "slide10",
+        "caption": "(10) Notice, all the customers like you who think the good is not worth the price it's selling at in the market - those of you who value it less than what the market thinks it's worth simply will not buy the good because you're not willing to do so. ",
+        "image": "../../public/sliders/103/slider2/10310.png"
+    } ,
+    {
+        "name": "slide11",
+        "caption": "(11) So, in an efficient market, we are allocatively efficient because we allocate the goods to those consumers who value the good for more than what it's worth or exactly what it's worth. Clearly, in an efficient market, we don't allocate/supply the goods to those consumers like you who are not willing to pay for it because you value it less. I mean, if you go to a store and a video game costs $100, just because you think its worth less doesn't mean the price is going to change. You still have to buy it at the price it's selling at. But if you think the game is valued more than what it's selling for then you think it's a steal because you get to buy it for less than you were willing to.",
+        "image": "../../public/sliders/103/slider2/1038.png"
     }
+   
   ]

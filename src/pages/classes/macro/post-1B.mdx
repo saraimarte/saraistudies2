@@ -1,15 +1,16 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Fundamental Concepts of Macro Economics 
+title: Fundamental Concepts of Macro Economics
 date: 02/24/2024
 author: Sarai Marte
 ---
 
-import imgurl1 from "../../../../public/Images/103/1032.png";
-
-
+import Slider from '../../../components/displayComponents/Slider.astro';
+import sliderData1 from './sliders/slider2.json';
+import sliderData2 from './sliders/slider3.json';
 
 <span style=" font-family: var(--primaryFont);">
+
 
     The three decision making units are 
     <li style = "list-style:none">(1) Households</li>
@@ -44,7 +45,7 @@ import imgurl1 from "../../../../public/Images/103/1032.png";
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
-    # Opportunity Cost
+    # (1) Opportunity Cost
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
@@ -89,7 +90,7 @@ import imgurl1 from "../../../../public/Images/103/1032.png";
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
-    # Marginal Analysis
+    # (2) Marginal Analysis
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
@@ -109,12 +110,7 @@ import imgurl1 from "../../../../public/Images/103/1032.png";
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
-    # Efficient Markets
-
-    <div style = "object-fit:contain" >
-        <img src={imgurl1.src} alt="PPF Curve" width="100%" height="auto" /> 
-    </div>
-
+    # (3) Efficient Markets
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
@@ -133,22 +129,6 @@ import imgurl1 from "../../../../public/Images/103/1032.png";
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
-    ### Productive Efficiency
-
-    &nbsp;&nbsp;&nbsp;&nbsp;    
-
-    This is when we make the most of what we have.
-    
-    &nbsp;&nbsp;&nbsp;&nbsp;    
-
-    When markets produce at the lowest cost possible *while* maximizing the use of avaliable resources.
-
-    &nbsp;&nbsp;&nbsp;&nbsp;    
-
-    They're being productively efficient with their resources.
-
-    &nbsp;&nbsp;&nbsp;&nbsp;    
-
     ### Allocative Efficiency
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
@@ -161,14 +141,38 @@ import imgurl1 from "../../../../public/Images/103/1032.png";
   
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
-
     When markets produce at a point that will supply goods to the consumers who value those goods the most.
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
 
     In other words, when the benefit the consumer recevies from the product is equal to the cost the producers inccured from making the product- that is when the market has allocative efficiency.
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;    
+
+    <Slider data = {sliderData1}> </Slider>
 
     &nbsp;&nbsp;&nbsp;&nbsp;    
+
+    ### Productive Efficiency
+
+    &nbsp;&nbsp;&nbsp;&nbsp;    
+
+    This is when we make the most of what we have.
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;    
+
+    When markets produce at the lowest cost possible *while* maximizing the use of avaliable resources.
+   
+    &nbsp;&nbsp;&nbsp;&nbsp;    
+
+
+    They're being productively efficient with their resources.
+
+    &nbsp;&nbsp;&nbsp;&nbsp; 
+
+    <Slider data = {sliderData2}> </Slider>
+
+   
 
     <hr/>
 
