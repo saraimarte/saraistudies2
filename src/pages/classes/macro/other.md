@@ -19,7 +19,7 @@ True
 B.
 False
 
-Its false because its not a direct consequence of a shortage its a response to the shortage. Remember, the goal is to have a blanced economy so to keep that balance we dont want a shortage nor a surplus so to fix the shortage, we raise prices so that quantity demanded by the market decreases and our shortage becomes again just what people are demanding . Bc when price of something goes up, less people are going to buy it. Law of Demand.
+Its false because its not a direct consequence of a shortage its a response to the shortage. Remember, the goal is to have a blanced economy so to keep that balance we dont want a shorta ge nor a surplus so to fix the shortage, we raise prices so that quantity demanded by the market decreases and our shortage becomes again just what people are demanding . Bc when price of something goes up, less people are going to buy it. Law of Demand.
 
 A response to a surplus Qd  < Qs we want to lower prices so that more people demand the good. So when there is a surplus the response is to lower prices demand goes up.
 
