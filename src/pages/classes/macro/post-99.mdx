@@ -1,9 +1,32 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 
+title: Labor Force and Unemployment Rate
 date: 01/05/2024
 author: Sarai Marte
 ---
 
 
-Content blah blah blah
+
+import GameType3 from '../../../components/learningComponents/GameType3.astro';
+import data from './games/game2.json';
+
+<span style= "font-family: var(--primaryFont);">
+
+Labor Force = Unemployed  + Employed
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Unemployed = ppl who are jobless but are **actively** looking for work
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Discouraged Workers = ppl who were unemployed but were discouraged so they are no longer **actively** looking for a job hence not unemployed anymore.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<GameType3 
+	 data = {data}
+     hint = "hint"
+	 answer1A = "Structural" answer2A = "Cyclically" answer1B = "Seasonal" answer2B = "Frictional">
+</GameType3>
+</span>

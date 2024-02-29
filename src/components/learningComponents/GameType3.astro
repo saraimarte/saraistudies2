@@ -1,0 +1,362 @@
+---
+import '../../styles/Global.css';
+
+const {data, answer1A, answer2A, answer1B, answer2B, hint} = Astro.props;
+const randomIndex = 0;
+console.log(data)
+
+---
+
+<div class = "container" x-data = "{ open: false }" data-random-index={randomIndex}>
+    <div class = "a">
+        {randomIndex !== null ? (
+            <div>
+              <p class="prompt">
+                {data[randomIndex].name}
+              </p>
+            </div>
+          ) : (
+            <p>No more items to select</p>
+          )}
+    </div>
+    <form class="b">
+        <div class="left">
+            <div class="options">
+                <div>
+                    <input class="option" type="radio" id="optionA1" name="answerChoice" value={answer1A} />
+                    <label for="optionA1">{answer1A}</label><br>
+                </div>
+            
+                <div>
+                    <input class="option" type="radio" id="optionA2" name="answerChoice" value={answer2A} />
+                    <label for="optionA2">{answer2A}</label><br>
+                </div>
+               
+            </div>
+        </div>
+
+        <div class="right">
+            <div class="options">
+                <div>
+                    <input class="option" type="radio" id="optionB1" name="answerChoice" value={answer1B} />
+                    <label for="optionB1">{answer1B}</label><br>
+                </div>
+              
+                <div>
+                    <input class="option" type="radio" id="optionB2" name="answerChoice" value={answer2B} />
+                    <label for="optionB2">{answer2B}</label><br>
+                </div>
+                            
+            </div>
+        </div>
+    </form>
+    <div  class = "c">
+        <button @click = "open = ! open" class = "controls question" id = "hint"> Hint </button>
+        <button class = "controls leftBtn" id = "checkButton"> Check</button>
+        <button class = "controls" id = "solution"> </button>
+        <button class = "controls" id = "restartButton"> Restart </button>
+        <button class = "controls" id = "nextButton">Next</button>
+    </div>
+
+    <div x-show = "open" class = "modal">{hint}</div>
+
+
+</div>
+
+
+<script define:vars = {{data}}>
+    let costChosen = 0;
+    let chosenPrompts = [0];
+
+    const prompt = document.querySelector(".prompt");
+    const checkButton = document.getElementById("checkButton");
+    const nextButton = document.getElementById("nextButton");
+    let availablePrompts = []
+
+
+    function checkIfWeWillCHooseANewPrompt() {
+         //let availablePrompts be a list of prompts that have not been chosen yet 
+         availablePrompts = Array.from({ length: data.length }, (_, index) => index).filter(index => !chosenPrompts.includes(index) && index !== costChosen);
+        //if there are no more prompts left...
+        if (availablePrompts.length <=0 ) {
+            //then restart the whole thing including the prompts
+
+            //show restart button
+            const restartButton = document.getElementById("restartButton");
+            restartButton.style.display = "flex";
+
+            //hide all other buttons
+            const checkButton = document.getElementById("checkButton");
+            const nextButton = document.getElementById("nextButton");
+            const hint = document.getElementById("hint");
+
+            checkButton.style.display = "none";
+            nextButton.style.display = "none";
+            hint.style.display = "none";
+
+            availablePrompts = []
+            costChosen = 0;
+            chosenPrompts = [0];
+
+            restartButton.addEventListener("click", ()=> {
+                console.log("hey im restarting!")
+
+                //hide restart 
+                restartButton.style.display = "none";
+
+                //display all other buttons
+                const checkButton = document.getElementById("checkButton");
+                const nextButton = document.getElementById("nextButton");
+                const hint = document.getElementById("hint");
+
+                checkButton.style.display = "flex";
+                nextButton.style.display = "flex";
+                hint.style.display = "flex";
+                
+                checkButton.textContent = "Check"
+                //bring back the check button
+                checkButton.style.display = "flex"; 
+                //remove the next button
+                nextButton.style.display = "none"; 
+
+                //Get all options that were selected
+                const radioA = document.querySelector('input[name="answerChoice"]:checked');
+
+                // Unselect them
+                if (radioA) {
+                    radioA.checked = false;
+                }
+                //Change Next Btn back to default Color
+                nextButton.style.backgroundColor = "rgb(240, 240, 240)";
+            })
+
+        } else {
+            //pick a new prompt
+            costChosen = availablePrompts[Math.floor(Math.random() * availablePrompts.length)];
+            chosenPrompts.push(costChosen); //add the chosen prompt to the list so we don't pick it again
+            console.log("Random Index of Prompt " + costChosen);
+            prompt.textContent = data[costChosen].name;
+        }
+    }
+    
+    function onNextClicked(){
+        //Goal: Reset everything to how it was before I clicked the Check button for the first time EXCEPT for the prompt as long as game is still going.
+       
+        //remove the next button
+        nextButton.style.display = "none"; 
+        //bring back the check button
+        checkButton.style.display = "flex"; 
+
+
+        //Get all options that were selected
+        const radioA = document.querySelector('input[name="answerChoice"]:checked'); 
+
+        // Unselect them
+        if (radioA) {
+            radioA.checked = false;
+        }
+    
+        //Change Next Btn back to default Color
+        nextButton.style.backgroundColor = "rgb(240, 240, 240)";
+
+        checkIfWeWillCHooseANewPrompt();
+       
+    }
+
+
+  
+
+    function onCheckAnswersClicked(){
+        console.log("Checking Answer this is the current cost chosen: " + costChosen)
+        //take the check and next buttton 
+        const checkButton = document.getElementById("checkButton");
+        const nextButton = document.getElementById("nextButton");
+
+
+        //Find the selected answers
+        const selectedAnswer1 = document.querySelector('input[name="answerChoice"]:checked');
+        //See if they exist
+        //If they do exist...
+        if (selectedAnswer1) {
+            //Get their value
+            const selectedValueA = document.querySelector('input[name="answerChoice"]:checked').value;
+    
+            if (selectedValueA === data[costChosen].answers[0]) {
+                //remove the check button
+                checkButton.style.display = "none"; 
+                //add the next button
+                nextButton.style.display = "flex"; //if i do block it wont have flex and so it wont be centered.
+                //change next button to green
+                nextButton.style.backgroundColor = "rgb(145, 202, 204)"; //turn next button green   
+
+            }else{ // If either answer is wrong...
+                checkButton.textContent = "Check Again";
+                //change next button to red
+                //checkButton.style.backgroundColor = "#cc9391"; //turn next button green    
+
+            }
+
+        } else{ //error message
+            alert("You failed to select an answer.");
+        }
+      
+ 
+    }
+
+    checkButton.addEventListener("click", onCheckAnswersClicked);
+    nextButton.addEventListener("click", onNextClicked);
+
+
+</script>
+
+    
+<style>
+    .modal{
+        padding:20px;
+        width:100%;
+        height:100%;
+        background-color: rgb(240, 240, 240);
+    }
+    .container{
+        font-family: var(--primaryFont);
+        font-size: var(--text-md);
+    }
+    .selected{
+        font-size: var(--text-lg);
+    }
+
+    .container{
+        border: var(--border);
+        width:100%;
+        height:min-content;
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        padding:20px;
+
+    }
+    .a {
+        background-color: rgb(240, 240, 240);
+        padding:20px;
+        width:100%;
+        height:20%;
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .b{
+        display: flex;
+        height:50%;
+        width:100%;
+        background-color: rgb(240, 240, 240);
+        padding:20px 20px 20px 60px;
+
+    }
+
+    .left, .right {
+        width:50%;
+        display: flex;
+        height:100%;
+        padding:10px;
+        gap:1em;
+        justify-content: center;
+        align-items: center;
+        min-height:200px;
+
+    }
+
+    .controls{
+        height:50px;
+        width:50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(240, 240, 240);
+        font-size:var(--text-md);
+        border:none;
+        color:black;
+        padding:20px;
+
+    }
+    .controls:hover{
+        background-color: rgb(189, 189, 189);
+    }
+    .c{
+        display: flex;
+        height:min-height;
+        width:100%;
+        justify-content: center;
+        align-items: center; 
+        gap:0.2em;
+    }
+
+    .options{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        gap:1em;
+        width:100%;
+        font-size: 25px;
+
+    }
+
+
+    .options input[type='radio'] {
+        width:10%;
+        height:10%;
+        accent-color: rgb(145, 202, 204);
+        
+    }
+    #restartButton{
+        display: none;
+        width:100%;
+        background-color:rgb(240, 240, 240);
+
+    }
+    #solution{
+        display: none;
+    }
+    #nextButton{
+        background-color: rgb(195, 199, 199);
+        display: none;
+    }
+
+
+    /*for mobile*/
+    @media only screen and (max-width:850px){
+    .options{
+        position: relative;
+        right:15px;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap:1em;
+        width:100px;
+        font-size: 22px;
+    }
+    .options input[type='radio'] {
+        width:20px;
+        height:20px;
+        accent-color: rgb(145, 202, 204);
+        border: 3px solid #5b9390;
+    }
+}
+
+    @media only screen and (min-width:850px){
+    
+    .options input[type='radio']:checked {
+        appearance: none;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        background: rgb(145, 202, 204);
+        border: 3px solid #5b9390;
+        width:20px;
+        height:20px;
+    }}
+
+
+</style>
+

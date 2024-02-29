@@ -1,0 +1,35 @@
+[
+    {
+      "name": "Eva, a skilled graphic designer, lost her job when her company decided to outsource design work to a foreign agency. Eva is currently experiencing _______ unemployment.",
+      "answer": "Structural"
+    },
+    {
+      "name": "During a financial crisis, many tech companies faced a sharp decline in demand for their products, leading to layoffs. The affected employee, currently facing _______ unemployment, is",
+      "answer": "Cyclical"
+    },
+    {
+      "name": "Jake, a barista at a local coffee shop, was laid off when the shop closed due to the economic downturn caused by a global pandemic. Jake is currently experiencing _______ unemployment.",
+      "answer": "Cyclical"
+    },
+    {
+      "name": "Samantha works as a ski instructor in a resort town. During the summer months when skiing is not in season, she is currently experiencing _______ unemployment.",
+      "answer": "Seasonal"
+    },
+    {
+      "name": "After completing a degree in sustainable agriculture, Liam takes time off to volunteer on different farms to gain experience. Liam is currently facing _______ unemployment.",
+      "answer": "Frictional"
+    },
+    {
+      "name": "Employees at a solar panel manufacturing plant are laid off due to a decrease in government subsidies for renewable energy. The affected workers are currently experiencing _______ unemployment.",
+      "answer": "Structural"
+    },
+    {
+      "name": "A surge in online shopping leads to the closure of several brick-and-mortar retail stores, resulting in job losses for many retail workers. The affected workers are currently facing _______ unemployment.",
+      "answer": "Structural"
+    },
+    {
+      "name": "If the government implements automation to replace manual labor in certain industries, it may result in _______ unemployment.",
+      "answer": "Cyclical"
+    }
+  ]
+  
