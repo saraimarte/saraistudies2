@@ -1,94 +1,232 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Flow of Inventory Costs
+title: Value Chain + Manufacturing Costs vs Operational Costs + Inventory System
 date: 02/09/2024
 author: Sarai Marte
 ---
-
+<span style="font-family: var(--primaryFont)">
+import imgurl from '../../../../public/Images/275/2751.png';
+import imgurl2 from '../../../../public/Images/275/2752.png';
+import imgurl3 from '../../../../public/Images/275/2753.png';
+import imgurl4 from '../../../../public/Images/275/2754.png';
 import imgurl5 from '../../../../public/Images/275/2755.png';
-import imgurl7 from '../../../../public/Images/275/2757.png';
-import vid1 from '../../../../public/Images/275/275v1.gif';
-import vid2 from '../../../../public/Images/275/275v2.gif';
-import vid3 from '../../../../public/Images/275/275v3.gif';
+import imgurl6 from '../../../../public/Images/275/2756.png';
 
-<span style=" font-family: var(--primaryFont);">
+import {Image} from "astro:assets";
+
+
+
+# Intro
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The end goal of this chapter is to complete an income statement, which you should be familiar with from financial accounting.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+An income statement just states how much you really earned. It's your Revenues - Expenses = Net Income.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In managerial, expenses are more thought of as costs so it's really Revenues - Costs = Net Income.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+However, in managerial (for now) we will do Revenues - Costs = Operating Income (Net Income is after taxes).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 <div style = "object-fit:contain" >
+    <img src={imgurl2.src} alt="img1" width="100%" height="auto" /> 
+</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But what is considered Revenues and what is considered costs?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well it all starts with the value chain.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Value Chain
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Value Chain: Is the chain of steps a business takes to produce value (a product/service).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+All busineses start with researching and developing a product, then they design the product, then they produce (manufacture) the product and so on. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Within each of those steps there are research and development costs, design costs and production (manufacturing) costs. 
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div style = "object-fit:contain" >
+    <img src={imgurl3.src} alt="img1" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Every cost that falls under the green steps above goes under operational costs in the income statement (Including GAS Costs, General, Administrative, Sales Costs. Basically any cost that has nothing to do with producing the product in the plant/factory).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain" >
+    <img src={imgurl4.src} alt="img1" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+And the only costs left are production costs. In the production of a product, there's the manufacturing of the product and with manufacturing comes manufacturing costs. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If we were a company that manufactures cars...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total manufacturing costs consist of 
+
+<li style = "list-style:none">(1) Direct Materials DM  (steel, tires) </li>
+<li style = "list-style:none">(2) Direct Labor DL (workers on the assembly line) </li>
+<li style = "list-style:none">(3) Manufacturing Overhead MOH (rent, electricity, insurance of the plant) </li>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Take a lucky guess at which are the direct costs. As for Manufacturing Overhead- that's just a fancy way of saying indirect costs. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain">
+    <img src={imgurl.src} alt="img1" width="100%" height="auto" /> 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, these costs are taken through the inventory system.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Inventory System
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The inventroy system is made up of 3 accounts. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style = "list-style:none">(1) Direct Materials DM </li>
+<li style = "list-style:none">(2) Work In Process WIP</li>
+<li style = "list-style:none">(3) Finished Goods FG </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+To make a car, we first need material that goes directly into making the car hence the name <i> Direct </i> Materials. Let's say we take some steel and start making the car.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Once we take the steel and start to make the car with it, we are now in the <i> process </i> of making the car hence the name Work In <i> Process </i> but once we take more material and finish the car those costs go into Finished Goods because the car is <i> finished </i> hence the name <i> Finished </i> Goods.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now the good (the car) is just sitting in our plant waiting to be sold but once it sells the cost of the car <i> sold </i> is now moved out of the inventory system and into - guess where? - the Cost of Goods <i> sold </i> account. Who would have thought!
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div style = "object-fit:contain">
     <img src={imgurl5.src} alt="img1" width="100%" height="auto" /> 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We already discussed the concept of taking the costs through the inventory system but you really want to know <i>how</i> to actually do it, so here we go.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-First you need to remember how to use a t-account.
+And that ladies and gentlemen is how we get COGS. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-All the inventory accounts are asset accounts meaning that debits will increase the account and credits will decrease the account. 
+And COGS is what goes under revenue in the income statement.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style = "object-fit:contain" >
-    <img src={imgurl7.src} alt="img1" width="100%" height="auto" /> 
+
+<div style = "object-fit:contain">
+    <img src={imgurl6.src} alt="img1" width="100%" height="auto" /> 
 </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-So let's set up the accounts.
-
+voila! 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-<div style = "object-fit:contain" >
-    <img src={vid1.src} alt="img1" width="100%" height="auto" /> 
-</div>
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Point
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The point is that the goal is to make up an income statement but to do that you need your Revenues and Costs. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Every inventory account starts with a beginning inventory and ending inventory. COGS is not an inventory account, I have it there because I want to show you where the costs go there after they leave the inventory system. It is also why COGS has BB (for beginning balance) because it has no beginning <i> inventory </i>.
+Here revenue will mostly always be given to you but you have to identify the two different types of costs (1) Manufacturing Costs (2) Operating Costs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style = "object-fit:contain" >
-    <img src={vid2.src} alt="img1" width="100%" height="auto" /> 
-</div>
+Manufacturing Costs is just a fancy way of saying cost of goods completed and sold.
+
+(Manufacturing Costs are also known as <i>inventoriable</i> costs because they're costs that go through the <i>inventory</i> system.)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Each account has 1 thing that increases it (on the left) and 1 thing that decreases it (on the right).
+Think about it, the cost of the goods you sold in a manufacturing company is the same cost of the goods you manufactured. Because to sell the goods you had to manufacture them in the first place no?
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Also the fact that COGS is made up of DM + DL + MOH which <i> are </i> manufacturing costs.
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-<div style = "object-fit:contain" >
-    <img src={vid3.src} alt="img1" width="100%" height="auto" /> 
-</div>
+Operating Costs are literally every other cost. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-For example, purchases increases the DM acccount while usage decreases it. 
+Operating costs are any costs that are not inccured in the manufacturing/plant.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Think about it, when you purchase DM, you now quite literally have more DM hence you're increasing the DM account - that's why we put purchases on the left (the debit side) to increase the DM account.
+(They are also known as period costs b/c they are costs we record in the period in which they were inccured in.)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Then, the usage of that DM decreases the amount of DM hence we credit the DM acount to decrease it.
+Again, it includes costs in every step of the value chain except for the production/manufacturing step (the costs inccured during that step are manufacturing costs.)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-That DM we used goes to the DM we're in the process of using. Get it? So the DM we used goes into the WIP (Work in Process) account as DM. 
+Another way to remember operating costs are GAS (General, Adminitrative, Sales Costs).
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The WIP account contains the costs that are inccured in the process of making a product which includes the manufacturing costs, DM + DL + MOH.
-What decreases WIP is goods that are no longer in the process of being made so they are now known as COGM - the cost of goods manufactured/completed/done. 
-Then, COGM goes into finished goods account because the product is no longer being made- its done - finished - finito hence the Finished Goods account.
-The COGM now turn to GAS (Cost of goods avalible for sale) because they are finished goods that are waiting to be sold and once they're sold they leave the inventory system and into- you guessed it- COGS.
+So, what you will be doing for this entire chapter is not coming up with an income statement-that's the easy part. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Instead, it's finding COGS by taking the costs through the inventory system. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+To do that, you need to be comfortable with classifying costs and determining if they're a manufacturing cost or an operational cost in the first place.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So...let's practice taking those costs through the inventory system to get COGS.
 
 
 </span>
