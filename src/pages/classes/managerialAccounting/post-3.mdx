@@ -3,8 +3,9 @@ layout: '@layouts/Blog.astro'
 title: Value Chain + Manufacturing Costs vs Operational Costs + Inventory System
 date: 02/09/2024
 author: Sarai Marte
+chapter: 2
+
 ---
-<span style="font-family: var(--primaryFont)">
 import imgurl from '../../../../public/Images/275/2751.png';
 import imgurl2 from '../../../../public/Images/275/2752.png';
 import imgurl3 from '../../../../public/Images/275/2753.png';
@@ -12,9 +13,13 @@ import imgurl4 from '../../../../public/Images/275/2754.png';
 import imgurl5 from '../../../../public/Images/275/2755.png';
 import imgurl6 from '../../../../public/Images/275/2756.png';
 
-import {Image} from "astro:assets";
 
 
+import GameType2 from '../../../components/learningComponents/GameType2.astro';
+
+import data from './games/game2.json';
+
+<span style="font-family: var(--primaryFont)">
 
 # Intro
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -164,15 +169,29 @@ And COGS is what goes under revenue in the income statement.
 </div>
 
 voila! 
+
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+Okay, now practice identifying which costs are manufacturing or operating costs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Manufacturing Costs = Inventoriable Costs 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Operating Costs = Period Costs
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<GameType2  data = {data} answer1A = "Manufacturing" answer1B = "Operating" hint = "Manufacturing costs can be both directly or indirectly related to the MAKING of the product like the cost of rent for the plant (indirect) or the cost of tires for a car (direct). Operating costs are all other costs that are inccured during the operating period that have nothing to do with MAKING the product like the cost of office supplies or the cost of distributing the product after it was made (freight-out)"></GameType2>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 # The Point
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The point is that the goal is to make up an income statement but to do that you need your Revenues and Costs. 
+The point is- that the goal is to make up an income statement but to do that you need your Revenues and Costs. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -226,7 +245,10 @@ To do that, you need to be comfortable with classifying costs and determining if
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So...let's practice taking those costs through the inventory system to get COGS.
+So...now let's learn how to take those costs through the inventory system to get COGS in the next note.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 
 </span>

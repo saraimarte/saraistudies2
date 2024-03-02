@@ -1,35 +1,102 @@
 [
-    {
-      "name": "Eva, a skilled graphic designer, lost her job when her company decided to outsource design work to a foreign agency. Eva is currently experiencing _______ unemployment.",
-      "answer": "Structural"
-    },
-    {
-      "name": "During a financial crisis, many tech companies faced a sharp decline in demand for their products, leading to layoffs. The affected employee, currently facing _______ unemployment, is",
-      "answer": "Cyclical"
-    },
-    {
-      "name": "Jake, a barista at a local coffee shop, was laid off when the shop closed due to the economic downturn caused by a global pandemic. Jake is currently experiencing _______ unemployment.",
-      "answer": "Cyclical"
-    },
-    {
-      "name": "Samantha works as a ski instructor in a resort town. During the summer months when skiing is not in season, she is currently experiencing _______ unemployment.",
-      "answer": "Seasonal"
-    },
-    {
-      "name": "After completing a degree in sustainable agriculture, Liam takes time off to volunteer on different farms to gain experience. Liam is currently facing _______ unemployment.",
-      "answer": "Frictional"
-    },
-    {
-      "name": "Employees at a solar panel manufacturing plant are laid off due to a decrease in government subsidies for renewable energy. The affected workers are currently experiencing _______ unemployment.",
-      "answer": "Structural"
-    },
-    {
-      "name": "A surge in online shopping leads to the closure of several brick-and-mortar retail stores, resulting in job losses for many retail workers. The affected workers are currently facing _______ unemployment.",
-      "answer": "Structural"
-    },
-    {
-      "name": "If the government implements automation to replace manual labor in certain industries, it may result in _______ unemployment.",
-      "answer": "Cyclical"
-    }
-  ]
-  
+  {
+      "name": "Direct Materials Inventory.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Work in Process Inventory.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Finished Goods Inventory.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Direct materials used.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Indirect materials used.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Property taxes on manufacturing plant building.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Purchase of direct materials.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Miscellaneous plant overhead.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Plant utilities.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Direct manufacturing labor costs.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Plant insurance.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Repairs and maintenance-plant.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Depreciation-plant building and equipment.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Fixed manufacturing overhead.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Variable manufacturing overhead.",
+      "answers": ["Manufacturing"]
+  },
+  {
+      "name": "Marketing, distribution, and customer service costs.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "General administrative costs.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Sales commissions.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Administrative salaries.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "General office expenses.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Cost of office supplies.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Depreciation of office equipment.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Marketing distribution costs.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Salespersons' company vehicles costs.",
+      "answers": ["Period"]
+  },
+  {
+      "name": "Freight out.",
+      "answers": ["Period"]
+  }
+]

@@ -1,0 +1,118 @@
+[
+    {
+        "name": "Direct Materials Inventory.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Work in Process Inventory.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Finished Goods Inventory.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Direct materials used.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Indirect materials used.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Property taxes on manufacturing plant building.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Purchase of direct materials.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Miscellaneous plant overhead.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Plant utilities.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Direct manufacturing labor costs.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Plant insurance.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Repairs and maintenance-plant.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Depreciation-plant building and equipment.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Fixed manufacturing overhead.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Variable manufacturing overhead.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Marketing, distribution, and customer service costs.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "General administrative costs.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Sales commissions.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Administrative salaries.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "General office expenses.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Cost of office supplies.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Depreciation of office equipment.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Marketing distribution costs.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Salespersons' company vehicles costs.",
+        "answers": ["Operating"]
+    },
+    {
+        "name": "Glue Purchased",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Plant Rent.",
+        "answers": ["Manufacturing"]
+    },  
+    {
+        "name": "Spray Paint Purchased.",
+        "answers": ["Manufacturing"]
+    },
+    {
+        "name": "Salary of Plant Manager.",
+        "answers": ["Manufacturing"]
+    },    
+    {
+        "name": "Advertising Costs",
+        "answers": ["Operating"]
+    }
+]
