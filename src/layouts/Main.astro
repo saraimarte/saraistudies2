@@ -3,7 +3,7 @@ import BottomNav from "@components/BottomNav.astro";
 import TopNav from '@components/TopNav.astro';
 import '@styles/Global.css';
 const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
-
+import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 ---
 <html lang="en">
 	<head>
@@ -16,7 +16,11 @@ const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
     </head>
 	<body>
         <div x-data="{closedScreen:false}" class="container" >
-            <div x-show="!closedScreen" class="screen" >
+            <a href = "" id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
+                <img src = {folderIcon1.src} alt = "toolbox"></>
+                <p class = "label"> toolbox </p>
+            </a>
+            <div x-show="!closedScreen"  class="screen" >
                 <TopNav/>
                 <div class = "content">
                     <slot>
@@ -28,7 +32,120 @@ const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
 
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
+    <script type="module">
+        import 'https://cdn.interactjs.io/v1.9.20/auto-start/index.js'
+        import 'https://cdn.interactjs.io/v1.9.20/actions/drag/index.js'
+        import 'https://cdn.interactjs.io/v1.9.20/actions/resize/index.js'
+        import 'https://cdn.interactjs.io/v1.9.20/modifiers/index.js'
+        import 'https://cdn.interactjs.io/v1.9.20/dev-tools/index.js'
+        import interact from 'https://cdn.interactjs.io/v1.9.20/interactjs/index.js'
+      
+       
+        // target elements with the "draggable" class
+        interact('.folder')
+        .draggable({
+            // enable inertial throwing
+            inertia: true,
+            // keep the element within the area of it's parent
+            modifiers: [
+            interact.modifiers.restrictRect({
+                restriction: 'parent',
+                endOnly: false //this makes it so that the folder can only be dragged on the blue screen and not further than the bottom nav
+            })
+            ],
+            // enable autoScroll
+            autoScroll: true,
+
+            listeners: {
+            // call this function on every dragmove event
+            move: dragMoveListener
+            }
+        })
+
+        function dragMoveListener (event) {
+        var target = event.target
+        // keep the dragged position in the data-x/data-y attributes
+        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+
+        // translate the element
+        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+
+        // update the posiion attributes
+        target.setAttribute('data-x', x)
+        target.setAttribute('data-y', y)
+        }
+
+        // this function is used later in the resizing and gesture demos
+        window.dragMoveListener = dragMoveListener
+
+        document.addEventListener('click', function () {
+            var folderElement = document.querySelector('.folderVisible');
+
+            if (folderElement) {
+                folderElement.style.position = 'inherit';
+            }
+        });
+
+    </script>
+
+<script>
+
+    //Problem: I would drag the desktop folder and once i let go it would take me to it's page but I didnt want to go to the page just by dragging it. I wanted to go to the page if and only if I double click on the icon.
+    //Solution: this
+    // Get all elements with the class 'myLink'
+    var links = document.querySelectorAll('.myLink');
+
+    // Add event listeners to each element with the class 'myLink'
+    links.forEach(function(link) {
+        link.addEventListener('click', function (event) {
+            // Prevent the default behavior of the link on a single click
+            event.preventDefault();
+        });
+
+        link.addEventListener('dblclick', function () {
+            // Handle the double-click action, for example, open the link
+            window.location.href = this.getAttribute('href');
+        });
+    });
+</script>
 </html>
+
+
+
+
+
+<style>
+    .folder{
+        position:absolute;
+        z-index: -1;
+        height:10px;
+        width: 3.125em;
+        min-height: 1.125em;
+        touch-action: none;
+        user-select: none;
+        transform: translate(0px, 0px);
+        height: min-content;
+        width:max-content;
+        display: flex;
+        justify-self: center;
+        align-items: center;
+        flex-direction: column;
+        gap:0.2em;
+        text-decoration: none;
+        color:var(--primaryColor);
+    }
+
+    .folder img{
+        width: 3.125em;
+        height: 3.125em;
+    }
+    .label{
+        font-family: var(--primaryFont);
+
+    }
+</style>
+
 
 
 <style>
@@ -54,6 +171,7 @@ const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
    
 	}
 	.screen{
+        z-index:3;
         background-color: white;
         display:grid;
         grid-template-columns: 100%;
