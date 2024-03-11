@@ -91,46 +91,30 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     });
 
 
-</script>
-
+    </script>
 
 <script>
+
+    //Problem: I would drag the desktop folder and once i let go it would take me to it's page but I didnt want to go to the page just by dragging it. I wanted to go to the page if and only if I double click on the icon.
+    //Solution: this
+    // Get all elements with the class 'myLink'
     var links = document.querySelectorAll('.myLink');
 
+    // Add event listeners to each element with the class 'myLink'
     links.forEach(function(link) {
-        var touchstartTimestamp = 0;
-        var touchendTimestamp = 0;
-        var touchTimeout;
-
-        link.addEventListener('click', function(event) {
+        link.addEventListener('click', function (event) {
             // Prevent the default behavior of the link on a single click
             event.preventDefault();
         });
 
-        link.addEventListener('touchstart', function(event) {
-            // Record the timestamp when the touch starts
-            touchstartTimestamp = event.timeStamp;
-
-            // Clear any previous timeout
-            clearTimeout(touchTimeout);
-        });
-
-        link.addEventListener('touchend', function(event) {
-            // Record the timestamp when the touch ends
-            touchendTimestamp = event.timeStamp;
-
-            // Check if the time difference is within the double-click threshold
-            if (touchendTimestamp - touchstartTimestamp < 300) {
-                // Handle the double-tap action, for example, open the link
-                window.location.href = this.getAttribute('href');
-            }
-
-            // Clear the timestamps
-            touchstartTimestamp = 0;
-            touchendTimestamp = 0;
+        link.addEventListener('dblclick', function () {
+            // Handle the double-click action, for example, open the link
+            window.location.href = this.getAttribute('href');
         });
     });
 </script>
+
+
 
 </html>
 
