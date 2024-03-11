@@ -29,7 +29,6 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 		</div>
         <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}></BottomNav>
 	</body>
-
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
     <script type="module">
@@ -39,81 +38,89 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         import 'https://cdn.interactjs.io/v1.9.20/modifiers/index.js'
         import 'https://cdn.interactjs.io/v1.9.20/dev-tools/index.js'
         import interact from 'https://cdn.interactjs.io/v1.9.20/interactjs/index.js'
-      
-       
+    
         // target elements with the "draggable" class
         interact('.folder')
-        .draggable({
-            // enable inertial throwing
-            inertia: true,
-            // keep the element within the area of it's parent
-            modifiers: [
-            interact.modifiers.restrictRect({
-                restriction: 'parent',
-                endOnly: false //this makes it so that the folder can only be dragged on the blue screen and not further than the bottom nav
+            .draggable({
+                // enable inertial throwing
+                inertia: true,
+                // keep the element within the area of its parent
+                modifiers: [
+                    interact.modifiers.restrictRect({
+                        restriction: 'parent',
+                        endOnly: false // this makes it so that the folder can only be dragged on the blue screen and not further than the bottom nav
+                    })
+                ],
+                // enable autoScroll
+                autoScroll: true,
+    
+                listeners: {
+                    // call this function on every dragmove event
+                    move: dragMoveListener
+                }
             })
-            ],
-            // enable autoScroll
-            autoScroll: true,
-
-            listeners: {
-            // call this function on every dragmove event
-            move: dragMoveListener
-            }
-        })
-
-        function dragMoveListener (event) {
-        var target = event.target
-        // keep the dragged position in the data-x/data-y attributes
-        var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-        var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
-
-        // translate the element
-        target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
-
-        // update the posiion attributes
-        target.setAttribute('data-x', x)
-        target.setAttribute('data-y', y)
+    
+        function dragMoveListener(event) {
+            var target = event.target
+            // keep the dragged position in the data-x/data-y attributes
+            var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+            var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+    
+            // translate the element
+            target.style.transform = 'translate(' + x + 'px, ' + y + 'px)'
+    
+            // update the position attributes
+            target.setAttribute('data-x', x)
+            target.setAttribute('data-y', y)
         }
-
+    
         // this function is used later in the resizing and gesture demos
         window.dragMoveListener = dragMoveListener
-
+    
+        document.addEventListener('dblclick', function (event) {
+            // Prevent the default behavior of the double click
+            event.preventDefault();
+            var target = event.target;
+    
+            // If the double click is on a folder, navigate to its link
+            if (target.classList.contains('folder')) {
+                window.location.href = target.getAttribute('data-href');
+            }
+        });
+    
         document.addEventListener('click', function () {
-        var folderElement = document.querySelector('.folderVisible');
-
-        if (folderElement) {
-            // Set a 1-second delay before changing the style
-            setTimeout(function () {
-                folderElement.style.position = 'inherit';
-            }, 1000); // 1000 milliseconds = 1 second THISSS is the hack I found- so the prob was that the folder was showing for a quick sec everytime I would switch pages (maybe bc for a sec the screen is closed??) so I just added a 1 second delay for it to show up- so ig its showing up in the bg of the screen but i gave the screen a chance to appear before the folder!
-        }
-    });
-
-
+            var folderElement = document.querySelector('.folderVisible');
+    
+            if (folderElement) {
+                // Set a 1-second delay before changing the style
+                setTimeout(function () {
+                    folderElement.style.position = 'inherit';
+                }, 1000); // 1000 milliseconds = 1 second
+            }
+        });
     </script>
+    
 
+<script>
 
-
-<script type="module">
-    // Import taptap.js library
-    import taptap from 'https://cdn.jsdelivr.net/npm/taptap';
-
+    //Problem: I would drag the desktop folder and once i let go it would take me to it's page but I didnt want to go to the page just by dragging it. I wanted to go to the page if and only if I double click on the icon.
+    //Solution: this
+    // Get all elements with the class 'myLink'
     var links = document.querySelectorAll('.myLink');
 
+    // Add event listeners to each element with the class 'myLink'
     links.forEach(function(link) {
-        link.addEventListener('click', function(event) {
+        link.addEventListener('click', function (event) {
             // Prevent the default behavior of the link on a single click
             event.preventDefault();
         });
 
-        taptap(link).on('doubletap', function() {
-            // Handle the double-tap action, for example, open the link
-            window.location.href = link.getAttribute('href');
+        link.addEventListener('dblclick', function () {
+            // Handle the double-click action, for example, open the link
+            window.location.href = this.getAttribute('href');
         });
     });
 </script>
-
 
 
 
