@@ -1,5 +1,53 @@
 ---
 import Main from '@layouts/Main.astro';
+const pathHome =  './';
+const path1 = '/classes/financialAccounting/home';
+const path2 = '/classes/managerialAccounting/home';
+const path3 = '/classes/calc1/home';
+const path4 = '/classes/calc2/home';
+const path5 = '/classes/micro/home';
+const path6 = '/classes/macro/home';
+const path7 = '/classes/stats/home';
+const path8 = '/classes/compsci/home';
+const folderPath1 = "../../toolbox";
 ---
 
-<Main></Main>
+<Main  folderPath1= {folderPath1} pathHome = {pathHome} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}>
+
+<h1> free tools to help you study! </h1>
+
+<br>
+
+<ul>
+
+    <li> <a href = "https://homeworkify.st/mirror-1/"> Homeworkify </a></li>
+    <li> <a href = "https://pi.ai/onboarding"> Pi </a></li>
+    <li> <a href = "https://www.perplexity.ai/"> Perplexity AI </a></li>
+    <li> <a href = "https://you.com/"> You.com </a></li>
+    <li> <a href = "https://www.imagetotext.io"> Image to Text </a></li>
+    <li> <a href = "https://exa.ai/"> Exa.ai </a></li>
+    <li> <a href = "https://chatbot.mindpal.space/653354159110b78947172569"> Research Paper Recommender</a></li>
+
+
+</ul>
+
+
+</Main>
+
+<style>
+    h1{
+        font-style: var(--primaryFont);
+        font-weight: 400;
+    }
+
+    ul{
+        margin:0px 20px;
+    }
+
+    li{
+        margin-bottom:5px;
+    }
+    a{
+        color:black;
+    }
+</style>

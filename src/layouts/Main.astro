@@ -2,7 +2,7 @@
 import BottomNav from "@components/BottomNav.astro";
 import TopNav from '@components/TopNav.astro';
 import '@styles/Global.css';
-const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
+const {folderPath1, path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
 import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 ---
 <html lang="en">
@@ -16,7 +16,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     </head>
 	<body>
         <div x-data="{closedScreen:false}" class="container" >
-            <a href = "/src/pages/toolbox.astro" id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
+            <a href = {folderPath1}id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
                 <img src = {folderIcon1.src} alt = "toolbox"></>
                 <p class = "label"> toolbox </p>
             </a>
