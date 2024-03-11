@@ -193,11 +193,13 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         grid-template-rows: 80px 1fr;
         border: var(--border);
         width:100%;
-        height:100%;
+        border: 5px solid red;
         overflow-y:hidden;
         min-height:300px;
         padding: 20px 0px 0px 0px;
         grid-gap:1em;
+        height:95%;
+
 	}
     
     .content{
@@ -219,10 +221,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
        /* position: relative; this is causing problems for the folders making them undraggable on  mobile view*/
     }
 
-    .screen{
-        height:95%;
-    }
-
+  
 }
 
 /*once it reaches 768px desktop (desktop)*/
@@ -232,6 +231,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         max-width:800px;
     }
 
+    
 }
 
 
