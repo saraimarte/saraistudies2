@@ -11,12 +11,12 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Sarai Studies</title>
+		<title>sarai studies</title>
 
     </head>
 	<body>
         <div x-data="{closedScreen:false}" class="container" >
-            <a href = "" id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
+            <a href = "/src/pages/toolbox.astro" id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
                 <img src = {folderIcon1.src} alt = "toolbox"></>
                 <p class = "label"> toolbox </p>
             </a>
@@ -80,12 +80,16 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         window.dragMoveListener = dragMoveListener
 
         document.addEventListener('click', function () {
-            var folderElement = document.querySelector('.folderVisible');
+        var folderElement = document.querySelector('.folderVisible');
 
-            if (folderElement) {
+        if (folderElement) {
+            // Set a 1-second delay before changing the style
+            setTimeout(function () {
                 folderElement.style.position = 'inherit';
-            }
-        });
+            }, 1000); // 1000 milliseconds = 1 second THISSS is the hack I found- so the prob was that the folder was showing for a quick sec everytime I would switch pages (maybe bc for a sec the screen is closed??) so I just added a 1 second delay for it to show up- so ig its showing up in the bg of the screen but i gave the screen a chance to appear before the folder!
+        }
+    });
+
 
     </script>
 
@@ -110,8 +114,6 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     });
 </script>
 </html>
-
-
 
 
 
@@ -201,7 +203,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 @media only screen and (max-width:768px){
     .container{
         height:90%;
-        position: relative;
+       /* position: relative;*/ /*this is causing problems for the folders making them undraggable on  mobile view*/
         bottom:-5px;
     }
 
