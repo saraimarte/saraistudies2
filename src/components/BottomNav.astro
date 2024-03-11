@@ -96,7 +96,7 @@ const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
 
     .bottomNav {
         position: relative;
-        bottom: -2px;
+        bottom: -10px;
         display: flex;
         width: 100%;
         background-color: white;
@@ -117,6 +117,16 @@ const {path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
         height:50px;
 
     }
+    
+
+/*for mobile*/
+@media only screen and (max-width:768px){
+     .bottomNav {
+        position: relative;
+        bottom: -10px;
+     }
+  
+}
 
 </style>
 <script>
