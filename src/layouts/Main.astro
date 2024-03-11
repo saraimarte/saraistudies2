@@ -91,57 +91,47 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     });
 
 
-    </script>
-
-<!-- <script>
-
-    //Problem: I would drag the desktop folder and once i let go it would take me to it's page but I didnt want to go to the page just by dragging it. I wanted to go to the page if and only if I double click on the icon.
-    //Solution: this
-    // Get all elements with the class 'myLink'
-    var links = document.querySelectorAll('.myLink');
-
-    // Add event listeners to each element with the class 'myLink'
-    links.forEach(function(link) {
-        link.addEventListener('click', function (event) {
-            // Prevent the default behavior of the link on a single click
-            event.preventDefault();
-        });
-
-        link.addEventListener('dblclick', function () {
-            // Handle the double-click action, for example, open the link
-            window.location.href = this.getAttribute('href');
-        });
-    });
-</script>-->
+</script>
 
 
 <script>
-    var lastTapTime = 0;
-    var doubleTapDelay = 300; // Adjust the delay as needed
+    var links = document.querySelectorAll('.myLink');
 
-    // Add event listeners to each element with the class 'myLink'
     links.forEach(function(link) {
-        link.addEventListener('click', function (event) {
+        var touchstartTimestamp = 0;
+        var touchendTimestamp = 0;
+        var touchTimeout;
+
+        link.addEventListener('click', function(event) {
             // Prevent the default behavior of the link on a single click
             event.preventDefault();
         });
 
-        link.addEventListener('touchstart', function (event) {
-            // Calculate the time difference between taps
-            var currentTime = new Date().getTime();
-            var timeDifference = currentTime - lastTapTime;
+        link.addEventListener('touchstart', function(event) {
+            // Record the timestamp when the touch starts
+            touchstartTimestamp = event.timeStamp;
 
-            // Reset lastTapTime for the first tap or if the delay is too long
-            if (timeDifference > doubleTapDelay || timeDifference < 0) {
-                lastTapTime = currentTime;
-            } else {
+            // Clear any previous timeout
+            clearTimeout(touchTimeout);
+        });
+
+        link.addEventListener('touchend', function(event) {
+            // Record the timestamp when the touch ends
+            touchendTimestamp = event.timeStamp;
+
+            // Check if the time difference is within the double-click threshold
+            if (touchendTimestamp - touchstartTimestamp < 300) {
                 // Handle the double-tap action, for example, open the link
                 window.location.href = this.getAttribute('href');
-                lastTapTime = 0; // Reset lastTapTime after handling the double tap
             }
+
+            // Clear the timestamps
+            touchstartTimestamp = 0;
+            touchendTimestamp = 0;
         });
     });
 </script>
+
 </html>
 
 
