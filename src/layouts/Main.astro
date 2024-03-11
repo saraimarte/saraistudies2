@@ -119,13 +119,13 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 
 <style>
     .folder{
+        user-select: none;
         position:absolute;
         z-index: -1;
         height:10px;
         width: 3.125em;
         min-height: 1.125em;
         touch-action: none;
-        user-select: none;
         transform: translate(0px, 0px);
         height: min-content;
         width:max-content;
@@ -139,11 +139,16 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     }
 
     .folder img{
+        user-select: none;
         width: 3.125em;
         height: 3.125em;
+        touch-action: none;
+
     }
     .label{
         font-family: var(--primaryFont);
+        user-select: none;
+        touch-action: none;
 
     }
 </style>

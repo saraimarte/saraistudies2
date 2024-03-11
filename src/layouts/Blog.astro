@@ -12,9 +12,11 @@ const path8 = '/classes/compsci/home';
 
 const { frontmatter } = Astro.props;
 const {title, date, author, chapter} = frontmatter;
+const folderPath1 = '../../toolbox'; 
+
 ---
 
-<Main title = {title} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}>
+<Main folderPath1 = {folderPath1} title = {title} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}>
     <div class = "post-content">
         <div class = "header">
             <h1 class = "title">{title}</h1>
