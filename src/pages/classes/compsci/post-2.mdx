@@ -1,13 +1,376 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Installing Java and VS Code
-date: 01/05/2024
+title: Counting Operations
+date: 03/11/2024
 author: Sarai Marte
 ---
-# Template 
 
-# Print Statements
+<span style="font-family: var(--primaryFont);">
 
-# Compiling and Running
+Alright! Counting Operations is a skill. To master it- you need to practice.
 
-#
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I'm going to show you my thought process (literally- in a video) and then give you a similar example.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Refer to the Counting Operations section on the <a href = "https://rutgers.app.box.com/s/6saf32ambqftpwlnp3hds9z86i0yce2e">pseudocode reference sheet</a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program takes in two numbers and returns their sum.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ num1
+    READ num2
+
+    COMPUTE sum AS num1 + num2
+
+    DISPLAY sum
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program determines if a number is even or odd.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ number 
+
+    IF number % 2 == 0 THEN
+        DISPLAY even
+    ELSE 
+        DISPLAY odd
+    ENDIF
+
+    
+``` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 3
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program calculates the area of a rectangle.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ base
+    READ height
+
+    IF base < 0 OR height < 0 THEN
+        DISPLAY ERROR
+    ELSE  
+        COMPUTE area AS base * height 
+        DISPLAY area
+    ENDIF
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 4
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program calculates the total cost a customer will pay, factoring in a $10 discount coupon if their purchase amount exceeds $100; otherwise, it provides the original purchase amount.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ purchaseAmount
+
+    SET couponAmount TO 10  
+
+    IF purchaseAmount > 100 THEN
+        COMPUTE totalCost AS purchaseAmount - couponAmount
+    ELSE
+        SET totalCost TO purchaseAmount
+    ENDIF
+
+    DISPLAY totalCost
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 5
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program prints the numbers 1 to 5.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    SET i TO 1
+
+    WHILE i <= 5 
+        DISPLAY i
+        INCREMENT i BY 1
+    ENDWHILE
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 6
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program tells you when a rocket has launched.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ initialCountdown
+
+    SET countdown TO initialCountdown
+
+    WHILE countdown > 0 
+        DISPLAY "Countdown: " + countdown
+        COMPUTE countdown AS countdown - 1
+    ENDWHILE
+    
+    DISPLAY "Rocket Launched!"
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+## Example 7
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program helps a college student count down the days until the next break, updating them on the days left every morning.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    READ daysUntilBreak
+
+    WHILE daysUntilBreak > 0 
+        DISPLAY "Days until break: " + daysUntilBreak
+        COMPUTE daysUntilBreak AS daysUntilBreak - 1
+    ENDWHILE
+
+    DISPLAY "Break time! Enjoy your break!"
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Example 8
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program calculates a student's letter grade by considering both exam score and participation points. It validates the input and assigns a letter grade based on specific conditions, ensuring accurate grading.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   READ examScore
+   READ participationPoints
+
+   IF examScore < 0 OR examScore > 100 OR participationPoints < 0 OR participationPoints > 10 THEN
+     DISPLAY Please enter valid scores.
+   ELSE
+     IF examScore >= 90 AND participationPoints >= 5 THEN
+       SET letterGrade TO "A"
+     ELSE IF examScore >= 80 AND participationPoints >= 3 THEN
+       SET letterGrade TO "B"
+     ELSE IF examScore >= 70 AND participationPoints >= 2 THEN
+       SET letterGrade TO "C"
+     ELSE
+       SET letterGrade TO "F"
+     ENDIF
+     DISPLAY "Letter Grade: " + letterGrade
+   ENDIF
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+## Example 9
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program keeps track of a cleaner's money earned. The money they earn depends on each task they complete.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    SET moneyEarned TO 0
+
+    READ cleanRoom
+    READ washDishes
+    READ takeOutTrash
+    READ cleanBathroom
+    READ vacuumFloor
+
+    IF cleanRoom IS true THEN
+        ADD 20 TO moneyEarned
+    ENDIF
+
+    IF washDishes IS true THEN
+        ADD 15 TO moneyEarned 
+    ENDIF
+
+    IF takeOutTrash IS true THEN
+        ADD 5 TO moneyEarned
+    ENDIF
+
+    IF cleanBathroom IS true THEN
+        ADD 30 TO moneyEarned
+    ENDIF
+
+    IF vacuumFloor IS true THEN
+        ADD 20 TO moneyEarned
+    ENDIF
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+## Example 10
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This program calculates the total cost of purchasing items from a grocery store, with predefined prices for each item. 
+Assuming all inputs are positive integers including 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    SET totalCost TO 0
+
+    READ applesQuantity
+    READ bananasQuantity
+    READ orangesQuantity
+    READ tomatoesQuantity
+    READ cucumbersQuantity
+
+    IF applesQuantity > 0 THEN
+        ADD 2 * applesQuantity TO totalCost
+    ENDIF
+
+    IF bananasQuantity > 0 THEN
+        ADD 1.5 * bananasQuantity TO totalCost
+    ENDIF
+
+    IF orangesQuantity > 0 THEN
+        ADD 2.5 * orangesQuantity TO totalCost
+    ENDIF
+
+    IF tomatoesQuantity > 0 THEN
+        ADD 3 * tomatoesQuantity TO totalCost
+    ENDIF
+
+    IF cucumbersQuantity > 0 THEN
+        ADD 1 * cucumbersQuantity TO totalCost
+    ENDIF
+
+    DISPLAY totalCost
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Total Operations: ____  
+Minimum Operations: ____    
+Maximum Operations: ____   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</span>
