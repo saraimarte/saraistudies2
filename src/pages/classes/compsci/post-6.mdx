@@ -1,9 +1,170 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Input & Output (Std Library)
-date: 
+title: ✅ Math Library
+date: 03/12/2024
 author: Sarai Marte
 ---
 
+<span style="font-family: var(--primaryFont);">
 
-Content blah blah blah
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math Library
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Power Function
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Have you ever questioned how to square a number in java?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, you can multiply it by itself...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   System.out.println(4*4); //same thing as 4^2 = 16
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but what if you want to cube a number? 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, you can multiply it by itself 3 times...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   System.out.println(4*4*4); //same thing as 4^3 = 64
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But what if you want to raise a number to the 12th power?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Will you multiply that number by itself 12 times?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   System.out.println(4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4); //same thing as 4^12 = 16777216
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+...yeah no. We don't have all day.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+That's why the math library exists!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The library comes with a bunch of pre built functions you can use like the pow function (stands for power).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, using the pow function from the Math library...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   System.out.println(Math.pow(4, 12)); //same thing as 4^12 = 16777216 but much nicer :)
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: The Math.pow method returns only doubles.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Random Function
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+About:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style = "list-style:none"> (1) Generates a random **double** from 0 to 1.</li>
+<li style = "list-style:none"> (2) It always includes the first number. </li>
+<li style = "list-style:none"> (3) It does not include the last number unless you add a +1.</li>
+<li style = "list-style:none"> (4) If you want it to be a number greater than 0 to 1 then just multiply by the last number. </li>
+<li style = "list-style:none"> (5) Inclusive = number should be included. Exclusive = number should be excluded. </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1 | Generate a random *integer* between 0 and 1 not including 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) Math.random() 
+   System.out.println(randomNum);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+### Example 2 | Generate random *integer* between 1 and 10 (both inclusive)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) (Math.random() * 10 + 1); 
+   // OR int randomNum = (int) (Math.random() * 11); 
+
+   System.out.println(randomNum);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 3 | Generate random *integer* between 0 and 5 (not including 5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) (Math.random() * 5 ); 
+   System.out.println(randomNum);
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href = "https://rutgers.app.box.com/s/no7pcx03ikfh6ybm9fdu9kdw1zvrnjck"> See Week 3 pg 61 for more functions </a>
+
+
+
+
+
+
+
+
+</span>

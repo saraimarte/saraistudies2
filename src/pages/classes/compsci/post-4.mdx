@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Intro to Java 
+title: ✅ Intro to Java 
 date: 03/12/24
 author: Sarai Marte
 ---
@@ -31,15 +31,29 @@ For now, in java we write everything in between these two curly brackets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-I like to call it the template because it's the same thing you will use for every program you write in java.
+I like to call it the template because it's the same thing you will use for every program you write in java. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The professors do not even bother explaining what all these words like public, static, void, etc. mean until we learn about functions... so i'll do the same.
+We also call this the "main method" hence the "Main" after the void. Around this main method however should be the following, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Besides, knowing the meaning won't actually be of any use to you now.
+```java
+    
+    public class FileName {
+
+        public static void Main (String[] args){
+            
+                everything
+
+            }
+    }
+   
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It is simply declaring the filename. It's like when you open a google doc and give the doc a title- that's all its doing. It's saying "Hey, I want this document to be named [insert fileName]"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -52,16 +66,17 @@ Let's write our first program! Print "Hello World!"
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
+    
+    public class FileName {
 
-    public static void Main (String[] args){
-        
-        System.Out.println("Hello World!");
+        public static void Main (String[] args){
+            
+            System.out.println("Hello World!");
 
+            }
     }
-
-
+   
 ```
-
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 This can be read as we are contacting the **system** and we want it to **print** **out** **"Hello World!".**
@@ -78,11 +93,7 @@ You could have done
 
 ```java
 
-    public static void Main (String[] args){
-        
-        System.Out.print("Hello World!");
-
-    }
+     System.out.print("Hello World!");
 
 
 ```
@@ -109,6 +120,8 @@ What's the equivalent of running your mouth in Java? Literally running your code
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ## Compiling and Running
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 Before running we have to complie our code in our terminal. 
 
@@ -148,38 +161,5 @@ great! now you should see your Hello World!
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Data Types 
-
-## Inputs and Outputs
-
-## Booleans 
-
-## Math Library
-
-## Casting
-
-## If Statements
-
-## Nested If Statements
-
-## For Loops
-
-## While Loops
-
-
-example 7
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: == is not the same as =. We use =  to set something equal to something else. We use == to compare something to something else.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-x = y. Here, we are setting x equal to y.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-x == y. Here we are asking if x is the same as y.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
 
 </span>

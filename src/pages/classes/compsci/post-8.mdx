@@ -1,9 +1,150 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Recursive Algorithms
-date: 
+title: 🟡 If Statements & Loops
+date: 03/12/24
 author: Sarai Marte
 ---
 
 
-Content blah blah blah
+<span style="font-family: var(--primaryFont);">
+
+
+## If Statements
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are familiar with if statements from pseudocode but how do they look like in Java?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1| Create a program that displays if an inputted number is even or odd.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: We assume this number will be an integer.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hint: We use our input skills we learned in the last post! 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+ ```java
+
+    //take in number from user
+    int number = Integer.parseInt(args[0]);
+
+    //see if number is even
+    if (number % 2 == 0) {
+    // if it's even then print out that the numbe is even
+      System.out.println("Number is even!");
+    } else { //otherwise print out the number is false
+      System.out.println("Number is odd!");
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Compile and then run with,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    java fileName 4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+the output should be "Number is even!" because 4 is even.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Also, note that we used == instead of = on ```(number % 2 == 0)```.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why? Because == is not the same as =.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We use = to set something equal to something else. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We use == to compare something to something else.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x = y. Here, we are setting x equal to y.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x == y. Here we are asking if x is the same as y.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+(number % 2 = 0). Here, we are **setting** the remainder when the number is divided by 2 equal to 0. Which doesn't make sense because that it not a comparison.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+(number % 2 == 0). Here, we are **asking** if the remainder when the number is divided by 2 is the same as 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Nested If Statements
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## For Loops
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1| Create a program that prints out all the numbers from 0 to 5. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    for (int count = 0; count < 6; count++) {
+      System.out.println(count);
+    }
+
+   // 0 1 2 3 4 5
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## While Loops
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1| Create a program that prints out all the numbers from 0 to 5. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int count = 0;
+    while (count < 6 ) {
+      System.out.println(count);
+      count = count + 1;
+    }
+
+   // 0 1 2 3 4 5 
+ 
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Notice: we put 6 instead of 5 because remember that we start counting at 0 so we want it to include 5 so we add + 1.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</span>

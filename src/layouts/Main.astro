@@ -20,7 +20,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
                 <img src = {folderIcon1.src} alt = "toolbox"></>
                 <p class = "label"> toolbox </p>
             </a>
-            <div x-show="!closedScreen"  class="screen" >
+            <div x-show="!closedScreen" class="screen" >
                 <TopNav/>
                 <div class = "content">
                     <slot>
@@ -31,7 +31,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 	</body>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
-<script type="module">
+    <script type="module">
         import 'https://cdn.interactjs.io/v1.9.20/auto-start/index.js'
         import 'https://cdn.interactjs.io/v1.9.20/actions/drag/index.js'
         import 'https://cdn.interactjs.io/v1.9.20/actions/resize/index.js'
@@ -73,10 +73,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
             target.setAttribute('data-x', x)
             target.setAttribute('data-y', y)
         }
-    
-        // this function is used later in the resizing and gesture demos
-        window.dragMoveListener = dragMoveListener
-    
+
         document.addEventListener('dblclick', function (event) {
             // Prevent the default behavior of the double click
             event.preventDefault();
@@ -87,17 +84,18 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
                 window.location.href = target.getAttribute('data-href');
             }
         });
-    
-        document.addEventListener('click', function () {
-            var folderElement = document.querySelector('.folderVisible');
-    
-            if (folderElement) {
-                // Set a 1-second delay before changing the style
-                setTimeout(function () {
-                    folderElement.style.position = 'inherit';
-                }, 1000); // 1000 milliseconds = 1 second
-            }
-        });
+
+        document.getElementById('navItem').addEventListener('click', function () {
+        var visibleFolders = document.querySelector('.folderVisible');
+        
+        if (visibleFolders) {
+            setTimeout(function () {
+                visibleFolders.style.display = 'flex';
+            }, 10);
+        }
+    });
+
+
 </script>
     
 
@@ -130,7 +128,6 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     .folder{
         user-select: none;
         position:absolute;
-        z-index: -1;
         height:10px;
         width: 3.125em;
         min-height: 1.125em;
@@ -138,7 +135,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         transform: translate(0px, 0px);
         height: min-content;
         width:max-content;
-        display: flex;
+        display: none;
         justify-self: center;
         align-items: center;
         flex-direction: column;
@@ -209,7 +206,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
 
     }
 	
-
+    
 /*for mobile*/
 @media only screen and (max-width:768px){
     .container{
