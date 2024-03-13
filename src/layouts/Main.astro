@@ -110,14 +110,8 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
             event.preventDefault();
         });
 
-        link.addEventListener('mousedown', function (event) {
-            // Prevent selection on mousedown for both single and double clicks
-            event.preventDefault();
-        });
-
-        link.addEventListener('dblclick', function (event) {
+        link.addEventListener('dblclick', function () {
             // Handle the double-click action, for example, open the link
-            event.preventDefault(); // Prevent default browser behavior for double-click
             window.location.href = this.getAttribute('href');
         });
     });
