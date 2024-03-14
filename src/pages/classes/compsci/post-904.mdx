@@ -1,0 +1,200 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Functions
+date: 03/13/24
+author: Sarai Marte
+chapter: Week 7
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+You have a body.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Your body functions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Meaning it takes actions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What are some functions that your body takes?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, your body speaks. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, we can think of speaking as a function of your body.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style="width:100%;height:0;padding-bottom:125%;position:relative;"><iframe src="https://giphy.com/embed/de5yu652vsARnyh5x3" width="100%" height="100%" style="position:absolute" frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><p><a href="https://giphy.com/gifs/speaker-speak-megaphone-de5yu652vsARnyh5x3"></a></p>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You start with thinking about what you want to say, you subconsciously tell your mind that you want to say it so then your body functions and outputs what you wanted to say.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The average person however doesn't know how many neurons needed to be connected or whatever else needed to happen in order for that thought to be converted into spoken words but we don't care. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+All we care about is that if we input a thought, our body functions, and speaks that thought. We don't care what happens in between or how our body converted that thought into spoken words.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Similarly, in programming, functions are pre-written pieces of code that take in inputs (or no inputs) and then provide an output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We have already used many functions. For example: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(1) Math.pow()** is a function we've used. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We put in two inputs (number, what we want the number to be raised to) and get an output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ex. Math.pow(2, 3) is the same as 2^3 = 8
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We didn't have any idea what went on inside or how it converted the two inputs into the output, we just cared that it did it's job- which was to function (pun was intended).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's **function** was to input two numbers and output another number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(2) Math.random().**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is an example of a function we have used that does not take an input but provides 0 or one output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+By default, the code in this function - which we can't see- generates random numbers between 0 inclusive and 1 exclusive.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So there was no input but we knew that the output would be a number between [0, 1).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's only **function** was to output a number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(3) StdIn.readInt().**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This function we know takes in an integer as input, but it never outputs anything.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's only **function** was to read in an integer.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(4) main()**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This function took in an array called args- short for arguments- that could only take in Strings as input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Which is why we wrote
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```main (String[] args);```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+However, it never provided any output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's only **function** was to read in arguments.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Functions and Methods are the same thing in Java.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, how do we write a function?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How to write a function
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static dataType nameOfFunction (dataType nameOfDataValue, dataType2 nameOfDataValue2) {
+        code goes here
+    }
+ 
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+public -> everyone can acess it as opposed to a private function
+
+static -> we will use static for now in all our functions
+
+dataType -> this will always be the type of data your function will hold.
+
+nameOfFunction -> self explanatory
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example | Write a function that takes in two numbers and returns their sum.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    public static int sum (int num1, int num2) {
+        int sum = num1 + num2;
+        StdOut.println(sum);
+    }
+ 
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+### Problem 1| Write a function that takes in two numbers and returns their difference.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</span>

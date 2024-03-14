@@ -1,8 +1,9 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Arrays (1D & 2D)
+title: ✅ Arrays (1D)
 date: 03/12/24
 author: Sarai Marte
+chapter: Week 5
 ---
 
 
@@ -92,6 +93,8 @@ By reference variable I mean that in ```String[] names``` names is literally a v
  
 
 ```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 By default Java will fill in the arrays with 0's if you don't specify what to fill it with.
 
@@ -221,7 +224,7 @@ Okay! So if you run and compile that you should see ten 0's!
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Declaring, initializing and displaying an array with specific values
+### Declaring, initializing and displaying an array with specific values + Another way to think of looping through arrays.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -229,7 +232,7 @@ What if you don't just want a bunch of 0's?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-What if you want the arrray to hold values of 1, 2, 7, 8, 2?
+What if you want the array to hold values of 1, 2, 7, 8, 2?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -282,7 +285,7 @@ So to select student #1 from Rutgers I would do,
 
 ```java
 
-    Rutgers[0]
+    Rutgers[0] //get me the first student at rutgers
 
 
 ```
@@ -295,7 +298,9 @@ but in this case,
 
 ```java
 
-    numbers[0]
+    numbers[0] //get me the first number
+
+    //Output: 1
 
 
 ```
@@ -307,6 +312,131 @@ So, in the code above, i represents whatever index or ID we are currently at. As
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 Regardless, if you compile and run your code you should get 1 2 7 8 2!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Setting or changing specific array values
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's declare and initialize an array called ```studentAges``` that will hold the ages of 10 students.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    int[] studentAges = {24, 20, 18, 17, 19, 20, 21, 22, 23, 22};
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, let's say that we jotted down a few of the student's ages wrong. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The first student is actually 23 not 24.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The fourth student is actually 18 not 17.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The second to last student is actually 22 not 23.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How can we access those student's ages and change them?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, to change the first student's age we have to access the first student in the array. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Remember, in the programming world we start counting at 0! 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So our first student has an index (or id) of 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    int[] studentAges = {24, 20, 18, 17, 19, 20, 21, 22, 23, 22};
+    
+    studentAges[0] = 23; //select first student and set their age equal to 23
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, output the first studen't age to see if it changed!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    int[] studentAges = {24, 20, 18, 17, 19, 20, 21, 22, 23, 22};
+
+    studentAges[0] = 23; //select first student and set their age equal to 23
+
+    System.out.println(studentAges[0]); //print first student's age
+
+    //Output: 23
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You should get 23! Let's change the other student's ages we got wrong.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+```java
+
+    int[] studentAges = {24, 20, 18, 17, 19, 20, 21, 22, 23, 22};
+
+    studentAges[0] = 23; //select first student and set their age equal to 23
+
+    studentAges[3] = 18; //select fourth student and set their age equal to 18
+
+    studentAges[8] = 22; //method 1 select second to last student and set their age equal to 22
+    studentAges[studentAges.length - 2] = 22; // method 2
+
+    System.out.println(studentAges[0]); //print first student's age
+    System.out.println(studentAges[3]); //print fourth's student's age
+    System.out.println(studentAges[8]); //print second to last student's age
+      
+    //Output: 23 18 22
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Sometimes we will have an array with a lot of values and we don't want to specify which exactly is the second to last one and we can get away without specifying by taking the length of the array and just saying yeah subtract 2 and that should be the second to last value.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The moral of the story when it comes to accessing values from an array is that whatever value you think you want- just subtract 1 from it. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you want the first value then you should access the 0th space. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you want the fourth value then you should access the 3rd space and so on.
 
 
 </span>

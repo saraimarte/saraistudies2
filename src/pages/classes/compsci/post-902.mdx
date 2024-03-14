@@ -1,0 +1,256 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Inputs & Outputs (Std Library)
+date: 03/13/24
+author: Sarai Marte
+chapter: Week 6
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+
+## Installing the Standard Libraries
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Alrighty, so far we have taken inputs and outputs from the command line but there is another way and that is to use the standard libraries!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The idea is that we have a bunch of libraries that each have a bunch of methods we can use. For example, we can use the StdIn library and use it's readInt method to read in an integer and so on.
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You can download them <a href = "https://rutgers.app.box.com/s/jj32x6ibxigrxu5yfyhbpu4xxi8n9c20">here</a> if you are a Rutgers student.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If it's not letting you- make sure you sign up for box through <a href = "https://it.rutgers.edu/box/"> here </a>.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Make sure you drop them into the same folder that your file is in. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Taking in an input
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are used to doing the following, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int number = Integer.parseInt(args[0]);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We call that the command line method.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But we can also use the standard In library's method called readInt to read in a number given by the user.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int number = StdIn.readInt();
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When you run this you might be a bit confused because nothing is happening... but there is something happening. The program is waiting for you to put in a number and click enter.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you put in 2 and click enter, nothing is happening because you only told it to read the number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, use System.out to output the number you just put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+        
+    int number = StdIn.readInt(); //tell Java to read and store the number
+
+    System.out.println("You entered: " + number); //print out the number 
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you put 2 again you should get "You entered: 2" back.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: the way we use methods is by calling the standard library ```StdIn``` and telling it which method we want to borrow for a quick second ```.readInt()``` for example. Methods always end with ().
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You can also read in a double, string, or boolean.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int number = StdIn.readInt();
+    double decimal = StdIn.readDouble();
+    String stringValue = StdIn.readString();
+    boolean stringValue = StdIn.readBoolean();
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+## Providing an Output
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are used to doing the following, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+    
+    System.out.println(number);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We call that the command line method.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But we can also use the standard Out library's method called println.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    StdOut.println(number);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's use it in the example above to print out the number we put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    // here's a cool thing you can do
+    StdOut.println("Enter a number: "); //ask user to put in a number
+    
+    int number = StdIn.readInt(); //tell Java to read and store the number
+
+    StdOut.println("The number you put in was " + number); //print the number 
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When you compile and run this it will ask you to put in a number, if you put in 2 and click enter you should get 2 back.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Read in multiple inputs (into an array)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int[] integers = StdIn.readAllInts(); //read in a bunch of integers and store them in an array called integers
+    double[] doubles = StdIn.readAllDoubles();//read in a bunch of doubles and store them in an array called doubles
+    String[] strings = StdIn.readAllStrings(); //read in a bunch of strings and store them in an array called strings
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's say you want to take in a bunch of numbers and print out the first of them.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int[] numbers = StdIn.readAllInts();
+    StdOut.println("First Number: " + numbers[0]);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When running this line you need to enter the numbers with spaces in between, click enter and then CTRL + Z (Windows) or CTRL + D (Mac) to tell the computer that you are done inputting numbers and then click enter again.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example| Write a program that reads in a stream of integers from the user and stores them in an array. Then, print out the sum of all the integers in the array.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int[] numbers = StdIn.readAllInts(); //reads and stores all numbers
+
+    int sum =  0; //sets sum to 0
+
+    for (int number = 0; number < numbers.length; number++){ //as long as the number exists in the array, add that number to the sum, move on to the next number
+        sum = sum + numbers[number];
+    }
+
+    StdOut.println(sum); //print out the sum
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Read in Lines
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    String line = StdIn.readLine(); //reads in a whole line
+    StdOut.println(line); //prints that line once you click enter.
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: The enter represents the end of your line. As soon as you click enter, this program will print out exactly what you wrote on that line.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</span>

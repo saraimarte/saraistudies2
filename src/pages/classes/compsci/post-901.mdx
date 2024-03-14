@@ -1,0 +1,50 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Arrays (2D)
+date: 03/13/24
+author: Sarai Marte
+chapter: Week 5
+
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 2 Dimensional Arrays
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can also make 2D arrays- that simply means that instead of 1 column of data values we have 2.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int[][] numbers = new int[10][5];
+
+    for(int i = 0; i < numbers.length; i++ ){
+        System.out.println(numbers[i][i]);
+    }
+
+    //Output: 
+
+
+```
+
+```java
+
+    int[][] numbers = new int[10][5];
+
+    for (int row = 0; row < numbers.length; row ++) {
+        for(int column = 0; column < numbers.length; column++){
+            System.out.println(numbers[row][column]);
+        }
+    }
+
+    //Output: 
+
+
+```
+</span>

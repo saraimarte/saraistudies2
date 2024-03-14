@@ -3,6 +3,7 @@ layout: '@layouts/Blog.astro'
 title: 🟡 If Statements & Loops
 date: 03/12/24
 author: Sarai Marte
+chapter: Week 4
 ---
 
 
@@ -36,7 +37,7 @@ Hint: We use our input skills we learned in the last post!
 
     //see if number is even
     if (number % 2 == 0) {
-    // if it's even then print out that the numbe is even
+    // if it's even then print out that the number is even
       System.out.println("Number is even!");
     } else { //otherwise print out the number is false
       System.out.println("Number is odd!");
@@ -100,11 +101,73 @@ x == y. Here we are asking if x is the same as y.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+Let's build a calculator that can only multiply or divide two numbers.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The program should take in two numbers from the user and the operation they wish to perform (* or /).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hint: To compare a string to another you use .equals() method instead of ==.  
+Ex. ```operator.equals("*")```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+    int num1 = Integer.parseInt(args[0]); //read in first argument, turn it into an int and store it as num1  
+    int num2 = Integer.parseInt(args[1]); //same thing ^ but for second number
+    String operation = args[2]; //read in third argument which is already a string
+
+    if (operation.equals("*")){ //if user wants to multiply the numbers then...
+      
+      int product = num1 * num2; //compute product as the product of the 2 numbers
+      System.out.println("Product " + product); //print out the product
+
+    } else if (operation.equals("/")){ //if user wants to divide the numbers then...
+
+        //NESTED IF STATEMENT BELOW
+        if (num2 == 0){ //first check if 2nd number is 0, if it is then...
+
+          System.out.println("Error: Dividing by 0 is undefined."); //print out an error bc you can't divide by 0   
+
+        }else { //otherwise 
+
+            int quotient = num1/num2; // compute quotient as the quotient of the 2 numbers
+            System.out.println("Quotient: " + Quotient); //print out the quotient
+
+        }
+
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When the user says they want to divide the two numbers- that is a clear example of a nested if statement, because there is an if statement within another.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why? Because before dividing we had to do an additional check if the second number was 0 because we can't divide by 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Otherwise, we can go on to compute the quotient.
+
+
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
 ## For Loops
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 1| Create a program that prints out all the numbers from 0 to 5. 
+### Create a program that prints out all the numbers from 0 to 5. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -125,7 +188,7 @@ x == y. Here we are asking if x is the same as y.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 1| Create a program that prints out all the numbers from 0 to 5. 
+### Create a program that prints out all the numbers from 0 to 5. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
