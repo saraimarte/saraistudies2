@@ -37,3 +37,26 @@
     color: black;
   }
 
+summary{
+    user-select: none;
+    color:white;
+}
+
+/*
+details[open] {
+    padding: 10px;
+    border:5px solid green;
+  }
+
+  */
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    background-color: rgb(145, 202, 204);;
+    padding:5px 10px;
+    color:black;
+    font-family: var(--primaryFont);
+
+}
+  
