@@ -1,26 +1,24 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Math Library
-date: 03/12/2024
+title: ✅ Math Library
+date: 03/19/2024
 author: Sarai Marte
 chapter: Week 3
 ---
 
 <span style="font-family: var(--primaryFont);">
 
-TODO: round, abs, floor, max, min, sqrt, ceil, and pi
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math Library 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Math Library
+### Introduction
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Power Function
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Have you ever questioned how to square a number in java?
+Have you ever asked yourself how to square a number in java?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -77,11 +75,11 @@ That's why the math library exists!
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The library comes with a bunch of pre built functions you can use like the pow function (stands for power).
+The library comes with a bunch of pre built functions/methods you can use like the pow function (stands for power).
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, using the pow function from the Math library...
+So, using the power function from the Math library...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -94,11 +92,349 @@ So, using the pow function from the Math library...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Note: The Math.pow method returns only doubles.
+Note: I'm putting all these Math.methodName()'s inside System.out.println() method so you can copy and paste into your own file and see the result printed for yourself :)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Random Function
+## Math.pow()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Raises the first input to the power of the second input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.pow(5, 2)); //5^2 = 25.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Negative Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.pow(-5, 3)); //-5^3 = 125.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.pow(2.4,2)); //5.76
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: The Math.pow method returns only doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.min()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Finds the lowest value out of the two inputs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.min(1,2)); //1
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.min(1.2,2.4)); //1.2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.max()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Finds the greatest value out of the two inputs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.max(1,2)); //2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.max(1.2,2.4)); //2.4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.abs()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Takes absolute value of input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.abs(-1)); //1
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.max(-1.2)); //1.2
+   
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.sqrt()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Squares input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.sqrt(4)); //2.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Does not work with negative Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.sqrt(-4)); //NaN
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.sqrt(5.76)); //2.4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.ceil()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rounds whatever you give it to the next whole number (it just rounds up).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+20.9 -> 21
+
+20.2 -> 21 
+
+21 -> 21 (so, there is really no point in providing ints as input for ceil since it will give you the same thing you gave it.)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers (no point in this)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.ceil(21)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.ceil(20.9)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.ceil(20.2)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.floor()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Opposite of ceil(). This rounds down- to the FLOOR. Down. Floor. See the connection?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers (no point in this)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.ceil(20)); //20
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.floor(20.2)); //20.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.floor(20.9)); //20.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.PI
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Math.PI gives you &#120645; 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.PI); //3.141592653589793
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Math.random()
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -157,14 +493,24 @@ About:
 
 ```
 
-
 &nbsp;&nbsp;&nbsp;&nbsp;
+
 
 <a href = "https://rutgers.app.box.com/s/no7pcx03ikfh6ybm9fdu9kdw1zvrnjck"> See Week 3 pg 61 for more functions </a>
 
+&nbsp;&nbsp;&nbsp;&nbsp;
 
+## Conclusion
 
+&nbsp;&nbsp;&nbsp;&nbsp;
 
+Only Math.pow(), Math.sqrt(), Math.ceil() and Math.floor() return *only* doubles. As in no matter what you put in- in an integer or double- you will *only* get a double back.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Honestly, these are not too hard to remember but if this is what you're missing to study and your exam is in five minutes- do not bother memorizing these because these are on the cheat sheet they provide for you (they even include examples).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 
