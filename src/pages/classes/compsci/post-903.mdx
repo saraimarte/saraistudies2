@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Other StdIn and StdOut Library Methods
-date: 03/13/24
+title: 🟡 Redirecting and Piping
+date: 03/20/24
 author: Sarai Marte
 chapter: Week 6
 ---
@@ -9,10 +9,177 @@ chapter: Week 6
 
 <span style="font-family: var(--primaryFont);">
 
-Not only can we use the StdIn and StdOut libraries for inputs and outputes but we can also use the StdDraw library which helps us well, draw!
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Redirecting and Piping
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+## Redirecting to a file
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    java fileName1 > data.txt
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is saying, "Hey, I want to store the output of this program in data.txt"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Redirecting from a file
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    java fileName2 < data.txt
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is saying, "Hey, I want to use info from data.txt in my program."
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+OR
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is saying, "Hey, I want to use the output of the program in fileName1 in this program
+fileName2"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+With piping you can do this in one go
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    java fileName1 | fileName2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is saying, "Hey, I want to use the output from fileName1 as input in fileName2."
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What is the difference between redirecting and piping?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You might be like, well if piping can do the same thing and faster why use redirecting?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, we don't. We don't use redirecting for taking output from one file as input to another
+because piping can do it faster. We can but we don't.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Instead we use redirecting tools for their specific functionalities.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sometimes you don't want to use the output from one file in another, you just simply want to
+save the output as data you can look at later. Then you would just use redirecting to a file using,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    fileName1 > data.txt
+     
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sometimes, you download a file from the internet and want to use it as input in one of your files
+so you would use,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+     fileName1 < fileFromTheInterent.txt
+     
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Another perspective:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Step 1: We can take an output from file1 and save it in a text file called output.txt.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Step2: Later we can take that same output.txt file and use it's output as input for another program in file2.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But we can do this in one go with piping.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Step1: Piping takes the output of file1 straight as the input for file2.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Meaning that with piping we don't have to do 2 steps like we did in redirecting but only one step for when we want to use the output of one file in another.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, piping only exists for that case scenario but redirecting can also be used to do the same
+thing, it will just take an extra step.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+However, redirecting doesn't just exist to take output from one file to another. They also exist to
+do each individual part by itself.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sometimes you don't want to use the output from one file in another, you just simply want to
+save the output as data you can look at later. Then you would just use redirecting to a file using,
+java fileName1 > data.txt.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sometimes, you download a file from the internet and want to use it as input in one of your files
+so you would use,
+java fileName1 < fileFromTheInterent.txt
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Confused about the arrows?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Think of the pointy part of > or < as "to" so in
+java fileName1 > data.txt.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The pointy part is pointing to data.txt so the data is going into data.txt.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In java fileName1 < fileFromTheInterent.txt,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+the pointy part is pointing to fileName1 meaning the data from fileFromTheInterent is going into
+fileName1.
 
 
 </span>

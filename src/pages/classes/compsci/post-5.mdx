@@ -1,310 +1,518 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Data Types & Casting
-date: 03/12/24
+title: ✅ Math Library
+date: 03/19/2024
 author: Sarai Marte
 chapter: Week 3
 ---
-import Table6 from "@components/tableComponents/Table6.astro";
 
 <span style="font-family: var(--primaryFont);">
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math Library 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Data types are types of...well data that we can perform operations on.
+### Introduction
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-There are 5 types of data we will deal with in Java.
-
-<li style = "list-style:none"> (1) String (Text 'hello world')</li>
-<li style = "list-style:none"> (2) Int (Integers 1, 4, -2, -20) </li>
-<li style = "list-style:none"> (3) Double (Decimals 2.0 2.44) </li>
-<li style = "list-style:none"> (4) Boolean (True or False) </li>
-<li style = "list-style:none"> (5) Char (Chracters & or 'B') </li>
+Have you ever asked yourself how to square a number in java?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Initializating Data Types 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: From now on assume that everything I show you is written inside the main method - or the template as I like to call it.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-The format for Initializing a variable with a certain data types is 
-
-dataType variableName = value;
+Well, you can multiply it by itself...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    String name = "Sarai";  //String
-    int age = 102;          //Integer
-    double weight = 140.20; //Double 
-    boolean isHappy = true; //Boolean
-    char b = 'b';           //Char
-    
+   System.out.println(4*4); //same thing as 4^2 = 16
+
+
 ```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but what if you want to cube a number? 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Performing Operations on Data Types
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We can perform operations on these data types so let's practice.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Your operators consist of: 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<Table6/>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 1 | Initialize two integers, add them together and then display the result.
+Well, you can multiply it by itself 3 times...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    int num1 = 20;
-    int num2 = 10;
-
-    System.out.println(num1 + num2);
-
-    //30
+   System.out.println(4*4*4); //same thing as 4^3 = 64
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 2 | Initialize two integers, add them together and then display the result.
+But what if you want to raise a number to the 12th power?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Will you multiply that number by itself 12 times?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    String name = "Sarai";
-    String college = "Rutgers";
-    int age = 103;
-
-    System.out.println("My name is " + name + ". I go to " + college + " and I am " + age + " years old.");
-    
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 3 | 
-
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 4 | Initialize two doubles, subtract the second double from the other and then display the result.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
-
-    double num1 = 20;
-    double num2 = 10;
-
-    System.out.println(num2 - num1);
-    
-    //10
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 5 | What does this statement evaluate to?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
-
-    System.out.println(2 + 4 + "3");
-
-    // 63
+   System.out.println(4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4); //same thing as 4^12 = 16777216
 
 
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 6 | What does this statement evaluate to?
+...yeah no. We don't have all day.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+That's why the math library exists!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The library comes with a bunch of pre built functions/methods you can use like the pow function (stands for power).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, using the power function from the Math library...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    System.out.println(2 + "4" + 3);
-
-    // 243
-
-
-```
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 7| What does this statement evaluate to?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
-
-    System.out.println("4" + 2 + 3); 
-
-    // 423
-
-    //Why not 45? Because we only add the integers next to eachother if they are before a character. Here, they are after the character. (Charcter or string?)
+   System.out.println(Math.pow(4, 12)); //same thing as 4^12 = 16777216 but much nicer :)
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-### Example 8 | What does this statement evaluate to?
+Note: I'm putting all these Math.methodName()'s inside System.out.println() method so you can copy and paste into your own file and see the result printed for yourself :)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-```java
+## Math.pow()
 
-    String number = "String";
-    System.out.println(number);
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-    // "String"
+Raises the first input to the power of the second input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.pow(5, 2)); //5^2 = 25.0
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 9 | What does this statement evaluate to?
+Works with Negative Integers
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-```java
+```java 
 
-    boolean x = true;
-    boolean y = true;
-
-    System.out.println( (x && !y) || (x && y) );
-
-    //true
+   StdOut.println(Math.pow(-5, 3)); //-5^3 = 125.0
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 10 | What does this statement evaluate to?
+Works with Doubles
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-```java
+```java 
 
-    boolean x = true;
-    boolean y = true;
-
-    System.out.println( (true) || (1 > 5) );
-
-    //true
+   StdOut.println(Math.pow(2.4,2)); //5.76
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<hr/>
+Note: The Math.pow method returns only doubles no matter what you put in.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Casting
+## Math.min()
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Casting is all about changing a *numerical* data type to another (so it doesn't work with strings bc a string is not numerical).
+Finds the lowest value out of the two inputs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 1| Integer to a Double
+Works with Integers
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-```java
+```java 
 
-    int num1 = 20;
-
-    double num2 = (double) num1;
-
-    System.out.println(num2);
-
-    // 20.0
+   StdOut.println(Math.min(1,2)); //1
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 2| Double to an Integer
+Works with Doubles
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-```java
 
-    double weight = 140.20;
+```java 
 
-    //here the (int) turns the age which is a double into an integer
-    int weightAsAnInteger = (int) weight;
-
-    System.out.println(weightAsAnInteger);
-
-    // 140 
-    //Notice how it rounded down. 
-    //(int) will always round down even if the double is 140.90
-
-
-```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-But what if we do want to turn a string into an integer? 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We can use what are called the system's version of casting or the systems method which use parsing.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 3| String to an Integer
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
-
-    String ageAsString = "103"; //String
-
-    int ageAsInteger = Integer.parseInt(ageAsString); // Turning String into Integer
-    
-    System.out.println(ageAsInteger);
-
-    //103
+   StdOut.println(Math.min(1.2,2.4)); //1.2
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.max()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Finds the greatest value out of the two inputs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.max(1,2)); //2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.max(1.2,2.4)); //2.4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.abs()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Takes absolute value of input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.abs(-1)); //1
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.max(-1.2)); //1.2
+   
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.sqrt()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Squares input.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.sqrt(4)); //2.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Does not work with negative Integers
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.sqrt(-4)); //NaN
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.sqrt(5.76)); //2.4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.ceil()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rounds whatever you give it to the next whole number (it just rounds up).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+20.9 -> 21
+
+20.2 -> 21 
+
+21 -> 21 (so, there is really no point in providing ints as input for ceil since it will give you the same thing you gave it.)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers (no point in this)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.ceil(21)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.ceil(20.9)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.ceil(20.2)); //21
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.floor()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Opposite of ceil(). This rounds down- to the FLOOR. Down. Floor. See the connection?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Always returns doubles no matter what you put in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Integers (no point in this)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.ceil(20)); //20
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.floor(20.2)); //20.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Works with Doubles Ex2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+   StdOut.println(Math.floor(20.9)); //20.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Math.PI
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Math.PI gives you &#120645; 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+   StdOut.println(Math.PI); //3.141592653589793
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Math.random()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+About:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style = "list-style:none"> (1) Generates a random **double** from 0 to 1.</li>
+<li style = "list-style:none"> (2) It always includes the first number. </li>
+<li style = "list-style:none"> (3) It does not include the last number unless you add a +1.</li>
+<li style = "list-style:none"> (4) If you want it to be a number greater than 0 to 1 then just multiply by the last number. </li>
+<li style = "list-style:none"> (5) Inclusive = number should be included. Exclusive = number should be excluded. </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1 | Generate a random *integer* between 0 and 1 not including 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) Math.random() 
+   System.out.println(randomNum);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+### Example 2 | Generate random *integer* between 1 and 10 (both inclusive)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) (Math.random() * 10 + 1); 
+   // OR int randomNum = (int) (Math.random() * 11); 
+
+   System.out.println(randomNum);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 3 | Generate random *integer* between 0 and 5 (not including 5)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+   int randomNum = (int) (Math.random() * 5 ); 
+   System.out.println(randomNum);
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<a href = "https://rutgers.app.box.com/s/no7pcx03ikfh6ybm9fdu9kdw1zvrnjck"> See Week 3 pg 61 for more functions </a>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Conclusion
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Only Math.pow(), Math.sqrt(), Math.ceil() and Math.floor() return *only* doubles. As in no matter what you put in- in an integer or double- you will *only* get a double back.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Honestly, these are not too hard to remember but if this is what you're missing to study and your exam is in five minutes- do not bother memorizing these because these are on the cheat sheet they provide for you (they even include examples).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
 
 </span>

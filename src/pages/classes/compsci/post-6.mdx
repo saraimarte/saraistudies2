@@ -1,518 +1,208 @@
 ---
 layout: '@layouts/Blog.astro'
-title: ✅ Math Library
-date: 03/19/2024
+title: ✅ Inputs & Outputs (Command Line)
+date: 03/12/2024
 author: Sarai Marte
-chapter: Week 3
+chapter: Week 6
+
 ---
+
 
 <span style="font-family: var(--primaryFont);">
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math Library 
+Alrighty! We already know how to output things using ```System.out.println()``` but we can take in inputs from a user aswell.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Introduction
+We know that to do this in pseudocode we just use READ but what is the equivalent in Java?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Have you ever asked yourself how to square a number in java?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Well, you can multiply it by itself...
+### Example 1| Read in an Integer from a user (and display the integer +1)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   System.out.println(4*4); //same thing as 4^2 = 16
+   int age = Integer.parseInt(args[0]);
 
 
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-but what if you want to cube a number? 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Well, you can multiply it by itself 3 times...
+You might be asking what does args[0] mean?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, let's look at the whole thing.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   System.out.println(4*4*4); //same thing as 4^3 = 64
+    public class fileName {
+
+        public static void Main (String[] args){
+
+            int age = Integer.parseInt(args[0]);
+
+        }
+
+    }
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-But what if you want to raise a number to the 12th power?
+Here, I explain what this part ``` (String[] args)``` of the Main method does.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Will you multiply that number by itself 12 times?
+The format is (datatypeofInput1, nameOfInput1)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In this case we are saying that,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+datatypeofInput1 is a String - specifically an array (list) of strings.  
+nameOfInput1 is args - which stands for arguments.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are taking in a bunch of string arguments (or inputs in this case) and putting them into a list called args.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So when we write this, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   System.out.println(4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4 x 4); //same thing as 4^12 = 16777216
+   int age = Integer.parseInt(args[0]);
+   System.out.println(age + 1);
 
 
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-...yeah no. We don't have all day.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-That's why the math library exists!
+we're really saying "hey, take in the first argument/input (argument 0) that we're given, make it into an integer, and then set it equal to a variable called age who's datatype is an integer."
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The library comes with a bunch of pre built functions/methods you can use like the pow function (stands for power).
+Note: Remember that in programming we start counting at 0 not at 1!
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, using the power function from the Math library...
+But how does the user actually input an argument? 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Through the command line in the terminal. Open up your terminal CTRL + J. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We compile as usual,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   System.out.println(Math.pow(4, 12)); //same thing as 4^12 = 16777216 but much nicer :)
+    javac fileName.java
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Note: I'm putting all these Math.methodName()'s inside System.out.println() method so you can copy and paste into your own file and see the result printed for yourself :)
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.pow()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Raises the first input to the power of the second input.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.pow(5, 2)); //5^2 = 25.0
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Negative Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.pow(-5, 3)); //-5^3 = 125.0
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.pow(2.4,2)); //5.76
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: The Math.pow method returns only doubles no matter what you put in.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.min()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Finds the lowest value out of the two inputs.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.min(1,2)); //1
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.min(1.2,2.4)); //1.2
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.max()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Finds the greatest value out of the two inputs.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.max(1,2)); //2
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.max(1.2,2.4)); //2.4
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.abs()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Takes absolute value of input.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.abs(-1)); //1
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.max(-1.2)); //1.2
-   
-```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.sqrt()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Squares input.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.sqrt(4)); //2.0
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Does not work with negative Integers
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.sqrt(-4)); //NaN
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.sqrt(5.76)); //2.4
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: Always returns doubles no matter what you put in.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.ceil()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Rounds whatever you give it to the next whole number (it just rounds up).
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-20.9 -> 21
-
-20.2 -> 21 
-
-21 -> 21 (so, there is really no point in providing ints as input for ceil since it will give you the same thing you gave it.)
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: Always returns doubles no matter what you put in.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers (no point in this)
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.ceil(21)); //21
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles Ex1
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.ceil(20.9)); //21
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles Ex2
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.ceil(20.2)); //21
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.floor()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Opposite of ceil(). This rounds down- to the FLOOR. Down. Floor. See the connection?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Note: Always returns doubles no matter what you put in.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Integers (no point in this)
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.ceil(20)); //20
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles Ex1
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.floor(20.2)); //20.0
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Works with Doubles Ex2
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-```java 
-
-   StdOut.println(Math.floor(20.9)); //20.0
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Math.PI
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Math.PI gives you &#120645; 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-   StdOut.println(Math.PI); //3.141592653589793
-
-
-```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Math.random()
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-About:
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<li style = "list-style:none"> (1) Generates a random **double** from 0 to 1.</li>
-<li style = "list-style:none"> (2) It always includes the first number. </li>
-<li style = "list-style:none"> (3) It does not include the last number unless you add a +1.</li>
-<li style = "list-style:none"> (4) If you want it to be a number greater than 0 to 1 then just multiply by the last number. </li>
-<li style = "list-style:none"> (5) Inclusive = number should be included. Exclusive = number should be excluded. </li>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Example 1 | Generate a random *integer* between 0 and 1 not including 1
+But this time when running the code, we will need to pass in the first argument.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   int randomNum = (int) Math.random() 
-   System.out.println(randomNum);
+    java fileName 2
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+and that's it! Once you run it you should get 3 out because we told the program to take in the first input, add 1 to it and display the answer.
 
-### Example 2 | Generate random *integer* between 1 and 10 (both inclusive)
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: If you had not entered 2 then you would get an Index Out of Bounds Error because you did not enter the required amount of values the program expects you to.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 2| Read in and Display a Double from a user 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   int randomNum = (int) (Math.random() * 10 + 1); 
-   // OR int randomNum = (int) (Math.random() * 11); 
-
-   System.out.println(randomNum);
+    double weight = Double.parseDouble(args[0]);
+    System.out.println(weight);
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Example 3 | Generate random *integer* between 0 and 5 (not including 5)
+Compile and then run with,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-   int randomNum = (int) (Math.random() * 5 ); 
-   System.out.println(randomNum);
+    java fileName 150.2
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-<a href = "https://rutgers.app.box.com/s/no7pcx03ikfh6ybm9fdu9kdw1zvrnjck"> See Week 3 pg 61 for more functions </a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Conclusion
+and you should get 150.2 as an output.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Only Math.pow(), Math.sqrt(), Math.ceil() and Math.floor() return *only* doubles. As in no matter what you put in- in an integer or double- you will *only* get a double back.
+### Example 3| Read in 1 integer and 1 double from the user, add them together and output the result.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Honestly, these are not too hard to remember but if this is what you're missing to study and your exam is in five minutes- do not bother memorizing these because these are on the cheat sheet they provide for you (they even include examples).
+```java
 
+    int num1 = Integer.parseInt(args[0]);
+    double num2 = Double.parseDouble(args[1]);
+
+    double sum = num1 + num2;
+
+    System.out.println(sum);
+
+
+```
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
+Compile and then run with,
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    java fileName 6 6.2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and you should get 12.2 as output!
 
 </span>

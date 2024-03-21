@@ -1,166 +1,310 @@
 ---
 layout: '@layouts/Blog.astro'
-title: ✅ Intro to Java 
+title: 🟡 Data Types & Casting
 date: 03/12/24
 author: Sarai Marte
 chapter: Week 3
 ---
+import Table6 from "@components/tableComponents/Table6.astro";
 
 <span style="font-family: var(--primaryFont);">
 
-## Installing Java and VS Code
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## The Template
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-For now, in java we write everything in between these two curly brackets.
+Data types are types of...well data that we can perform operations on.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are 5 types of data we will deal with in Java.
+
+<li style = "list-style:none"> (1) String (Text 'hello world')</li>
+<li style = "list-style:none"> (2) Int (Integers 1, 4, -2, -20) </li>
+<li style = "list-style:none"> (3) Double (Decimals 2.0 2.44) </li>
+<li style = "list-style:none"> (4) Boolean (True or False) </li>
+<li style = "list-style:none"> (5) Char (Chracters & or 'B') </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Initializating Data Types 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: From now on assume that everything I show you is written inside the main method - or the template as I like to call it.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The format for Initializing a variable with a certain data types is 
+
+dataType variableName = value;
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    public static void Main (String[] args){
-        everything
-    }
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-I like to call it the template because it's the same thing you will use for every program you write in java. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We also call this the "main method" hence the "Main" after the void. Around this main method however should be the following, 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
+    String name = "Sarai";  //String
+    int age = 102;          //Integer
+    double weight = 140.20; //Double 
+    boolean isHappy = true; //Boolean
+    char b = 'b';           //Char
     
-    public class FileName {
-
-        public static void Main (String[] args){
-            
-                everything
-
-            }
-    }
-   
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-It is simply declaring the filename. It's like when you open a google doc and give the doc a title- that's all its doing. It's saying "Hey, I want this document to be named [insert fileName]"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Print Statements
+## Performing Operations on Data Types
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Let's write our first program! Print "Hello World!"
+We can perform operations on these data types so let's practice.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Your operators consist of: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<Table6/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1 | Initialize two integers, add them together and then display the result.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
+
+    int num1 = 20;
+    int num2 = 10;
+
+    System.out.println(num1 + num2);
+
+    //30
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 2 | Initialize two integers, add them together and then display the result.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    String name = "Sarai";
+    String college = "Rutgers";
+    int age = 103;
+
+    System.out.println("My name is " + name + ". I go to " + college + " and I am " + age + " years old.");
     
-    public class FileName {
-
-        public static void Main (String[] args){
-            
-            System.out.println("Hello World!");
-
-            }
-    }
-   
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-This can be read as we are contacting the **system** and we want it to **print** **out** **"Hello World!".**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The print**ln** stands for print **line**, meaning "Hello World!" will be printed in a new line.
+### Example 3 | 
+
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-You could have done 
+### Example 4 | Initialize two doubles, subtract the second double from the other and then display the result.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-     System.out.print("Hello World!");
+    double num1 = 20;
+    double num2 = 10;
+
+    System.out.println(num2 - num1);
+    
+    //10
 
 
 ```
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-and that would just print "Hello World!" on the same line.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Here, there is no difference because we're only printing one thing but if we had more things to print we wouldn't want them to be all printed in one line but in differrent ones so we use println.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Okay but you wrote it but nothing is happening. Why? Because you haven't ran it. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-It's like you thinking you want to say Hello to a person but not actually speaking it. You have to run your mouth to say something no?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-What's the equivalent of running your mouth in Java? Literally running your code.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-## Compiling and Running
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Before running we have to complie our code in our terminal. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Click on CTRL + J or CMD + J to open it in VSCode.
+### Example 5 | What does this statement evaluate to?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    javac fileName.java
+    System.out.println(2 + 4 + "3");
+
+    // 63
 
 
 ```
-
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-java**c** -> the c stands for complile
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-then to run the code write,
+### Example 6 | What does this statement evaluate to?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    java fileName
+    System.out.println(2 + "4" + 3);
+
+    // 243
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 7| What does this statement evaluate to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    System.out.println("4" + 2 + 3); 
+
+    // 423
+
+    //Why not 45? Because we only add the integers next to eachother if they are before a character. Here, they are after the character. (Charcter or string?)
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-great! now you should see your Hello World! 
+
+### Example 8 | What does this statement evaluate to?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+```java
+
+    String number = "String";
+    System.out.println(number);
+
+    // "String"
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 9 | What does this statement evaluate to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    boolean x = true;
+    boolean y = true;
+
+    System.out.println( (x && !y) || (x && y) );
+
+    //true
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 10 | What does this statement evaluate to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    boolean x = true;
+    boolean y = true;
+
+    System.out.println( (true) || (1 > 5) );
+
+    //true
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Casting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Casting is all about changing a *numerical* data type to another (so it doesn't work with strings bc a string is not numerical).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 1| Integer to a Double
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int num1 = 20;
+
+    double num2 = (double) num1;
+
+    System.out.println(num2);
+
+    // 20.0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 2| Double to an Integer
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    double weight = 140.20;
+
+    //here the (int) turns the age which is a double into an integer
+    int weightAsAnInteger = (int) weight;
+
+    System.out.println(weightAsAnInteger);
+
+    // 140 
+    //Notice how it rounded down. 
+    //(int) will always round down even if the double is 140.90
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But what if we do want to turn a string into an integer? 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can use what are called the system's version of casting or the systems method which use parsing.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Example 3| String to an Integer
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    String ageAsString = "103"; //String
+
+    int ageAsInteger = Integer.parseInt(ageAsString); // Turning String into Integer
+    
+    System.out.println(ageAsInteger);
+
+    //103
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 </span>

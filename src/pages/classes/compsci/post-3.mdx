@@ -1,23 +1,166 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Identifying Errors
-date: 
+title: ✅ Intro to Java 
+date: 03/12/24
 author: Sarai Marte
-chapter: Week 2
+chapter: Week 3
 ---
 
 <span style="font-family: var(--primaryFont);">
 
-Here is the checklist of possible errors: 
+## Installing Java and VS Code
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## The Template
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<li style = "list-style:none">(1) Within if statements or while loops there should NEVER be 1 equal sign. Only 2. </li>
+For now, in java we write everything in between these two curly brackets.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<li style = "list-style:none">(2)  </li>
+```java
+
+    public static void Main (String[] args){
+        everything
+    }
+
+
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+I like to call it the template because it's the same thing you will use for every program you write in java. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We also call this the "main method" hence the "Main" after the void. Around this main method however should be the following, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+    
+    public class FileName {
+
+        public static void Main (String[] args){
+            
+                everything
+
+            }
+    }
+   
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It is simply declaring the filename. It's like when you open a google doc and give the doc a title- that's all its doing. It's saying "Hey, I want this document to be named [insert fileName]"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Print Statements
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's write our first program! Print "Hello World!"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+    
+    public class FileName {
+
+        public static void Main (String[] args){
+            
+            System.out.println("Hello World!");
+
+            }
+    }
+   
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This can be read as we are contacting the **system** and we want it to **print** **out** **"Hello World!".**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The print**ln** stands for print **line**, meaning "Hello World!" will be printed in a new line.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You could have done 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+     System.out.print("Hello World!");
+
+
+```
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and that would just print "Hello World!" on the same line.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, there is no difference because we're only printing one thing but if we had more things to print we wouldn't want them to be all printed in one line but in differrent ones so we use println.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Okay but you wrote it but nothing is happening. Why? Because you haven't ran it. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's like you thinking you want to say Hello to a person but not actually speaking it. You have to run your mouth to say something no?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What's the equivalent of running your mouth in Java? Literally running your code.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Compiling and Running
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Before running we have to complie our code in our terminal. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Click on CTRL + J or CMD + J to open it in VSCode.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    javac fileName.java
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+java**c** -> the c stands for complile
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+then to run the code write,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    java fileName
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+great! now you should see your Hello World! 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 </span>
