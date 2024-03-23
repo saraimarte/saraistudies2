@@ -4,7 +4,6 @@ const {className,classCode} = Astro.props;
 
 <div class = "container">
         <h1 id = "className">{className}</h1>
-        <div class = "hide icon"></div>
         <h1 id = "classCode">{classCode}</h1>
 </div>
 
@@ -20,27 +19,16 @@ const {className,classCode} = Astro.props;
         font-family: var(--primaryFont);
         font-weight: 400;
         margin-top:20px;
-        font-size: var(--text-xl);
-    }
-    .icon{
-        position: relative;
-        top:10px;
-        width:13px;
-        height:13px;
-        border-radius: 50%;
-        border:var(--border);
-        display: block;
-
-    }
+        font-size: clamp(16px, 4vw, 32px); 
+       }
+    
     
     /*for mobile*/
     @media only screen and (max-width:850px){
         #className, #classCode{
             font-size:larger;
         }
-        .hide{
-            display:none;
-        }
+      
         .container{
             flex-direction: column;
             align-items: flex-start;

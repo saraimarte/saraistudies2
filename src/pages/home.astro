@@ -83,6 +83,8 @@ const folderPath1 = "../../toolbox";
 	#logo, .title{
         font-family: var(--primaryFont);
         font-weight: 400;
+		font-size: 20px;
+
     }
 
     .title{
@@ -93,9 +95,23 @@ const folderPath1 = "../../toolbox";
 
 	}
 
+	
     p{
-        font-size: var(--text-lg);
+        font-size: var(--text-s);
     }
+
+	/*until it reaches 768px desktop (for mobile)*/
+	@media only screen and (max-width:768px){
+		p{
+       		font-size: var(--text-lg);
+    	}
+		
+		#logo, .title{
+			font-size:var(--text-heading);
+
+		}
+			
+	}
 
 
 </style>

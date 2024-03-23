@@ -96,7 +96,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     });
 
 
-</script>
+    </script>
     
 
 <script>
@@ -168,16 +168,18 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         height:100svh; 
         width:100%;
         overflow-y: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 
 	.container{
-        height:95%;
+        height:92%;
         width:100%;
         padding:20px 20px 20px 20px;
 
 	}
 	.screen{
-        z-index:3;
         background-color: white;
         display:grid;
         grid-template-columns: 100%;
@@ -200,29 +202,19 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         /* This is the part that makes it scrollable */
         overflow-y: auto;
         /*scrollbar-width:none; */
-
-
     }
 	
     
-/*for mobile*/
-@media only screen and (max-width:768px){
-    .container{
-        height:95%;
-       /* position: relative; this is causing problems for the folders making them undraggable on  mobile view*/
-    }
-  
-}
-
 /*once it reaches 768px desktop (desktop)*/
 @media only screen and (min-width:768px){
     .content{
         margin: 0 auto;
         max-width:800px;
-    }
 
+        }
     
 }
 
+    
 
 </style>
