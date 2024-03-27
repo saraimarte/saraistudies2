@@ -2,8 +2,10 @@
 import BottomNav from "@components/BottomNav.astro";
 import TopNav from '@components/TopNav.astro';
 import '@styles/Global.css';
-const {folderPath1, path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
+const {folderPath1, folderPath2, path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
 import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
+import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
+
 ---
 <html lang="en">
 	<head>
@@ -19,6 +21,10 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
             <a href = {folderPath1} id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
                 <img src = {folderIcon1.src} alt = "toolbox"></>
                 <p class = "label"> toolbox </p>
+            </a>
+            <a href = {folderPath2} id = "folder2" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
+                <img src = {folderIcon1.src} alt = "ranks"></>
+                <p class = "label"> rankings </p>
             </a>
             <div x-show="!closedScreen" class="screen" >
                 <TopNav/>
@@ -147,14 +153,15 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
         width: 3.125em;
         height: 3.125em;
         touch-action: none;
-
     }
+    
     .label{
         font-family: var(--primaryFont);
         user-select: none;
         touch-action: none;
-
     }
+
+ 
 </style>
 
 
@@ -210,8 +217,7 @@ import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
     .content{
         margin: 0 auto;
         max-width:800px;
-
-        }
+    }
     
 }
 

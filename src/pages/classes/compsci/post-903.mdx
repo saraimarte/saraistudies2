@@ -27,7 +27,7 @@ chapter: Week 6
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This is saying, "Hey, I want to store the output of this program in data.txt"
+This is saying, "Hey, I want to store the output of this program in**to** data.txt"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -43,7 +43,7 @@ This is saying, "Hey, I want to store the output of this program in data.txt"
 ```
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This is saying, "Hey, I want to use info from data.txt in my program."
+This is saying, "Hey, I want to use info from data.txt in**to** my program."
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -51,7 +51,7 @@ OR
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This is saying, "Hey, I want to use the output of the program in fileName1 in this program
+This is saying, "Hey, I want to use the output of the program into fileName1 in this program
 fileName2"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -115,71 +115,140 @@ so you would use,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Another perspective:
+
+<details>
+
+  <summary>Another way to think of this </summary>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Step 1: We can take an output from file1 and save it in a text file called output.txt.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Step2: Later we can take that same output.txt file and use it's output as input for another program in file2.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    But we can do this in one go with piping.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Step1: Piping takes the output of file1 straight as the input for file2.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Meaning that with piping we don't have to do 2 steps like we did in redirecting but only one step for when we want to use the output of one file in another.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    So, piping only exists for that case scenario but redirecting can also be used to do the same
+    thing, it will just take an extra step.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    However, redirecting doesn't just exist to take output from one file to another. They also exist to
+    do each individual part by itself.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Sometimes you don't want to use the output from one file in another, you just simply want to
+    save the output as data you can look at later. Then you would just use redirecting to a file using,
+    java fileName1 > data.txt.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Sometimes, you download a file from the internet and want to use it as input in one of your files
+    so you would use,
+    java fileName1 < fileFromTheInterent.txt
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Step 1: We can take an output from file1 and save it in a text file called output.txt.
+## Confused about the arrows?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Step2: Later we can take that same output.txt file and use it's output as input for another program in file2.
+Note: Think of the pointy part of > or < as "**to**", so in  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-But we can do this in one go with piping.
+```java 
+
+    java fileName1 > data.txt
+
+
+ ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Step1: Piping takes the output of file1 straight as the input for file2.
+The pointy part is pointing **to** data.txt so the data is going in**to** **data.txt**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Meaning that with piping we don't have to do 2 steps like we did in redirecting but only one step for when we want to use the output of one file in another.
+```java 
+
+    java fileName1 < fileFromTheInterent.txt
+
+
+ ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, piping only exists for that case scenario but redirecting can also be used to do the same
-thing, it will just take an extra step.
+the pointy part is pointing **to** fileName1 meaning the data from fileFromTheInterent is going in**to**
+**fileName1**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-However, redirecting doesn't just exist to take output from one file to another. They also exist to
-do each individual part by itself.
+## Possible Errors
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Sometimes you don't want to use the output from one file in another, you just simply want to
-save the output as data you can look at later. Then you would just use redirecting to a file using,
-java fileName1 > data.txt.
+<details>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+  <summary>
+   The < operator is reserved for future use. Error when running java AirParticles < SmallerPM2.5.txt.
 
-Sometimes, you download a file from the internet and want to use it as input in one of your files
-so you would use,
-java fileName1 < fileFromTheInterent.txt
+    &nbsp;&nbsp;&nbsp;&nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+    ``` java
 
-### Confused about the arrows?
+        At line:1 char:19
+        + java AirParticles < SmallerPM2.5.txt
+        +                   ~
+        The '<' operator is reserved for future use.
+            + CategoryInfo          : ParserError: (:) [], ParentContainsErrorRecordException
+            + FullyQualifiedErrorId : RedirectionNotSupported
 
-&nbsp;&nbsp;&nbsp;&nbsp;
 
-Note: Think of the pointy part of > or < as "to" so in
-java fileName1 > data.txt.
+    ```
+   </summary>
+  
+    &nbsp;&nbsp;&nbsp;&nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+    You are getting this error probably because you are using VS Code's Terminal. 
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;
 
-The pointy part is pointing to data.txt so the data is going into data.txt.
+    Fact: VSCodes Terminal runs on powershell. 
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
 
-In java fileName1 < fileFromTheInterent.txt,
+    And Powershell does not support ```java java AirParticles < SmallerPM2.5.txt ``` so you have to use the command prompt.
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+    &nbsp;&nbsp;&nbsp;&nbsp;
 
-the pointy part is pointing to fileName1 meaning the data from fileFromTheInterent is going into
-fileName1.
+    Next to where it says "powershell" in the right corner of the terminal near the 'x' there should be a plus sign and a drop down arrow. Click on the drop down arrow and click "Command Prompt" should be the third option from the top. Now run the same line and it should work,
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    If you're on apple you wouldn't get this error because apple uses zsh (z-shell) not powershell.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+</details>
 
 
 </span>
