@@ -2,9 +2,10 @@
 import BottomNav from "@components/BottomNav.astro";
 import TopNav from '@components/TopNav.astro';
 import '@styles/Global.css';
-const {folderPath1, folderPath2, path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
+const {folderPath1, folderPath2, folderPath3, path1, path2, path3, path4, path5, path6, path7, path8} = Astro.props;
 import folderIcon1 from '../../public/folderIcons/1x/toolbox.png';
-import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
+import folderIcon2 from '../../public/folderIcons/1x/rankings.png';
+import folderIcon3 from '../../public/folderIcons/1x/ratings.png';
 
 ---
 <html lang="en">
@@ -23,8 +24,12 @@ import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
                 <p class = "label"> toolbox </p>
             </a>
             <a href = {folderPath2} id = "folder2" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
-                <img src = {folderIcon1.src} alt = "ranks"></>
+                <img src = {folderIcon2.src} alt = "ranks"></>
                 <p class = "label"> rankings </p>
+            </a>
+            <a href = {folderPath3} id = "folder3" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
+                <img src = {folderIcon3.src} alt = "rating"></>
+                <p class = "label"> ratings </p>
             </a>
             <div x-show="!closedScreen" class="screen" >
                 <TopNav/>
@@ -90,17 +95,16 @@ import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
                 window.location.href = target.getAttribute('data-href');
             }
         });
-
         document.getElementById('navItem').addEventListener('click', function () {
-        var visibleFolders = document.querySelector('.folderVisible');
-        
-        if (visibleFolders) {
-            setTimeout(function () {
-                visibleFolders.style.display = 'flex';
-            }, 10);
-        }
-    });
+    const visibleFolders = document.querySelectorAll('.folderVisible');
 
+    visibleFolders.forEach((folder, index) => {
+        setTimeout(() => {
+            folder.style.display = 'flex';
+            folder.style.top = `${(index + 0.2) * 100}px`; // Adjust the value to control the vertical spacing
+        }, 10 * (index + 1)); // Delay each folder's appearance
+        });
+    });
 
     </script>
     
@@ -121,6 +125,8 @@ import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
             window.location.href = this.getAttribute('href');
         });
     });
+
+    
 </script>
 
 
@@ -136,7 +142,6 @@ import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
         width: 3.125em;
         min-height: 1.125em;
         touch-action: none;
-        transform: translate(0px, 0px);
         height: min-content;
         width:max-content;
         display: none;
@@ -171,6 +176,7 @@ import folderIcon2 from '../../public/folderIcons/1x/toolbox.png';
         background: url('../../public/012024r2.png');
         background-size: cover;
     }
+    
     body{
         height:100svh; 
         width:100%;
