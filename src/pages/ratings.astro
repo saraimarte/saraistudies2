@@ -12,29 +12,57 @@ const path8 = '/classes/compsci/home';
 const folderPath1 = "../../toolbox";
 const folderPath2 = "../../rankings";
 const folderPath3 = "../../ratings";
-
+import '../styles/Global.css';
 ---
 
 <Main  folderPath1= {folderPath1} folderPath2 = {folderPath2} folderPath3 = {folderPath3}  pathHome = {pathHome} path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8}>
 
-<h1 class = "title"> Here, I rank all the business core classes and comp sci classes by level of busywork.</h1>
+<h1 class = "title"> Class Ratings </h1>
 
-<p> As a double major, I was always taking max credits every semester, and I often found myself wanting to know out of thee billion business core classes I was required to take- which one would be 'easy'. I define easy as 'I don't have to try at all because everything is just busy work'.</p>
+<br>
+
+<p> Here, I rate all the classes I have taken in both finance and cs majors out of 3 categories: enjoyment, amount of study time you need to put in and quality of teaching.</p>
+
+<br>
+
+<span class = "color"> Rating Format (Enjoyment, Amt of Study Time Needed, Teaching Quality) </span>
+
+<br>
+<h3> Key </h3>
+<ul>
+    <li style="list-style: none;"> 1 - Not Good/ nothing much</li>
+    <li style="list-style: none;"> 2 - Neutral</li>
+    <li style="list-style: none;"> 3 - Great/a lot</li>
+    <li style="list-style: none;"> N/A - Didn't go to class or not relevant</li>
+</ul>
+
+<br>
+
+<h3> Finance </h3>
 <br>
 
 <ul>
-
-    <li> <a href = "https://homeworkify.st/mirror-1/"> Homeworkify </a></li>
-    <li> <a href = "https://pi.ai/onboarding"> Pi </a></li>
-    <li> <a href = "https://www.perplexity.ai/"> Perplexity AI </a></li>
-    <li> <a href = "https://you.com/"> You.com </a></li>
-    <li> <a href = "https://www.imagetotext.io"> Image to Text </a></li>
-    <li> <a href = "https://exa.ai/"> Exa.ai </a></li>
-    <li> <a href = "https://chatbot.mindpal.space/653354159110b78947172569"> Research Paper Recommender</a></li>
-    <li> <a href = "https://www.jdoodle.com/online-java-compiler/"> Online Java Compiler IDE</a></li>
+    <li> <b> 01:198:170 Computer Applications for Business <span class = "color">(1, 2, 1) </span> </b> I had already done web dev before this class and when I tell you that the code they have you write here is <b> ANCIENT </b>. They don't even let you use document.getElementById(). They make you do things as if you were in the 1990's. Comp Sci 111 is better in all ways. Yes, you have to learn Java but at least they're not teaching you ancient useless code that no one ever uses in the real world.  </li>
+    <br>
+    <li>  <b>01:220:102 Introduction to Microeconomics  <span class = "color"> (1, 3, 1) </span> </b> This class <i>would</i> have been easy if the lectures were not 1 hour and 20 minutes worth of political monologues and instead, actually showed us what we needed to know. </li>
+    <br>
+    <li>  <b>01:220:103 Introduction to Macroeconomics <span class = "color"> (1, 3, 1) </span> </b>  Same thing as micro.</li>
+    <br>
+    <li>  <b>01:640:135 Calculus I <span class = "color"> (3, 3, 3) </span></b> I loved this class. </li>
+    <br>
+    <li>  <b>01:960:285 Introductory Statistics for Business <span class = "color"> (1, 2, 1) </span></b> I took AP Stats in Highschool and I learned more in that class than here. I Got a good grade in this class but the teaching was...<b>quite</b> inefficient. Makes me never want to take a stat class here again.</li>
+    <br>
+    <li>  <b>33:010:272 Introduction to Financial Accounting <span class = "color"> (3, 3, N/A) </span> </b> Honestly, I never went to this class. I self studied everything. The content had a learning curve obviously because everything was new but once you got it- you got it. I loved it. Yes, I spent a lot of time studying but I enjoyed what I was learning.</li>
+    <br>
+    <li>  <b>33:620:301 Introduction to Management  <span class = "color"> (2, 1, N/A) </span> </b> This is the class you take when you have 4 other hard classes. It's literally just busy work- you don't even have to think, just get it done. It's asynchronous/live so one class a week. You have individual assignments due the day before your live class. In the live class, you have a team assignment but it's literally the same thing as your individual assignment. All your team does is is copy and paste snippets from all your assignments into the team doc. Submit. Done. Go study for your harder classes. Note: The teaching rating is N/A because he doesn't really teach anything- he just talks for five minutes in the beginning and at the end of class. Most of his teaching is in the book. All class time spent is just working on the team doc. He also let's us leave early. </li>
 
 </ul>
 
+<br>
+
+<h3> Computer Science </h3>
+
+<br>
 
 </Main>
 
@@ -54,5 +82,9 @@ const folderPath3 = "../../ratings";
     }
     a{
         color:black;
+    }
+    .color{
+        color:rgb(28, 121, 122);
+        font-weight: bold;
     }
 </style>

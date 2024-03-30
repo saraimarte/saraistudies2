@@ -96,15 +96,15 @@ import folderIcon3 from '../../public/folderIcons/1x/ratings.png';
             }
         });
         document.getElementById('navItem').addEventListener('click', function () {
-    const visibleFolders = document.querySelectorAll('.folderVisible');
+        const visibleFolders = document.querySelectorAll('.folderVisible');
 
-    visibleFolders.forEach((folder, index) => {
-        setTimeout(() => {
-            folder.style.display = 'flex';
-            folder.style.top = `${(index + 0.2) * 100}px`; // Adjust the value to control the vertical spacing
-        }, 10 * (index + 1)); // Delay each folder's appearance
+        visibleFolders.forEach((folder, index) => {
+            setTimeout(() => {
+                folder.style.display = 'flex';
+                folder.style.top = `${(index + 0.2) * 100}px`; // Adjust the value to control the vertical spacing
+            }, 10 * (index + 1)); // Delay each folder's appearance
+            });
         });
-    });
 
     </script>
     
