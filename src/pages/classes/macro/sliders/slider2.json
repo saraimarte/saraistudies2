@@ -2,12 +2,12 @@
     {
       "name": "slide1",
       "caption": "(1) First, Demand Curve goes down. D for down. Supply curve goes up. Remember, the demand curve represents the quantity of a good demanded at various prices. Supply curve represents the quantity of a good supplied at various prices.",
-      "image": "../../public/sliders/103/slider2/1031.png"
+      "image":  "../../../assets/images/sliders/103/slider2/1031.png"
     },
     {
     "name": "slide2",
     "caption": "(2) There is a point called the equilibrium point E. It is called the eqilibrium point because...",
-    "image": "../../public/sliders/103/slider2/1032.png"
+    "image":  "../../../assets/images/sliders/103/slider2/1032.png"
     },
     {
         "name": "slide3",
