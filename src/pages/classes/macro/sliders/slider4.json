@@ -2,66 +2,66 @@
     {
       "name": "slide1",
       "caption": "(1) Here, we have two producers you and I, Sarai. The goal is to find who has a comparative advantage in bananas and apples. Remember, the one who has a comparative advantage is the one who has the lowest opportunity cost when making a good. ",
-      "image": "../../../assets/images/sliders/103/slider4/1031.jpg"
+      "image": "/public/sliders/103/slider4/1031.jpg"
     },
     {
     "name": "slide2",
     "caption": "(2)  Let's start with moi. First, identify the intercepts. If I put all my efforts into making bananas then I will make 10 Bananas and 0 Apples. If I put all my efforts into making apples I will make 2 apples and 0 bananas.",
-    "image": "../../../assets/images/sliders/103/slider4/1032.jpg"
+    "image": "/public/sliders/103/slider4/1032.jpg"
     },
     {
         "name": "slide3",
         "caption": "(3) This means that when I make 10 bananas I am giving up making 2 apples. Our opportunity cost of 10 bananas is 2 apples. But I want to find out how much I am giving up of one fruit when I make one unit of the other, so set the intercepts equal to eachother.",
-        "image": "../../../assets/images/sliders/103/slider4/1033.jpg"
+        "image": "/public/sliders/103/slider4/1033.jpg"
     },
     {
         "name": "slide4",
         "caption": "(4) Solve for each good. When I solve for A I realize that for every 1 Apple I make, I am giving up making 5 bananas. When I solve for B, I realize that for every 1 Banana I make, I am giving up making 1/5 of an Apple.",
-        "image": "../../../assets/images/sliders/103/slider4/1034.jpg"
+        "image": "/public/sliders/103/slider4/1034.jpg"
     },
     {
         "name": "slide5",
         "caption": "(4) Okay let's take a quick break from me and focus on you. Try finding the opportunity cost of making 1 Banana and 1 Apple for you.",
-        "image": "../../../assets/images/sliders/103/slider4/1035.jpg"
+        "image": "/public/sliders/103/slider4/1035.jpg"
     },
     {
         "name": "slide6",
         "caption": "(4) Set the intercepts equal to eachother. This tells us that when you make 8 bananas you are giving up 1 apple and vise versa. But we wan to find how much you're giving up making 1 unit of each good which is why we set them equal to eachother and then...",
-        "image": "../../../assets/images/sliders/103/slider4/1036.jpg"
+        "image": "/public/sliders/103/slider4/1036.jpg"
     },
     {
         "name": "slide7",
         "caption": "(5) solve for each good. The opportunity cost for 1 apple is already given to you. If you make 1 Apple you give up making 8 bananas. When you solve for B, you realize that when you make 1 banana you give up making 1/8 of an apple.",
-        "image": "../../../assets/images/sliders/103/slider4/1037.jpg"
+        "image": "/public/sliders/103/slider4/1037.jpg"
     },
     {
         "name": "slide8",
         "caption": "(6) Okay now we have all the information we need to determine who has a comparative advantage in each good. Remember the producer who has a Comparative Advantage in a good is the producer who gives up less of another good when making that good. Ask yourself, who gives up less when making 1 banana? Well, I give up 1/5 of an apple (0.2) and you give up 1/8 of an apple (0.125).",
-        "image": "../../../assets/images/sliders/103/slider4/1038.jpg"
+        "image": "/public/sliders/103/slider4/1038.jpg"
     },
     {
         "name": "slide9",
         "caption": "(7) You clearly give up less when making 1 banana so...",
-        "image": "../../../assets/images/sliders/103/slider4/1039.jpg"
+        "image": "/public/sliders/103/slider4/1039.jpg"
     },
     {
         "name": "slide10",
         "caption": "(8) between you and I, it would make sense if you were the one to specialize in making bananas. ",
-        "image": "../../../assets/images/sliders/103/slider4/10310.jpg"
+        "image": "/public/sliders/103/slider4/10310.jpg"
     },
     {
         "name": "slide11",
         "caption": "(9) Now, who gives up less when mkaing 1 apple? Well, when I make 1 apple, I give up making 5 bananas. When you give up 1 apple, you give up making 8 bananas so...",
-        "image": "../../../assets/images/sliders/103/slider4/10311.jpg"
+        "image": "/public/sliders/103/slider4/10311.jpg"
     },
     {
         "name": "slide12",
         "caption": "(10) I am the one who gives up less when making 1 apple which means... ",
-        "image": "../../../assets/images/sliders/103/slider4/10312.jpg"
+        "image": "/public/sliders/103/slider4/10312.jpg"
     },
     {
         "name": "slide13",
         "caption": "(11) it would make sense for me to specialize in making apples. So, I have a comparative advantage in apples, and you have a comparative advantage in bananas.",
-        "image": "../../../assets/images/sliders/103/slider4/10313.jpg"
+        "image": "/public/sliders/103/slider4/10313.jpg"
     }
   ]
