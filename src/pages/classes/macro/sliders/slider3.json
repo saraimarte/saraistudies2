@@ -2,22 +2,22 @@
     {
       "name": "slide1",
       "caption": "(1) We have the same setup. Note that the eqilibirum price from the producers POV is the price they have to supply or sell the good for.",
-      "image": "/public/sliders/103/slider3/1031.png"
+      "image": "../../public/sliders/103/slider3/1031.png"
     },
     {
     "name": "slide2",
     "caption": "(2) If it costs the producer C1 dollars to make the good then that's bad because the cost is more than what the market is willing to pay for it.",
-    "image": "/public/sliders/103/slider3/1032.png"
+    "image": "../../public/sliders/103/slider3/1032.png"
     },
     {
         "name": "slide3",
         "caption": "(3) If it costs the producer C2 dollars to make the good then that's good because the cost is less than what they will have to sell it for so they will make a profit.",
-        "image": "/public/sliders/103/slider3/1033.png"
+        "image": "../../public/sliders/103/slider3/1033.png"
     },
     {
         "name": "slide4",
         "caption": "(4) Now, if it costs the producer C3 dollars to make the good then that's the best position to be in the market from an economic perspective because the cost of making the good is equal to exactly the price consumers are demanding. This means that the market is productively efficient.",
-        "image": "/public/sliders/103/slider3/1034.png"
+        "image": "../../public/sliders/103/slider3/1034.png"
     }
    
   ]
