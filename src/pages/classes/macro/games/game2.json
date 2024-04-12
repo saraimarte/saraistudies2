@@ -1,102 +1,34 @@
 [
   {
-      "name": "Direct Materials Inventory.",
-      "answers": ["Manufacturing"]
+      "name": "A 65 year old teacher who just retired.",
+      "answers": ["Not In Labor Force"]
   },
   {
-      "name": "Work in Process Inventory.",
-      "answers": ["Manufacturing"]
+      "name": "A professor working at Rutgers.",
+      "answers": ["In Labor Force"]
   },
   {
-      "name": "Finished Goods Inventory.",
-      "answers": ["Manufacturing"]
+    "name": "A nurse working in a hospital.",
+    "answers": ["In Labor Force"]
   },
   {
-      "name": "Direct materials used.",
-      "answers": ["Manufacturing"]
+    "name": "A deadbeat sleeping in his mom's basement and is too lazy to look for a job.",
+    "answers": ["Not In Labor Force"]
   },
   {
-      "name": "Indirect materials used.",
-      "answers": ["Manufacturing"]
+    "name": "A doctor who is on a sabbatical.",
+    "answers": ["In Labor Force"]
   },
   {
-      "name": "Property taxes on manufacturing plant building.",
-      "answers": ["Manufacturing"]
+    "name": "A student who just lost his job but is calling their friends to see if they have any connections to get him a job.",
+    "answers": ["In Labor Force"]
   },
   {
-      "name": "Purchase of direct materials.",
-      "answers": ["Manufacturing"]
+    "name": "Santa Clause quit his job because he was sick and tired of leaving his home 1 day out of the year and all he does now is sit on his couch watching mr.molnar talk about linear approximation and refuses to look for another job. Santa Clause is...",
+    "answers": ["Not In Labor Force"]
   },
   {
-      "name": "Miscellaneous plant overhead.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Plant utilities.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Direct manufacturing labor costs.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Plant insurance.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Repairs and maintenance-plant.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Depreciation-plant building and equipment.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Fixed manufacturing overhead.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Variable manufacturing overhead.",
-      "answers": ["Manufacturing"]
-  },
-  {
-      "name": "Marketing, distribution, and customer service costs.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "General administrative costs.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Sales commissions.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Administrative salaries.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "General office expenses.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Cost of office supplies.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Depreciation of office equipment.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Marketing distribution costs.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Salespersons' company vehicles costs.",
-      "answers": ["Period"]
-  },
-  {
-      "name": "Freight out.",
-      "answers": ["Period"]
+    "name": "Miss Piggy got fired from her big play and when she went looking for other jobs - everybody kept rejecting her. She was discouraged and stopped looking for a job. Miss Piggy is...",
+    "answers": ["Not In Labor Force"]
   }
 ]

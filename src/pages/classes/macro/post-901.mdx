@@ -1,13 +1,11 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Labor Force and Unemployment Rate
-date: 01/05/2024
+title: 🟡 Labor Force and Unemployment Rate
+date: 04/12/2024
 author: Sarai Marte
 ---
 
-
-
-import GameType3 from '../../../components/learningComponents/GameType3.astro';
+import GameType2 from '../../../components/learningComponents/GameType2.astro';
 import data from './games/game2.json';
 
 <span style= "font-family: var(--primaryFont);">
@@ -24,9 +22,13 @@ Discouraged Workers = ppl who were unemployed but were discouraged so they are n
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<GameType3 
+Practice identifying who is in the labor and who is not:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<GameType2 
 	 data = {data}
-     hint = "hint"
-	 answer1A = "Structural" answer2A = "Cyclically" answer1B = "Seasonal" answer2B = "Frictional">
-</GameType3>
+     hint = "In Labor Force = Unemployed or Employed; Unemployed = doesn't have a job but is actively looking for work; Employed = has a job."
+	 answer1A = "In Labor Force" answer1B = "Not In Labor Force">
+</GameType2>
 </span>
