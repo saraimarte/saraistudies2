@@ -1,13 +1,630 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Cost Function + Approximating Costs Using High/Low Method
-date: 03/15/24
+title: Cost Function + Approximating Costs Using High/Low & Regression Method
+date: 04/12/24
 author: Sarai Marte
 chapter: Chapter 10
 ---
 
+<span style= "font-family: var(--primaryFont);">
 
-<span style=" font-family: var(--primaryFont);">
+<details>
+  <summary>CheatSheet</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  ### High Low Method 
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  These questions will give you actual data. They will give you costs and drivers. You have to pick the highest and lowest point in the data based on the driver (x) NOT whatever y is.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Use PB&J
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  P - P for find the two **p**oints.   
+  B - B for find '**b**' the slope with the two points.  
+  A - A for find '**a**' the constant intercept by plugging in a point and slope.  
+  J - J for **j**ust write the function because you're done!  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  ### Linear Regression Method
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  These questions will give you a bunch of random numbers you won't understand. The only things you need are your a, b and r^2.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  You use r^2 to tell which a and b to use if they give you multiple regression data
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  The higher the r^2 the better the results so you want to use those results to make your equation.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  The 'a' and the 'b' will always be under coefficients. There are only two coefficients in an equation 'a' and 'b'. They will tell you the constant and that is 'a' meaning the other coefficient has to be 'b'.
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Idea
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The whole point of this chapter (at least the first part) is to find a function or an equation that estimates the costs of your company.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are two methods of doing so, one is more accurate than the other.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">1. High-Low Method  </li>
+
+<li style="list-style:none">2. Linear Regression </li>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The Linear Regression method is more accurate because it finds the line that best fits the data while the high-low method just takes the highest and lowest point of the data and makes a line out of that.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Interpreting The Function
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Before finding the equations from given data, you need to make sure what the equation is telling you. You can skip this part if you know your stuff already.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In this chapter, you will deal with the mitochondria of highschool math and that was y = mx + b. But instead we write it in a different format: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Y = a + bX
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is literally y = mx+ b but b is now your slope instead of your intercept and instead of m we have a and a is the intercept now.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+y = output (dependent variable)  
+x = driver (independent variable)  
+a = fixed costs (constant)  
+b = variable cost per unit (constant)(slope)  
+bX = total variable costs
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's say you make pizzas.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This equation tells you the manufacturing costs of the pizzas you make.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In this case, the costs of your pizza are **based** on how many pizzas you make.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So what's your **driver**? The amount of pizzas you make.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Take the following equation,  
+
+Y = 25 + 2.50X
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+y = cost of X amount of pizzas   
+x = amount of pizzas (what drives the costs to go up or down)  
+a = maybe rent + salaries  
+b = maybe cost of sauce + cost of olives     
+bX = total variable cost of sauce and cost of olives per amount of pizzas we made  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**What are the estimated costs of making 3 pizzas?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Y = 25 + 2.50(3)  
+Y = 32.50
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, the estimated total cost of making 3 pizzas is $32.50
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+# You Try
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sarai's company manufactures cars. The company's manufacturing cost allocation base is the amount of cars the company makes. The company's fixed costs are $5000 and every car has variable manufacturing costs of $1000. What is the cost equation for Sarai's company? What are the costs of making 5 cars? Respectively. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">A) Y = 1000 + 5000x; $26,000  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">B) Y = 4000 + 5000x; $65,000  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">C) Y = 5000 + 1000x; $10,000 </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">D) Y = 1000 + 4000x; $21,000  </li>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Answer: C**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+ **Part 1**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  fixed costs = $5000  
+  variable costs = $1000 per car  
+  x = number of cars  
+  y = cost of x amount of cars  
+ 
+  So, Y = 5000 + 1000x  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Part 2**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  x = 5 cars  
+  Y = 5000 + 1000(5) = $10,000  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Finding Function From Data (High-Low (PB&J) Method)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The Watch&Co company has the following data regarding the costs of making specific amounts of watches.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: start;">Cost</th>
+      <th>Watches</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>$28,000</td>
+      <td style="padding-left: 20px;">5,200</td>
+    </tr>
+    <tr>
+      <td>$33,800</td>
+      <td style="padding-left: 20px;">5,900</td>
+    </tr>
+    <tr>
+      <td>$32,500</td>
+      <td style="padding-left: 20px;">6,700</td>
+    </tr>
+    <tr>
+      <td>$59,500</td>
+      <td style="padding-left: 20px;">11,500</td>
+    </tr>
+    <tr>
+      <td>$40,900</td>
+      <td style="padding-left: 20px;">8,200</td>
+    </tr>
+  </tbody>
+</table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What is the cost equation using the high and low method? What is the estimated cost of making 50 watches? Respectively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">A) Y = 5640 + 4.3; $5,855  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">B) Y = 2000 + 5x; $2,250  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">C) Y = -400 + 0.2x; -$319 </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">D) Y = 1000 + 10x; $1,500  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Answer: B**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  For the high-low method I came up with PB **&** J pronounced (P B **A**nd J), You know, because of peanut butter and jelly. It's just an easier way to remember the steps.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  P - P for find the two **p**oints.   
+  B - B for find '**b**' the slope with the two points.  
+  A - A for find '**a**' the constant intercept by plugging in a point and slope.  
+  J - J for **j**ust write the function because you're done!  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+ **Part 1**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **P** - Points - Find the two points   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Pick the lowest number in the x.  
+  Remember, x is what drives up your costs so x is the watches column.  
+  Lowest X = 5,200.   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Find the corresponding y. At 5200 watches the cost is $28,000.  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  So your first point is   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  (5200, $28000)
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Second point  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Pick the highest number in the x = 11,500.  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Find the corresponding y. At 11,500 watches the cost is $59,500.  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  So your second point is   
+
+  (11500, $59500)  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ **B** - b - b is slope - find the slope
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  
+  Now use your algebra skills from highschool and find the slope between those two points.  
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  Lowest Point: (5200, $28000)  
+  Highest Point:  (11500, $59500)    
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  59,500- 28,000 /  11500 - 5200 = 5
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **A** - a - a is your intercept. Find your a.
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Just like you would find the y-intercept in highschool given a point you can do the same here.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Pick a point- plug it in and find what the intercept would be at that point.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  You have,
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Y = a + bX and that b = 5
+ 
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  so, let's pick (5200,28000) it doesn't matter which point you pick.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  28000 = a + 5(5200)
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Solve for a, you get a = 2000
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **J** - Just write the equation! You're done.  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  b = 5  
+  a = 2000  
+  Y = 2000 + 5x  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+ **Part 2** 
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Now, you can use this equation to estimate the cost of making 50 watches.
+
+  x = 50 watches  
+  Y = 2000 + 5(50) = $2,250
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Finding Function From Data (Regression Method)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You will know when to use the regression method because the questions won't give you pure data on costs and drivers- they will instead give you a bunch of weird looking numbers like this 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<img style = "width:100%" src = "https://www.real-statistics.com/wp-content/uploads/2022/04/weighted-least-squares-regression.png"/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+https://www.real-statistics.com/wp-content/uploads/2022/04/weighted-least-squares-regression.png
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and you'll be like omg what is all this stuff???
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But don't you worry- this method is honestly easier because they give you the fixed and variable costs. The only thing with these problems is you have to know how to read the table.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In line 18 column N you see "coeff" which stands for coefficients. The coefficient in line 19 is your intercept which we know is our 'a' and our fixed costs. The coeffcient on line 20 is b is your variable cost per unit aka the slope.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The only other number you have to pay attention to is the r^2 which tells you how good the line is.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Everything else is irrelevant. So when doing these problems just ignore all the numbers except for r^2 and the coefficients which you need to make your equation. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+The following are the most recent regression results from Sarai's company. Here, there are two different drivers that Sarai's company uses to measure their costs.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<h4>Assembly Worker's Hours: </h4>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table>
+  <thead>
+    <tr>
+      <th style=" padding-right: 85px;">Variable</th>
+      <th style="text-align: start; padding-right: 20px;">Coefficient</th>
+      <th style="text-align: start; padding-right: 20px;">Standard Error</th>
+      <th style="text-align: start;">p-Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="padding-left: 20px;">Constant</td>
+      <td style="padding-left: 20px;">$2000</td>
+      <td style="padding-left: 20px;">$156.20</td>
+      <td style="padding-left: 20px;">0.40</td>
+    </tr>
+    <tr>
+      <td style="padding-left: 20px;">Independent variable</td>
+      <td style="padding-left: 20px;">$15.55</td>
+      <td style="padding-left: 20px;">$2.34</td>
+      <td style="padding-left: 20px;">0.20</td>
+    </tr>
+
+    <tr>
+      <td style="padding-left: 20px;" colspan="4">r^2 = 0.74</td>
+    </tr>
+
+    </tbody>
+    </table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table>
+    <tbody>
+
+   <h4>Number of watches: </h4>
+
+    <tr>
+      <th style=" padding-right: 75px;">Variable</th>
+      <th style="text-align: start; padding-right: 20px;">Coefficient</th>
+      <th style="text-align: start; padding-right: 20px;">Standard Error</th>
+      <th style="text-align: start;">p-Value</th>
+    </tr>
+    <tr>
+      <td style="padding-left: 20px;">Constant</td>
+      <td style="padding-left: 20px;">$3000</td>
+      <td style="padding-left: 20px;">$2000</td>
+      <td style="padding-left: 20px;">0.29</td>
+    </tr>
+    <tr>
+      <td style="padding-left: 20px;">Independent variable</td>
+      <td style="padding-left: 20px;">$34.65</td>
+      <td style="padding-left: 20px;">$348.47</td>
+      <td style="padding-left: 20px;">0.34</td>
+    </tr>
+
+     &nbsp;&nbsp;&nbsp;&nbsp;
+
+    <tr>
+      <td style="padding-left: 20px;" colspan="4">r^2 = 0.43</td>
+    </tr>
+  </tbody>
+</table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What are the estimated costs if Sarai's company has inccured 1000 hours of assembly watches and needs to make 200 watches?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">A) $44,890  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">B) $37,650  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">C) $24,940 </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style:none">D) $17,550  </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Answer: D**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Part 1**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  You can make a equation out of both these results but the result you should always pick is the one with the highest r^2.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  r^2 tells you how good the line fits to the data.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  When you use assembly worker's hours as the variable that drives up or down your costs- r^2 is 0.74 meaning the numbers in this result fits the true data by 74% while if you use the number of watches as a cost driver the regression results only fit 43% of the data so we will use the regresion results that give us a more accurate estimation of costs and that is the one that fits the data more.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  So the only thing you want is the 'a' and the 'b'. 'a' is always the constant coeffcient. Remember, it's fixed costs and fixed costs are constant, they don't change.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Your b or your variable cost per unit is always below it so that is $15.55.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Now, put your equation together to get: 
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Y = $2000 + $15.55x
+
+  &nbsp;&nbsp;&nbsp;&nbsp;  
+
+  and use it to answer the question.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  **Part 2**
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+    
+  You have: Y = $2000 + $15.55x
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  What are the estimated costs if Sarai's company has inccured 1000 hours of assembly watches and needs to make 200 watches?
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Since in Part 1 we chose the number of hours the workers worked to assemble the watches as our driver or our independent variable (X) then we need to choose the 'x' in the question that is the same 'x' as our driver.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  So we won't plug in 200 watches into our equation because our equation's 'x' is not number of watches, it's number of assembly hours.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  So we plug in 1000.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  You have: Y = $2000 + $15.55(1000) = $17,550 
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 
