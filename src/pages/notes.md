@@ -25,3 +25,20 @@ import Slider from '../components/Slider.astro';
 Then call the component with the data attribute.
 
 <Slider data = {sliderData}></Slider>
+
+
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+
+
+```
+</details> 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;

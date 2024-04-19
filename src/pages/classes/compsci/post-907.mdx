@@ -1,8 +1,396 @@
 ---
 layout: '@layouts/Blog.astro'
 title: 🟡 Recursive Functions
-date:
+date: 04/18/24
 author: Sarai Marte
 chapter: Week 9
 ---
 
+<span style="font-family: var(--primaryFont);">
+
+
+Recursion: Is just another way of solving problems.  It's where one calculation is based of the answer of the previous calculation. This is better shown in action:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's say people are in a line and you have to give them each two tickets.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Your boss wants to know how many tickets you gave out at the end of the day.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can do this with multipliation:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+    public static void main (String args[]){
+
+        //read in number of people in the line
+        int numOfPeople = Integer.parseInt(args[0]);  
+
+        //give 2 tickets to each person and print out total number of tickets given
+        StdOut.println(2 * numOfPeople); 
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can do this with loops:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+    public static void main (String args[]){
+
+        //read in number of people in the line
+        int numOfPeople = Integer.parseInt(args[0]);
+
+        //set count of tickets given to 0
+        int countTickets = 0;
+        
+        //for every person on the line, give them 2 tickets.
+        for (int i = 0; i < numOfPeople; i++){
+            countTickets += 2; //keep track of those 2 tickets given by adding it to the count
+        }
+
+        //print out the number of tickets given
+        StdOut.println(countTickets);
+
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can do this recursively: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    public static void main (String args[]){
+
+        //read in number of people in the line
+        int numOfPeople = Integer.parseInt(args[0]);
+       
+        //print out the number of tickets given
+        StdOut.println(numOfTickets(numOfPeople));
+
+    }
+
+
+    //recursive function
+    public static int numOfTickets(int numOfPeople){
+
+        if (numOfPeople == 0){ //base case| if number of people are 0 then return 0 tickets.
+            return 0; 
+        } else { //recursive case| if there are still people left, add 2 tickets to the count and call the function again for the next person, so the calculation for the next person is based off the previous calculation. 
+            return 2 + numOfTickets(numOfPeople-1);
+        }
+
+    }
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+See, recursive functions have 2 components- a base case and a recursive case.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The base case is your stopping condition- it will tell the function when to stop calling itself.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The recursive case- returns something and then calls itself again until it reaches the base case.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Practice
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+1.You have a fleet of vehicles, and each vehicle has four wheels. Calculate the total number of wheels across all the vehicles recursively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java    
+
+    public static void main (String args[]){
+
+        //read in number of cars 
+        int numOfCars = Integer.parseInt(args[0]);
+
+        //print out total number of wheels
+        StdOut.println(numOfWheels(numOfCars));
+
+
+    }
+
+
+    public static int numOfWheels(int numOfCars){
+
+        //base case
+        //when do you stop counting the number of wheels? when there are no cars
+
+        if (numOfCars == 0){ //when there are no cars
+            return 0; //return 0 wheels
+        } else {
+            //return 4 wheels plus the number of wheels for the next car
+            return 4 + numOfWheels(numOfCars-1); //recursive case
+            //this return statement is based on it's previous answer
+        }
+
+    }
+
+
+
+```
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+2.You have a group of people, and each person has two hands with five fingers each. Calculate the total number of hands across all the people recursively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+       
+    public static void main (String args[]){
+        
+        //read in number of people there are
+        int numOfPeople = Integer.parseInt(args[0]);
+
+        //print out the number of hands 
+        StdOut.println(numOfHands(numOfPeople));
+
+
+    }
+
+
+    public static int numOfHands(int numOfPeople){
+
+        //base case
+        //when do you stop counting the number of Hands? When there are no more people.
+
+        if (numOfPeople == 0){ //if no more people
+            return 0; // return 0 hands 
+        } else {
+            return 2 + numOfHands(numOfPeople-1);
+            //return 2 hands plus the number of hands for the next person
+        }
+
+
+    }
+
+
+```
+
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+3.Write a function that adds two numbers recursively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main (String args[]){
+        
+        //read in both numbers
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        //print out the sum of those numbers
+        StdOut.println(add(num1, num2));
+
+
+    }
+
+        //whiteboard: let's say I want to add 2 and 3. We know that 2 + 3 = 5.
+        //But how can we break this up into smaller parts?
+        //Well, 2 + 1 + 1 + 1 = 5. 
+        //How do we  translate that into code?
+
+    public static int add(int num1, int num2){ //take in the two numbers, num1 = 2, num2 = 3 num2 is how many times we have to add 1 to 2
+       
+        //work backwards. what's the last thing you want to return? It's the last thing in 2 + 1 + 1 + 1 = 5 but backwards. (That's 2). So we want to return 2 or num1.
+        if (num2 == 0){
+            return num1; //last thing we want to return
+        }else {
+            return add(num1, num2-1) + 1; //for every time we add + 1, well we add + 1 + whatever many + 1 we need to add. How do we know how many +1 we need to do? Well num2 tells us how many. 3!
+            //so we need to stop when num2 == 0 when there is no more +1's to add. 
+        }
+
+    }
+
+
+```
+
+
+
+</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+4.Write a function that subtracts two numbers recursively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main (String args[]){
+        
+        //read in both numbers
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        //print out the difference of those numbers
+        StdOut.println(subtract(num1, num2));
+
+
+    }
+
+        //whiteboard: let's say I want to add 5 and 3. We know that 2 + 3 = 5.
+        //But how can we break this up into smaller parts?
+        //Well, 5 -1 -1 -1  = 2
+        //How do we  translate that into code?
+
+    public static int subtract(int num1, int num2){ //take in the two numbers, num1 = 5, num2 = 3 num2 is how many times we have to subtract 1 from num1 (5)
+       
+        //work backwards. what's the last thing you want to return? It's the last thing in 5 -1 -1 -1  = 2 but backwards. (That's 5). So we want to return 5 or num1.
+        if (num2 == 0){
+            return num1; //last thing we want to return
+        }else {
+            return add(num1, num2-1) + 1; //for every time we subtract 1, well subtract 1 + whatever many - 1 we need to subtract. How do we know how many -1 we need to do? Well num2 tells us how many. 3!
+            //so we need to stop when num2 == 0 when there is no more -1's to do. 
+        }
+
+    }
+
+
+
+```
+</details> 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+5.Write a function that multiplies two numbers recursively.
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main (String args[]){
+        
+        //read in both numbers
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        //print out the product of those numbers
+        StdOut.println(multiply(num1, num2));
+
+
+    }
+    public static int multiply(int num1, int num2){ 
+        if (num2 == 1){
+            return num1;
+        } else {
+            return num1 + multiply(num1, num2-1);
+        }
+
+    }
+
+
+
+```
+</details> 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+ 
+6.Write a function that takes one number and raises it to another number/power recursively.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary>Solution</summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main (String args[]){
+        
+        //read in both numbers
+        int num1 = Integer.parseInt(args[0]);
+        int num2 = Integer.parseInt(args[1]);
+
+        //print out the product of those numbers
+        StdOut.println(powers(num1, num2));
+
+
+    }
+    public static int powers(int num1, int num2){ 
+    
+        if (num2 == 1){
+            return num1;
+        } else {
+            return num1 * powers(num1, num2-1);
+        }
+
+    }
+
+
+```
+
+</details> 
+
+ &nbsp;&nbsp;&nbsp;&nbsp;
+
+   
+
+</span>

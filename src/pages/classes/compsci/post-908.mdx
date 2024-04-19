@@ -1,0 +1,347 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Object Oriented Programming (OOP) - Abstract vs Primitive Data Types
+date: 04/18/24
+author: Sarai Marte
+chapter: Week 
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Primitive vs Abstract Data Types / Objects
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So far we have used primitive data types: int, double, char,  boolean
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but now we are going to use abstract data types: String, Color, Picture.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Abstract data types are where the client (your computer) can't actually see the representation of your data because it's hidden.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why is it hidden?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because anything that is not a primitive type is a reference type. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Meaning that when you create an abstract data type- the computer is creating that object somewhere in the heap. (The heap is just a space in memory where all your objects are stored).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The computer is not able to 'see' the value of the object itself because the <span style = "color:green; font-weight: bold"> variable you set your object equal to </span> only holds the address of where the object is but not the object itself- so the variable *refers* to the object but again, does not hold the object. Hence, the object is hidden from the computer.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's take a look at the String object for example.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are used to declaring and initializing a string like so,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    String name = "name";
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but what you didn't know is that this is really called a string literal.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The simple fact is that when a string literal is defined- that automatically creates an object. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Think of the string literal as a short hand to create an object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is ONLY true for string literals because the ```String``` object is built into java and...it's an *abstract* object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Why is this only true for objects that are abstract and built into Java? </summary>
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Because integer literals, and double literals, and boolean literals exist aswell but that does not mean they automatically create Integer or Double objects when defined. 
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Why?
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Because integers and doubles are not abstract, they are primitive which is why you don't see 
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    ```java 
+
+        Int number = 3;
+    
+
+    ```
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    and instead you see
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    ```java 
+
+        int number = 3;
+
+
+    ```
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    where in the first case, Int has an uppercase I and the second case it doesn't.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    Objects that are abstract start with an Uppercase letter. We have never written Int with uppercase meaning it's not an abstract object, in fact, we know it's a primitive object.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+    So despite us defining an integer literal- that does not create an object automatically or at all because int is again, not an abstract object (it doesn't start with uppercase I) - it's not a built in abstract object like String.
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How do I know ```String``` is an abstract object?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because it starts with a capital letter.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Have you ever wondered why ```String``` was the only data type we wrote with an uppercase letter? All the other data types started with lowercase like ```int``` or ```double```. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Again, it's because ```String``` is the only data type/object that is abstract- the rest are primitive and therefore start with lowercase letters.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Which is why we have been writing this, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    String name = "name"; //upercase string = abstract object
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and not 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    string name = "name"; //lowercase string = not abstract object
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If we were to have the second case where string is not a built in data type/object then,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+1.you would have to create it from scratch or import it as you would Picture and Color (you will learn how to create your own objects in the next lesson)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+*which is why I say string literals automatically create string objects only if the object is already built in because you would *have* to create the String object from scratch if it's not already built in and would *have* to use proper notation to construct that object meaning a literal would not work in the first place.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and 2. you would have to create a String object with the proper notation as you would any other object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here is the proper format of constructing a String:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Constructing a String Object
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    String name = new String("name");
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<span style = "color:blue; font-weight: bold"> String </span>
+<span style = "color:green; font-weight: bold"> name </span>
+<span style = "color:black; font-weight: bold"> = </span>
+<span style = "color:orange; font-weight: bold"> new  </span>
+<span style = "color:red; font-weight: bold"> String( </span>
+<span style = "color:purple; font-weight: bold"> "name" </span>
+<span style = "color:red; font-weight: bold"> ) </span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style = "color:blue; font-weight: bold"> Abstract Data Type/Object</span> - you are telling the computer "hey, I want to create a String"   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style = "color:green; font-weight: bold"> Reference Variable  </span>  - this variable simply just refers to the new object I just created, it is NOT the object iself. It simply holds the address of the object (the object is in this place called the heap). 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style = "color:orange; font-weight: bold"> new</span>-  this tells Java to go and create a new object somewhere in the heap
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style = "color:red; font-weight: bold"> Constructor( </span>
+<span style = "color:purple; font-weight: bold">Data Value) </span>  -  this is the way you create/construct the object- by literally calling the constructor and inputting the value you want for that object.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+so, we have,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style = "color:blue; font-weight: bold"> Abstract Data Type/Object </span>
+<span style = "color:green; font-weight: bold"> Reference Variable </span>
+<span style = "color:black; font-weight: bold"> = </span>
+<span style = "color:orange; font-weight: bold"> new  </span>
+<span style = "color:red; font-weight: bold"> Constructor( </span>
+<span style = "color:purple; font-weight: bold">Data Value) </span>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## String Methods
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, objects may or may not have methods we can use specifically for that object only.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In this case, the String object has a whole lot of methods which are pretty cool because they open a whole world of new things we can do.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: all methods end with () at the end. Ex. .length()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 1. String.length()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Outputs how many letters the string contains.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    String name = new String("name");
+    StdOut.println(name.length());
+
+    //Output: 4
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 2. String.toUpperCase()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Makes all letters in the string uppercase.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("name");
+    StdOut.println(name.toUpperCase());
+
+    //Output: NAME
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 3. String.toLowercase()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Makes all letters in the string lowercase.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("NaMe");
+    StdOut.println(name.toUpperCase());
+
+    //Output: name
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 4. String.charAt()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Outputs the character or letter at a specified index.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("name");
+    StdOut.println(name.charAt(0)); //outputs the first letter
+
+    //Output: n
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</span>
