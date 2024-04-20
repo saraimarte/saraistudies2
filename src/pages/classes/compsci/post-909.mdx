@@ -1,0 +1,321 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Object Oriented Programming (OOP) - Creating your own data types
+date: 04/19/24
+author: Sarai Marte
+chapter: Week 
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+
+## The Idea
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So in the last lessons we have learned how to work with given class API's like String, Picture or Color.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now we get to create our own.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's start by creating a person object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For this, make sure your file name is Demo.java. Here is what you should start with:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public class Demo {
+    
+        public static void main (String args[]){
+             StdOut.println("Hello World");
+        }
+
+        //rest of code will go here 
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you open the terminal (CTRL + J) in VSCode and run
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    javac Demo.java
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+click enter and then run
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    java Demo
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and enter again, you should see "Hello World" as output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: Make sure you have the StdIn.java and StdOut.java files in the same folder as Demo.java. If not, then StdOut.println() will not work.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Get the files <a href = "https://rutgers.app.box.com/s/jj32x6ibxigrxu5yfyhbpu4xxi8n9c20">here</a> if you're a Rutgers student.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If this does not work then just use regular old System.Out.println();
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Okay, everything I write now can be after or before the main method does not matter but it should be still inside the Demo class.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+First, if we want to create a person object- we have to create a person class.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+     //object = Person
+
+     public static class Person {
+
+     }
+
+
+
+``` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This says "hey! I want to invent a new data type called Person" 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Second, all datatypes or objects have attributes. As a person, you have a name, you have an age, you have an eye color, weight, and even a password to your phone. Those are your attributes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In Java we call those instance variables.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, we will define some of those variables.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+     //object = Person
+     public static class Person { 
+        
+        //1. attributes of the object
+        public String name;
+        private int age;
+
+        
+     }
+
+
+
+``` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, we are saying "hey! make sure that all Persons have attributes of name and age"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: there can be public and private attributes- or instance variables. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I'm sure nobody cares who can see their name but maybe some people don't want their age out there so they will like it to be private.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Third, we will set default values for these variables because sometimes people don't want to put in their ages in the first place.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+
+     //object = Person
+     public static class Person {
+       
+      
+        //1. attributes of the object
+        public String name;
+        private int age;
+
+        //2. defaults 
+        //this is also called a setter method
+        public Person(){
+            name = "defaultName";
+            age = 0;
+        }
+
+
+     }
+
+
+
+``` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Fourth, you want to tell java that how to construct a new instance/version of the person object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+    //object = Person
+    public static class Person {
+    
+        //1. attributes of the object
+        public String name;
+        private int age;
+
+        //2. defaults 
+        //this is also called a setter method
+        public Person(){
+            name = "defaultName";
+            age = 0;
+        }
+
+
+        //3. tells java how to contruct a new person
+        //this is called a constructor
+        //it should always have the same name as the class
+        public Person(String  name, int age){
+            this.name = name;
+            this.age = age;
+        }
+
+
+     }
+
+
+
+
+``` 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The constructor tells java how to construct or create a new person.
+It tells java, "hey! when you want to create a new person- you need to take in their name and age".
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What is ```this```?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This refers to whatever the new person is. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is used because when we make a new person we give that person it's own variable name but since we don't know what those variable names will be and each time we create a person the varaible name will be different- we refer to that variable as ```this```.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, putting it all together, we have: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+
+
+    public class Demo {
+    
+        public static void main (String args[]){
+
+
+
+        }
+
+        //object = Person
+        public static class Person {
+        
+            //1. attributes of the object
+            public String name;
+            private int age;
+
+            //2. defaults 
+            //this is also called a setter method
+            public Person(){
+                name = "defaultName";
+                age = 0;
+            }
+
+            //3. tells java how to contruct a new person
+            //this is called a constructor
+            //it should always have the same name as the class
+            public Person(String  name, int age){
+                this.name = name;
+                this.age = age;
+            }
+
+
+    }
+
+    }
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, in the main method, we can create multiple instances of Person like so, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+        
+    public static void main (String args[]){
+
+        //create 2 people, give them names and ages
+        Person person1 = new Person("sarai", 20);
+        Person person2 = new Person("emily", 21);
+
+        StdOut.println(person1.name);
+        StdOut.println(person2.name);
+
+
+    }
+
+
+
+```
+
+</span>
+

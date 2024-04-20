@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 Object Oriented Programming (OOP) - Abstract vs Primitive Data Types
-date: 04/18/24
+title: 🟡 Object Oriented Programming (OOP) - Primitive vs Abstract Data Types
+date: 04/19/24
 author: Sarai Marte
 chapter: Week 
 ---
@@ -9,9 +9,8 @@ chapter: Week
 
 <span style="font-family: var(--primaryFont);">
 
-&nbsp;&nbsp;&nbsp;&nbsp;
 
-## Primitive vs Abstract Data Types / Objects
+## Primitive vs Abstract Data Types
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -327,7 +326,7 @@ Makes all letters in the string lowercase.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Outputs the character or letter at a specified index.
+Finds a character at a given index/position.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -343,5 +342,273 @@ Outputs the character or letter at a specified index.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+### 5. String.indexOf()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Finds the index/position of a given character. (Opposite of Method #4)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("name");
+    StdOut.println(name.indexOf("n")); 
+
+    //Output: 0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 6. String.substring()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Gets a part of the string from a beginning position to an ending position.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: It works just like Math.random() where the starting number is included but the last is not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So if I want to print out the "na" from "name" I can't use (0,1) because it doesn't include the 1st chracter and that is "a", it will only give me the 0th character "n". Instead I have to use (0,2) so it doesn't include the 2nd character "m" but it does include the 1st character "a".
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("name");
+    StdOut.println(name.substring(0,2)); 
+
+    //Output: na
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 7. String.substring() pt2
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You can also use it to find all the characters *starting from* a given position/index.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+           
+    String name = new String("name");
+    StdOut.println(name.substring(1)); 
+
+
+    //Output: ame
+    //from index 1 = from "a" including a 
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+### 8. String.compareTo()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sees if one string is the same as another. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Returns -1 is they are not the same.  
+
+Returns 0 if they are the same.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+    
+    String name = new String("sarai");
+    String name2 = new String("sara");
+
+    StdOut.println(name.compareTo(name2));
+
+    //Output: -1 b/c sarai is not the same as sara
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java 
+    
+    String name = new String("sarai");
+    String name2 = new String("sarai");
+
+    StdOut.println(name.compareTo(name2));
+
+    //Output: 0 b/c sarai is not the same as sarai
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 9. String.equals()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sees if one string is equal to another (We use this instead of ==).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+ 
+    String name = new String("name");
+    String name2 = new String("name2");
+    
+    StdOut.println(name.equals(name2)); 
+
+    //Output: false
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+ 
+    String name = new String("name");
+    String name2 = new String("name");
+    
+    StdOut.println(name.equals(name2)); 
+
+    //Output: true
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### 10. String.equalsIgnoreCase()
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sees if one string is equal to another ignoring the case.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+        
+    String name = new String("name");
+    String name2 = new String("name");
+    
+    StdOut.println(name.equalsIgnoreCase(name2)); 
+
+    //Output: true
+    
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> What's the difference between String.equals(), String.compareTo() and String.equalsIgnoreCase() ?</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Practice
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+1.Given any string, output the string backwards.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Solution </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+
+    //Given any string, output the string backwards.
+
+    //read in string
+    String word = new String(StdIn.readString());
+
+    StdOut.println("Input: " + word);
+    StdOut.print("Output: ");
+
+    //w o r d
+    //1 2 3 4  int i = word.length()
+    //0 1 2 3  int i = word.length()-1
+    
+    //start at the last letter of every word; as long as it exists; run the loop and then move down to the next letter
+    
+    for(int i = word.length()-1; i >= 0; i--){
+
+        //print out the letter at specified index
+        StdOut.print(word.charAt(i)); 
+
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+2.Given any string, output how frequent a certain character shows up.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Solution </summary>
+
+```java 
+
+    //Given any string, output how frequent a certain character shows up.
+
+    //read in word and letter
+    String[] inputs = StdIn.readAllStrings(); 
+    String word = new String(inputs[0]);
+    String letter = inputs[1]; 
+    
+    StdOut.println("Input: " + word);
+    StdOut.print("Frequency of " + letter + ": ");
+
+    //start at the last letter of every word; as long as it exists; run the loop and then move down to the next letter
+
+    int count = 0;
+    for(int i = word.length()-1; i >= 0; i--){
+
+        if(word.charAt(i) == letter.charAt(0)){
+            count +=1;
+        }
+
+    }
+
+    StdOut.print(count); 
+
+    
+
+```
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 
 </span>
