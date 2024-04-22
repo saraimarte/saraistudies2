@@ -1,0 +1,638 @@
+---
+layout: '@layouts/Blog.astro'
+title: 🟡 Array List Class
+date: 04/21/24
+author: Sarai Marte
+chapter: Week 
+
+---
+
+
+<span style="font-family: var(--primaryFont);">
+
+  
+**What you know:** arrays can hold any data type, both primitive (ints, doubles, chars) or abstract (Strings).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**What's new:** array lists can hold *only* objects.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You're going to love these because this is how you wished arrays worked.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's start.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+First, make sure you import the class at the top of your file.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    import java.util.ArrayList;
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why? Because ArrayList is not built into java like String is. ArrayList is like the Color class/object where you had to import it.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## How to declare and initialize an array list?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's declare and initialize an arrayList that contains only String items.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <String> names = new ArrayList <String> ();
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Always follow the same format: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <datatypeOfItems> arrayListName = new ArrayList <datatypeOfItems> ();
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: ArrayLists can only hold object of the same type. So Only Strings not Colors and Strings or Pictures and Strings.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## ArrayList Methods
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Just like every other object- ArrayList can and does have some methods we can use specifically on this object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **1.ArrayList.size()**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Returns the amount of items in the arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+
+    ArrayList <String> names = new ArrayList <String> ();
+    
+    StdOut.println(names.size());
+
+    //Output: 0;
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Right now, size is 0 because there is nothing in the array but we can add things...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **2.ArrayList.add(x)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Adds x to the end of the arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+
+    ArrayList <String> cars = new ArrayList <String> ();
+    
+    names.add("Sarai"); //adds sarai to the list of names
+
+    StdOut.println(names); //ISNT THIS AMAZING THAT YOU DONT HAVE TO LOOP THROUGH IT TO PRINT OMGGG
+    StdOut.println(names.size()); //print amount of items in the arrayList
+
+    //Output: [Sarai]
+    //Output: 1
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **3.ArrayList.add(n,object)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Adds object to the nth position in the array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+   
+    ArrayList <String> names = new ArrayList <String> ();
+
+    //add "Sarai" at the 0th index 
+    //aka add "Sarai" as the first item in the array list
+  
+    names.add(0, "Sarai");
+  
+    StdOut.println(names); //Output: [Sarai]
+    StdOut.println(names.size()); //Output: 1
+   
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **4.ArrayList.remove(index)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Removes object at specified index.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+
+    ArrayList <String> names = new ArrayList <String> ();
+    names.add("Sarai");
+    
+    //removes object at 0th index 
+    //aka removes the first item in the array list.
+    names.remove(0); 
+
+    StdOut.println(names); //Output: []
+    StdOut.println(names.size()); //Output: 0
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **5.ArrayList.remove(object)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Removes specified object.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+   
+
+    ArrayList <String> names = new ArrayList <String> ();
+    names.add("Sarai");
+    
+    //removes "Sarai" from the arrayList
+    names.remove("Sarai"); 
+
+    StdOut.println(names); //Output: []
+    StdOut.println(names.size()); //Output: 0
+   
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **6.ArrayList.indexOf(object)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Returns the position of an object in the array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+   
+    ArrayList <String> names = new ArrayList <String> ();
+    
+    names.add("Sarai");
+   
+    StdOut.println(names.indexOf("Sarai")); 
+    
+    //Output: 0
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **7.ArrayList.get(object)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Gets the object at specified index.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+       
+    ArrayList <String> names = new ArrayList <String> ();
+    
+    names.add("Nikki");
+    names.add("Hiro");
+    names.add("Claire");
+    names.add("Peter");
+
+    StdOut.println(names.get(2));
+    
+    //Output: Claire
+
+   
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## **8.ArrayList.set(object)**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Replaces the object at specified index.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+  
+         
+    ArrayList <String> names = new ArrayList <String> ();
+    
+    names.add("Nikki");
+    names.add("Hiro");
+    names.add("Claire");
+    names.add("Peter");
+
+    //Before: [Nikki, Hiro, Claire, Peter]
+
+    //Replace the first item in the array list (0th index) with Sylar
+    names.set(0, "Sylar");
+
+    StdOut.println(names);
+    
+    //Output: [Sylar, Hiro, Claire, Peter]
+   
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Practice
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1A**.Make and output a list that contains the following names: Sam, Cat, Selena, Miley, Demi, Mike.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Solution </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <String> names  = new ArrayList <String> ();
+    names.add("Sam");
+    names.add("Cat");
+    names.add("Selena");
+    names.add("Miley");
+    names.add("Demi");
+    names.add("Mike");
+
+    StdOut.println(names);
+
+    //Output: [Sam, Cat, Selena, Miley, Demi, Mike]
+    
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1B**.Replace Mike with Demi and Austin with Ally without changing what you added to the array list. Output the changed array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    //get indices for mike and demi bc in the real world you may have
+    //a lot of data, maybe millions of rows and you won't 
+    //be able to eyeball where Mike or Demi is.
+    int whereMikeIs = names.indexOf("Mike");
+    int whereDemiis = names.indexOf("Demi");
+    
+    //Replace where they are with Austin and Ally.
+    names.set(whereMikeIs, "Austin");
+    names.set(whereDemiis, "Ally");
+
+    StdOut.println(names);
+
+    //Output: [Sam, Cat, Selena, Miley, Ally, Austin]
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use this new list for #2A (you can do it the manual way now and just add them from the getco like so)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>ArrayList For #2A</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <String> names  = new ArrayList <String> ();
+    names.add("Sam");
+    names.add("Cat");
+    names.add("Selena");
+    names.add("Miley");
+    names.add("Ally");
+    names.add("Austin");
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**2A**.Get and output the 4th name in the array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <String> names  = new ArrayList <String> ();
+    names.add("Sam");
+    names.add("Cat");
+    names.add("Selena");
+    names.add("Miley");
+    names.add("Ally");
+    names.add("Austin");    
+
+    StdOut.println(names.get(3));
+
+    //Output: Miley
+
+    //POV: Amount of Items
+    //[Sam, Cat, Selena, Miley, Ally, Austin]
+    //  1    2     3       4     5       6
+    //                     * Miley is the fourth name 
+
+    //POV: Positions of Items
+    //[Sam, Cat, Selena, Miley, Ally, Austin]
+    //  0    1     2       3     4      5
+    //                     * but get only works with positions 
+    //                       and miley has the 3rd position in the
+    //                       array list. 
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+**2B**.Remove Miley and replace Selena with Alex 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    //Before: [Sam, Cat, Selena, Miley, Ally, Austin]
+
+    //Remove Miley
+    names.remove("Miley");
+
+    //Find where selena is 
+    int whereIsSelena = names.indexOf("Selena");
+
+    //Replace Selena with Alex
+    names.set(whereIsSelena, "Alex");
+
+    StdOut.println(names);
+
+
+    //Output: [Sam, Cat, Alex, Ally, Austin]
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**2C**.Add Teddy as the second name in the array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+  
+    //Before: [Sam, Cat, Selena, Miley, Ally, Austin]
+
+    names.add(1, "Teddy");
+
+    StdOut.println(names);
+
+    //Output: [Sam, Teddy, Cat, Selena, Miley, Ally, Austin]       
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**2D**.Output how many items/names are in the arraylist?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    StdOut.println(names.size());
+
+    //Output: 7
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+3.Write a method that takes an ArrayList of strings and returns the string with the longest length.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+4.Write a method that takes an ArrayList of strings and returns the average length of the strings in the list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+5.Write a method that takes an ArrayList of integers and removes strings shorter than 5 letters.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+6.Write a method that takes an ArrayList of integers and removes all duplicate elements, leaving only one occurrence of each number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+</span>
