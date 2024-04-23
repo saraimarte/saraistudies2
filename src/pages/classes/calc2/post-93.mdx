@@ -1,9 +1,23 @@
 ---
 layout: '@layouts/Blog.astro'
 title: Sequences
-date:
+date: 04/23/24
 author: Sarai Marte
 ---
+
+
+import img1 from '../../../../public/Images/152/1.svg';
+import img2 from '../../../../public/Images/152/2.svg';
+import img3 from '../../../../public/Images/152/3.svg';
+
+import img1T5 from '../../../../public/Images/152/4.svg';
+import img2T5 from '../../../../public/Images/152/5.svg';
+import img3T5 from '../../../../public/Images/152/6.svg';
+import img4T5 from '../../../../public/Images/152/7.svg';
+import img5T5 from '../../../../public/Images/152/8.svg';
+import img6T5 from '../../../../public/Images/152/9.svg';
+
+
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -11,8 +25,296 @@ author: Sarai Marte
 
 A list of ordered numbers that go on for eva eva.
 
-### Notation
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-a
+## Notation
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+a<sub>n</sub> = ``` {1, 1/2, 1/3, 1/4 ...} ```  
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;a<sub>1</sub> &nbsp;&nbsp; a<sub>2</sub> &nbsp;&nbsp;&nbsp;  a<sub>3</sub> &nbsp;&nbsp; &nbsp;  a<sub>4</sub> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+where a<sub>n</sub> is the sequence and n is the nth term in the sequence.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, if I ask you: **What is a<sub>3</sub>?** You should say 1/3.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But what if I ask you: **What is a<sub>5</sub>?** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How are you suppose to know? Do you guess? No.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For all sequences in *this* course, every sequence can be represented by a function (or a formula- can be used interchangeably in *this* course).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We can let  a<sub>n</sub> be a(n) where it makes sense.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So just like f(x) = y so is a(n) = y.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So all the terms of the sequence are really outputs of a function or formula a(n). 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hence, we are able to answer the question: **What is the formula for a<sub>n</sub>?**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In other words, we're asking what function or formula will give us all these terms in the sequence?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If we find this function (or formula) that represents this sequence then we can plug in any n (even 5) to find what the output is!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table style="width: 564px; height: 178px;">
+<tbody>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 148px;">
+<div>
+<div>List Terms</div>
+</div>
+</td>
+<td style="height: 23px; width: 182.305px;">Write in similar Form</td>
+<td style="height: 23px; width: 85.6953px;">What is n?</td>
+<td style="height: 23px; width: 188px;">Relate all terms to n</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 148px;">
+<div>
+<div> a<sub>1 = 1</sub></div>
+</div>
+</td>
+<td style="height: 23px; width: 182.305px;">&nbsp;1/1</td>
+<td style="height: 23px; width: 85.6953px;">&nbsp;n=1</td>
+<td style="height: 23px; width: 188px;">&nbsp;1/n</td>
+</tr>
+<tr style="height: 23.5px;">
+<td style="height: 23.5px; width: 148px;"> a<sub>2 = 1/2</sub></td>
+<td style="height: 23.5px; width: 182.305px;">&nbsp;1/2&nbsp;</td>
+<td style="height: 23.5px; width: 85.6953px;">&nbsp;n=2&nbsp;</td>
+<td style="height: 23.5px; width: 188px;">&nbsp;1/n</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 148px;"> a<sub>3 = 1/3</sub></td>
+<td style="height: 23px; width: 182.305px;">&nbsp;1/3&nbsp;</td>
+<td style="height: 23px; width: 85.6953px;">&nbsp;n=3&nbsp;</td>
+<td style="height: 23px; width: 188px;">&nbsp;1/n&nbsp;</td>
+</tr>
+<tr style="height: 23px;">
+<td style="height: 23px; width: 148px;"> a<sub>4 = 1/4</sub></td>
+<td style="height: 23px; width: 182.305px;">&nbsp;1/4&nbsp;</td>
+<td style="height: 23px; width: 85.6953px;">&nbsp;n=4&nbsp;</td>
+<td style="height: 23px; width: 188px;">&nbsp;1/n&nbsp;</td>
+</tr>
+</tbody>
+</table>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, a(n) = 1/n
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Meaning that if you plug in 1 to n, it will output ```{1, 1/2, 1/3, 1/4 ... 1/n}```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In other words, 1/n will give us all the terms for this sequence.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, if I ask you: **What is a<sub><span style = "color:blue; font-weight:bold">5</span></sub>?** You should say 1/5. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because a(n) = 1/n and <span style = "color:blue; font-weight:bold"> n = 5 </span> so a(<span style = "color:blue; font-weight:bold"> 5 </span>) = 1/5.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What do we care about?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are only three things we care about in this lesson, if a sequence converges or diverges, if it converges then what does it converge to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### What does it mean for a sequence to converge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It just means that 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img1.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+exists.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In other words, as n gets infinitely bigger, the list of ordered numbers will eventually be limited to a certain number. So, we say that the sequence converges to that number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For example, the sequence a<sub>n</sub> = ```{1, 1/2, 1/3, 1/4...1/n}``` converges because as the sequence keeps going infinitely, the numbers get limited to 0. Hence, we say the sequence 1/n **converges to 0**.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Don't believe me? We already found the formula above so just find the limit as n gets bigger and bigger and bigger.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img3.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Makes sense right? Because 1 whole divided into infinite pieces just makes the whole infinitely smaller. So as n approaches infinity the fraction as a whole 1/n gets infinitely smaller and is limited to 0 hence we say that the sequence 1/n converges to 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### What does it mean for a sequence to diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It simply means it does not converge. It means that the numbers in the sequence are never limited to be one value.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For example, the sequence a<sub>n</sub> = ```{1, 2, 3, 4, 5, 6, 7, 8, 9, 10...}``` **diverges** because it is never limited to any number. It just keeps increasing by 1. Don't trust me?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Find the formula: a(n) = n
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Since
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img2.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+the sequence a <sub>n</sub> diverges
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+because it is not limited to any value as the sequence gets bigger and bigger (aka because it does not converge).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## But what if we can't find the limit?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sometimes, there will be functions that represent sequences that will be very hard to find the limit of as n approaches infinity- but that does not mean the limit does not exist.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In those situations, we have other tools that prove convergence. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style="list-style: none;"> (1) Theorem 5 </li>
+<li style="list-style: none;"> (2) Squeeze Theorem </li>
+<li style="list-style: none;"> (3) The type of series - Geometric or Telescoping </li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Theorem 5 </summary>
+  
+  
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Theorem 5 is literally just a list of limits you have to memorize.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img1T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img2T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img3T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img4T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img5T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img6T5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</details>
+  
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Squeeze Theorem </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  This one you mostly use when dealing with trig functions.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, depending on the type of the sequence, and your knowledge about those sequences, you can find out if a sequence converges or not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Think of it like this, let's say you recongize a person and you that if this person is breathing then you can conclude this person is alive.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+By the same coin, let's say you recognize a geometric sequence and you know that if that the |r| of that sequence is < 1 then you can conclude the sequence converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are two types of specific sequences: (1) Geometric and (2) Telescoping
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 </span>
