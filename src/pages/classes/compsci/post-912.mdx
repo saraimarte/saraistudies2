@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
 title: 🟡 Searching & Sorting
-date: 04/21/24
+date: 04/22/24
 author: Sarai Marte
 chapter: Week 
 
@@ -10,7 +10,286 @@ chapter: Week
 
 <span style="font-family: var(--primaryFont);">
   
+There are different types of algorithms we can write to search through or sort an array (or arrayList).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<li style = "list-style:none">(1) Linear/Sequential Search</li>
+<li style = "list-style:none">(2) Binary Search</li>
+<li style = "list-style:none">(3) Selection Sort</li>
+<li style = "list-style:none">(4) Insertion Sort</li>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Sequential Search 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When you go through the items in an array or arrayList one by one in sequential order aka just in order.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We will use the following array list of shapes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main(String[] args){
+
+        //make array
+        String[] shapes = {"Circle", "Square", "Triangle", "Rectangle", "Trapezoid"};
+
+        //convert it into arrayList
+        ArrayList <String> shapesList = new ArrayList<>(Arrays.asList(shapes));
+
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Remember to add these import statments at the top of your file.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    import java.util.ArrayList;
+    import java.util.Arrays;
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's create a method called 'sequentialSearch' that will search any arrayList for any search term and returns the position of where the search term is in the arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Call this function like so sequentialSearch(shapesList, "Square"); in your main method and set it equal to int whereOurSearchTermIs. Then output whereOurSearchTermIs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<summary> Solution (with ArrayList) </summary>
+
+
+```java
+
+    public static void main(String[] args){
+
+        String[] shapes = {"Circle", "Square", "Triangle", "Rectangle", "Trapezoid"};
+
+        ArrayList <String> shapesList = new ArrayList<>(Arrays.asList(shapes));
+
+        int whereOurSearchTermIs = sequentialSearch(shapesList, "Square");
+
+        StdOut.println(whereOurSearchTermIs);
+
+    }
+
+    public static int sequentialSearch(ArrayList <String> arrayListName, String searchTerm){
+
+        
+        for(int i = 0; i < arrayListName.size(); i++){
+
+            //if current item is the same as the searched term then...
+            if (arrayListName.get(i).compareTo(searchTerm) == 0 ){
+                return i; //return the position where the searchTerm was found
+            }
+
+        }
+
+        //after going through all the items return -1
+        // b/c the searchterm was not found
+        return -1; 
+
+
+    }
+
+
+    //Output: 1
+
+
+```
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<summary> Solution (with Array) </summary>
+
+
+```java
+
+    public static void main(String[] args){
+
+        String[] shapes = {"Circle", "Square", "Triangle", "Rectangle", "Trapezoid"};
+
+        int whereOurSearchTermIs = sequentialSearch(shapes, "Square");
+
+        StdOut.println(whereOurSearchTermIs);
+
+    }
+
+    public static int sequentialSearch(String[] arrayName, String searchTerm){
+
+        
+        for(int i = 0; i < arrayName.length; i++){
+
+            //if current item is the same as the searched Item then...
+            if (arrayName[i].compareTo(searchTerm) == 0 ){
+                return i; //return the position where the searchTerm was found
+            }
+
+        }
+
+        //after going through all the items return -1 b/c the searchterm was not found
+        return -1; 
+
+
+    }
+
+    
+
+```
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Binary Search 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We use binary search when the array or array list is sorted by either alphabetical order, numeriacal order, etc.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+<details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<summary>Draft</summary>
+
+Has anybody taught you how to play the guessing game the right way?
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+It's literally binary search.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Let's play a guessing game. Can you find the number i'm thinking about between 0 and 100 using binary search? The only hints you get is if you are higher or lower than the number i'm thinking.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+The number i'm thinking is 30 but you don't know that.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Now, let me show you how to play this game.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+First, you don't just randomly guess. You always pick the number in the middle.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+If your range is from 0 to 100, pick 50 ((0 + 100)/2).
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 50
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Lower
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+-See, now you got rid of 50 wrong guesses. Now, you know my number has to be less than 50. Now, you repeat the process. Cut the range in half.
+Now, your range  is between 0 and 50. In the middle is 25.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 25
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Higher 
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+-Now, you got rid of 25 wrong guesses because you know the number has to be higher than 25.   
+-You also know the number has to be lower than 50.  
+-Now, your range is (25, 50)   25 + 50 /2 = 37.5 (let's just use 37).
+-Now, repeat the process and cut in half.  
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 37
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Lower
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+-Now you know the number has to be between 25 and 27. Repeat the process and pick a number in the middle. (25 + 37 /2 ) = 31
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 31
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Lower
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+-New Range (25, 31) 25 + 31 /2 = 28
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 28
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Higher 
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+-New Range (28,31) 28 + 31 /2 = 30
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+You: 30
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Me: Correct!
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Now, we will do the same thing but in Java.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+Let's write a method that takes in an array of integers from 0 to 100 (but not all numbers are there), searches for the number 30 and returns the position of where that number is in the array.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
 
 
 
+</details>
 </span>

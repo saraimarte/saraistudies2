@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
 title: 🟡 Array List Class
-date: 04/21/24
+date: 04/22/24
 author: Sarai Marte
 chapter: Week 
 
@@ -79,6 +79,73 @@ Note: ArrayLists can only hold object of the same type. So Only Strings not Colo
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+## How to print out the arrayList?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    ArrayList <String> shapesList = new ArrayList<>();
+
+    StdOut.println(shapesList);
+
+    //Output: []
+    //returns empty array list because there is nothing in the array list rn
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+## How to convert regular array into an array List?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+First, add these import statements to the top of your file.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    import java.util.ArrayList;
+    import java.util.Arrays;
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Second, declare and initialize an array as you always do. Let's do one for shapes.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    String[] shapes = {"Circle", "Square", "Triangle", "Rectangle", "Trapezoid"};
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Lastly, declare and initialize an ArrayList by using Arrays.asList(passInArrayName) as the value for the arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java 
+
+    ArrayList <String> shapesList = new ArrayList<>(Arrays.asList(shapes));
+    StdOut.println(shapesList);
+
+    //Output: [Circle, Square, Triangle, Rectangle, Trapezoid]
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## ArrayList Methods
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -114,11 +181,11 @@ Right now, size is 0 because there is nothing in the array but we can add things
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## **2.ArrayList.add(x)**
+## **2.ArrayList.add(object)**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Adds x to the end of the arrayList.
+Adds object to the end of the arrayList.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -126,7 +193,7 @@ Adds x to the end of the arrayList.
 ```java
 
 
-    ArrayList <String> cars = new ArrayList <String> ();
+    ArrayList <String> names = new ArrayList <String> ();
     
     names.add("Sarai"); //adds sarai to the list of names
 
@@ -314,7 +381,7 @@ Replaces the object at specified index.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-**1A**.Make and output a list that contains the following names: Sam, Cat, Selena, Miley, Demi, Mike.
+**1A.** Make and output a list that contains the following names: Sam, Cat, Selena, Miley, Demi, Mike.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -345,7 +412,7 @@ Replaces the object at specified index.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-**1B**.Replace Mike with Demi and Austin with Ally without changing what you added to the array list. Output the changed array list.
+**1B.** Replace Mike with Demi and Austin with Ally without changing what you added to the array list. Output the changed array list.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -377,14 +444,14 @@ Replaces the object at specified index.
 
 </details>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Use this new list for #2A (you can do it the manual way now and just add them from the getco like so)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<details>
-<summary>ArrayList For #2A</summary>
+**2A.** Get and output the 4th name in the array list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use the following array list.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -400,15 +467,6 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 
 ```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-**2A**.Get and output the 4th name in the array list.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -455,7 +513,7 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 
-**2B**.Remove Miley and replace Selena with Alex 
+**2B.** Remove Miley and replace Selena with Alex 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -491,7 +549,7 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-**2C**.Add Teddy as the second name in the array list.
+**2C.** Add Teddy as the second name in the array list.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -519,7 +577,7 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-**2D**.Output how many items/names are in the arraylist?
+**2D.** Output how many items/names are in the arraylist?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -541,9 +599,10 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 </details>
 
+
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-3.Write a method that takes an ArrayList of strings and returns the string with the longest length.
+**3.** Write a method called 'populateArrayList' that takes in an empty arrayList called 'names' and adds other name String objects into the array by using the StdIn library.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -553,6 +612,255 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
+
+    public static void main(String[] args){
+
+        //Declaring and Initializing the Array List called names
+        ArrayList <String> names = new ArrayList<String>();
+
+        //Calling and printing out the output of the makeArrayList() method.
+        StdOut.println(populateArrayList(names));
+
+        //Remember: To tell the StdIn library you're done 
+        //inputting stuff you click enter
+        //and then do CTRL + Z (WINDOWS) or CTRL + D (MAC)
+
+    }
+
+
+    public static ArrayList<String> populateArrayList(ArrayList<String> arrayListName){
+
+        //While there is input
+        while(!StdIn.isEmpty()){
+            //Make that input into a String object
+            String name = StdIn.readString();
+            //Add that String to the names arrayList
+            arrayListName.add(name);
+        }
+
+        //Return the populated arrayList
+        return arrayListName;
+
+    }
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**4.** Write a method called 'getLongestString' that takes an ArrayList of whatever amount of strings and returns the string with the longest length assuming there is only one string that has the longest length.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use the following arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    ArrayList <String> names = new ArrayList<String>();
+
+    names.add("Sam");
+    names.add("Sarai");
+    names.add("Cat");
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main(String[] args){
+
+        //Declaring and Initializing the Array
+        ArrayList <String> names = new ArrayList<String>();
+
+        names.add("Sam");
+        names.add("Sarai");
+        names.add("Cat");
+
+        //Calling and printing out the output of the getLongestString() method.
+        StdOut.println(getLongestString(names));
+
+    }
+
+    public static String getLongestString(ArrayList <String> arrayListName){
+
+        String longestString = "";
+
+        for(int i = 0; i < arrayListName.size(); i++){ //go through every name in the arrayList
+            if(arrayListName.get(i).length() > longestString.length()){ //if the first name is longer than the current longestString then
+                longestString = arrayListName.get(i); // make it the longestString
+            } 
+        }
+
+        return longestString;
+        
+    }
+
+    //Output: Sarai
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Hopefully, here you learned that to access an arrayList object in a for loop you can't do arrayList[i] instead you do arrayList.get(i).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**5.** Write a method called 'averageLengthOfStrings' that takes an ArrayList of strings and returns the average length of the strings in the list.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use the following arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    ArrayList <String> names = new ArrayList<String>();
+
+    names.add("Sam");
+    names.add("Sarai");
+    names.add("Cat");
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main(String[] args){
+
+        //Declaring and Initializing the Array
+        ArrayList <String> names = new ArrayList<String>();
+
+        names.add("Sam");
+        names.add("Sarai");
+        names.add("Cat");
+
+        //Calling and printing out the output of the averageLengthOfStrings() method.
+        StdOut.println(averageLengthOfStrings(names));
+
+
+    }
+
+    public static double averageLengthOfStrings(ArrayList <String> arrayListName){
+
+        int countOfLetters = 0;
+
+        for(int i = 0; i < arrayListName.size(); i++){
+            //for every String in the arrayList- count the number of letters 
+            //and add it to the countOfLetters
+            countOfLetters += arrayListName.get(i).length();
+        }
+
+        //the average is the amount of letters in each name divided by how many names there are in the array list
+        double average = countOfLetters/(double)arrayListName.size(); // if we don't cast to a double then its going to be int/int and that will always round down so the answer would be 3
+
+        return average;
+
+
+    }
+
+    //Output: 3.6666666666666665 
+    //makes sense right? Bc most of the names are three letters and we only have one with 5 letters that brings the average up a little.
+
+
+
+
+```
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**6.** Write a method that takes an ArrayList of Strings and removes Strings shorter than 5 letters.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use the following arrayList.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    ArrayList <String> names = new ArrayList<String>();
+
+    names.add("Sam");
+    names.add("Sarai");
+    names.add("Cat");
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+<summary>Solution</summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static void main(String[] args){
+
+        //Declaring and Initializing the Array
+        ArrayList <String> names = new ArrayList<String>();
+
+        names.add("Sam");
+        names.add("Sarai");
+        names.add("Cat");
+
+        //Calling removeStringsShorterThan5Letters() method which performs an operation on the arrayList.
+        removeStringsShorterThan5Letters(names);
+
+        //Print out the modified arrayList.
+        StdOut.println(names);
+
+        
+
+    }
+
+    public static void removeStringsShorterThan5Letters(ArrayList <String> arrayListName){
+
+        //for every string - check the length- if its less than 5 remove it from the list
+        for(int i = 0 ; i < arrayListName.size(); i++){
+            if (arrayListName.get(i).length() < 5){
+                arrayListName.remove(i);
+            }
+        }
+
+    }
+
 
 
 
@@ -565,17 +873,23 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-4.Write a method that takes an ArrayList of strings and returns the average length of the strings in the list.
+**7.** Write a method called 'removeDuplicates' that takes an ArrayList of Strings and removes all duplicate elements, leaving only one occurrence of each String.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<details>
-<summary>Solution</summary>
+Use the following arrayList.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
+    ArrayList <String> names = new ArrayList<String>();
+
+    names.add("Sam");
+    names.add("Sam");
+    names.add("Sarai");
+    names.add("Cat");
+    names.add("Sarai");
 
 
 
@@ -584,14 +898,6 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-5.Write a method that takes an ArrayList of integers and removes strings shorter than 5 letters.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 <details>
 <summary>Solution</summary>
 
@@ -599,27 +905,61 @@ Use this new list for #2A (you can do it the manual way now and just add them fr
 
 ```java
 
+    public static void main(String[] args){
+
+        //Declaring and Initializing the Array
+        ArrayList <String> names = new ArrayList<String>();
+
+        names.add("Sam");
+        names.add("Sam");
+        names.add("Sarai");
+        names.add("Cat");
+        names.add("Sarai");
+        
+        //Call the method that removes duplicates
+        removeDuplicates(names);
+
+        //Print out modified arraylist
+        StdOut.println(names);
+
+    }
+
+    
+
+    public static void removeDuplicates(ArrayList <String> arrayListName){
+
+        //for every name in the array it has to be compared to the comparisonName
+        //once it goes through all the names, then the comparison name goes +1 moves on to the next until there are no more names to compare with
+
+        //for every comparison name
+        for(int comparisonNamePosition = 0; comparisonNamePosition < arrayListName.size(); comparisonNamePosition++ ){
+
+            String comparisonName = arrayListName.get(comparisonNamePosition);
+
+            //compare it with every name in the arrayList
+            for(int item = 1; item < arrayListName.size() -1 ; item++ ){
+
+                String currentName = arrayListName.get(item);
+
+                //if the comparison name is the same as the current name in the array list
+                if(currentName.compareTo(comparisonName) == 0){
+                    //remove the name (bc it is a duplicate)
+                    arrayListName.remove(item);
+
+                }
+
+                //then move on to the next comparison name and repeat.
+            
+            }
+
+        }
+
+       
+    }
+
+    //Output: [Sam, Cat, Sarai]
 
 
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-6.Write a method that takes an ArrayList of integers and removes all duplicate elements, leaving only one occurrence of each number.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<details>
-<summary>Solution</summary>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
 
 
 

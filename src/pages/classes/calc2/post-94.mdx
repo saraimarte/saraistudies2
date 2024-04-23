@@ -1,11 +1,126 @@
 ---
 layout: '@layouts/Blog.astro'
-title: Series
-date:
+title: Infinite Series
+date: 04/22/24
 author: Sarai Marte
 ---
 
+import img1 from '../../../../public/Images/152/10.svg';
+import img2 from '../../../../public/Images/152/11.svg';
+import img3 from '../../../../public/Images/152/12.svg';
+import img4 from '../../../../public/Images/152/13.svg';
+
 <span style=" font-family: var(--primaryFont);">
+
+## What is a series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+A series is just the sum of a sequence.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In other words, you are adding up all the terms in a sequence.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Notation
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, if a sequence is: &nbsp;&nbsp;&nbsp;&nbsp;  a<sub>n</sub> = ``` {1, 2, 3...} ```  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+To find the series you take the partial sum at every n and dump that into the sequence of partial sums called s<sub>n</sub>.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's called partial sums because you will notice we take the sum one n at a time- partially.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+s<sub>1</sub> = 1 = 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; so, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; S<sub>n </sub> = ```{1, ...} ```  
+s<sub>2</sub> = 1 + 2 = 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  so, &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;S<sub>n </sub> = ```{1, 3, ...} ```  
+s<sub>3</sub> = 1 + 2 + 3 = 6 &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;so, &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S<sub>n </sub> = ```{1, 3, 6 ...} ``` 
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+then the series is:  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; s<sub>n</sub> = ``` {1, 3, 6...} ```  
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;s<sub>1</sub>&nbsp;&nbsp; s<sub>2</sub> &nbsp;&nbsp;  s<sub>3</sub>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, if I ask you: **What is S<sub>3</sub>?** You say 6 because (1 + 2 + 3) = 6
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I'm really asking what is the partial sum of a<sub>n</sub> up until n = 3.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In math notation, I'm really finding:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img2.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But if the goal is to find the full sum of the sequnce a<sub>n</sub> then that's going to take forever. Because a sequence will go on for eva eva and so will I have to sit here and find the partial sums for eva eva. Imagine if I had to find S<sub>100000</sub>, we don't have all day. So what do we do?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We literally take the sum of the sequence from a starting point to infinity.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "display:flex; gap: 10px; flex-wrap:wrap" >
+
+So, instead of finding the sum of the sequence from one point to another finite point n, 
+
+<div style = "object-fit:contain;" > <img src={img1.src} alt=""  /> </div>
+
+We can find the sum of the sequence from one point to infinity. 
+
+<div style = "object-fit:contain;" > <img src={img3.src} alt=""  /> </div>
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but remember infinity is not a number, so really we are trying to find the sum of the sequence as it approaches infinity.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img4.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What do we care about?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+As the last lesson, there are only three things we care about, if a series converges, diverges and if it converges what does it converge to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+- Notation
+- sequence to series
+- partial sums
+- how to compute the sum of the series
+- finding the sum telescoping and geometric
+- divergence test nth term test
+-segway- we can't find the sums of all series but we can find if they con or div
+
+- Integral Test
+- comparison tests DCT LCT 
+- absolute convergence test ROOT RATIO
+- alternating series test
 
 
 
