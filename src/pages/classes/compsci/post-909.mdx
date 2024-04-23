@@ -1,6 +1,6 @@
 ---
 layout: '@layouts/Blog.astro'
-title: 🟡 (OOP) - Creating your own data types
+title: 🟡 Object Oriented Programming (OOP) - Creating your own data types
 date: 04/19/24
 author: Sarai Marte
 chapter: Week 
@@ -132,10 +132,9 @@ Here, we will define some of those variables.
      public static class Person { 
         
         //1. attributes of the object
-        public String name;
+        public String = name;
         private int age;
 
-        
      }
 
 
@@ -167,16 +166,14 @@ Third, we will set default values for these variables because sometimes people d
      //object = Person
      public static class Person {
        
-      
         //1. attributes of the object
-        public String name;
+        public String = name;
         private int age;
 
-        //2. defaults 
-        //this is also called a setter method
+        //2. defaults
         public Person(){
             name = "defaultName";
-            age = 0;
+            age = null;
         }
 
 
@@ -195,20 +192,19 @@ Fourth, you want to tell java that how to construct a new instance/version of th
 ```java
 
 
-    //object = Person
-    public static class Person {
-    
+     //object = Person
+     public static class Person {
+       
         //1. attributes of the object
-        public String name;
+        public String = name;
         private int age;
 
         //2. defaults 
         //this is also called a setter method
         public Person(){
             name = "defaultName";
-            age = 0;
+            age = null;
         }
-
 
         //3. tells java how to contruct a new person
         //this is called a constructor
@@ -247,81 +243,9 @@ This is used because when we make a new person we give that person it's own vari
 
 Now, putting it all together, we have: 
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
 ```java 
 
 
-    public class Demo {
-    
-        public static void main (String args[]){
-
-
-
-        }
-
-        //object = Person
-        public static class Person {
-        
-            //1. attributes of the object
-            public String name;
-            private int age;
-
-            //2. defaults 
-            //this is also called a setter method
-            public Person(){
-                name = "defaultName";
-                age = 0;
-            }
-
-            //3. tells java how to contruct a new person
-            //this is called a constructor
-            //it should always have the same name as the class
-            public Person(String  name, int age){
-                this.name = name;
-                this.age = age;
-            }
-
-
-    }
-
-    }
-
-
-
 ```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Now, in the main method, we can create multiple instances of Person like so, 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java 
-
-        
-    public static void main (String args[]){
-
-        //create 2 people, give them names and ages
-        Person person1 = new Person("sarai", 20);
-        Person person2 = new Person("emily", 21);
-
-        StdOut.println(person1.name);
-        StdOut.println(person2.name);
-
-
-    }
-
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Notice, we can access the attributes of these Persons by just selecting the person.attribute.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 </span>
 

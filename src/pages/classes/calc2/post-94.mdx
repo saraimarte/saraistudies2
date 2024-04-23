@@ -9,6 +9,22 @@ import img1 from '../../../../public/Images/152/10.svg';
 import img2 from '../../../../public/Images/152/11.svg';
 import img3 from '../../../../public/Images/152/12.svg';
 import img4 from '../../../../public/Images/152/13.svg';
+import img5 from '../../../../public/Images/152/14.svg';
+import img6 from '../../../../public/Images/152/15.svg';
+import img7 from '../../../../public/Images/152/16.svg';
+import img8 from '../../../../public/Images/152/17.svg';
+import img9 from '../../../../public/Images/152/18.svg';
+import img10 from '../../../../public/Images/152/19.svg';
+import img11 from '../../../../public/Images/152/20.svg';
+import img12 from '../../../../public/Images/152/21.svg';
+import img13 from '../../../../public/Images/152/22.svg';
+import img14 from '../../../../public/Images/152/23.svg';
+import img15 from '../../../../public/Images/152/24.svg';
+import img16 from '../../../../public/Images/152/25.svg';
+import img17 from '../../../../public/Images/152/26.svg';
+import img18 from '../../../../public/Images/152/27.svg';
+import img19 from '../../../../public/Images/152/28.svg';
+import img20 from '../../../../public/Images/152/29.svg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -47,9 +63,9 @@ s<sub>3</sub> = 1 + 2 + 3 = 6 &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-then the series is:  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; s<sub>n</sub> = ``` {1, 3, 6...} ```  
+then the series is:  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; s<sub>n</sub> = ``` {1 + 3 + 6...} ```  
 
-&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;s<sub>1</sub>&nbsp;&nbsp; s<sub>2</sub> &nbsp;&nbsp;  s<sub>3</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;s<sub>1</sub>&nbsp;&nbsp; s<sub>2</sub> &nbsp;&nbsp;  s<sub>3</sub>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -66,6 +82,10 @@ In math notation, I'm really finding:
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 <div style = "object-fit:contain;" > <img src={img2.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## How do we find the sum of the *whole* sequence?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -107,22 +127,449 @@ As the last lesson, there are only three things we care about, if a series conve
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+### How do we know if a series converges?
+
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-- Notation
-- sequence to series
-- partial sums
-- how to compute the sum of the series
-- finding the sum telescoping and geometric
-- divergence test nth term test
--segway- we can't find the sums of all series but we can find if they con or div
+Look at what it's respective sequence does. 
 
-- Integral Test
-- comparison tests DCT LCT 
-- absolute convergence test ROOT RATIO
-- alternating series test
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the sequence of partial sum (S<sub>n</sub>) converges then the series will also converge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+*delete Note: Yes, they both may behave the same but that does not mean they will converge to the same thing.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This tells us that to find if a series converges we really just need to find if the sequence converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because these are series they may ask us what the series converges to but they will only ask us that if we are working with telescoping or geometric series because those are the only ones we can actually find the sum of.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How do we know what a series converges to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here is the delio, we can almost never tell what a series converges to but in this section 10.2 we will because we will be dealing with geometric and telescoping series which are series that if they converge, we can find what they converge to. For the rest of the series in the following sections we won't be able to tell what it converges to, only if it converges or diverges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are two types of specific series: (1) Geometric and (2) Telescoping
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.2 Geometric Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img5.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img6.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How to find sum of geometric series?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Just simply use this formula: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img17.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+where a is the first term and r is the ratio.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.2 Telescoping Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge of diverge? If they converge, what do they converge to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img19.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
 
 
 
+  &nbsp;&nbsp;&nbsp;&nbsp;
 
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<div style = "object-fit:contain;" > <img src={img20.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.2 Divergence Test (nth term test)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the limit as n approaches infinity of an is equal to 0 or does not exist then the series sigma from n = 1 to infinty of a sub n diverges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.3 Integral Test
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Only works with series with positive terms.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Conditions: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+(1) Positive  
+(2) Continuous  
+(3) Decreasing  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Find, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img18.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rules:  
+
+If L = ∞ DIV so given series will div aswell.  
+If L = constant CON so given series will con aswell. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.4 Comparison Tests
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Direct Comparison Test (DCT)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Only works with series with positive terms.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The rules: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If a<sub>n</sub> ≤ b<sub>n</sub> and  Σb<sub>n</sub> converges then so will Σa<sub>n</sub> converge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If a<sub>n</sub> ≤ b<sub>n</sub> and  Σb<sub>n</sub> diverges then so will Σa<sub>n</sub> diverge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img7.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img8.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img9.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Limit Comparison Test (LCT)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Only works with series with positive terms.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The rules: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Given: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img10.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+where p is pronounced "row" or "ro" (cuz some mathematician said so 5 billion years ago).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+If p = nonzero number then  Σb<sub>n</sub> and Σa<sub>n</sub> will either both converge or both diverge depending on what b<sub>n</sub> does.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If p = 0 and Σb<sub>n</sub> converges then Σa<sub>n</sub> will also converge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If p = ∞ and Σb<sub>n</sub> diverges then Σa<sub>n</sub> will also diverge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img11.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img12.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img13.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.5 Absolute Convergence Tests
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What happens when we have series with negative terms?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, because mathematicians are lazy they just said "hey! we don't have to work with series with negative terms- we can just put absolute value signs around them and boom! now they're positive series".
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But doesn't that make it a different series?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Yes! But the idea is that when you add absolute value to something the worst you can do is make that something bigger. So the concept is that if the series with absolute value converges then so will the series without absolute value (the given series) because that series will always be smaller or equal to it's corresponding positive series. So, if the top series converges the bottom will have to follow the same behavior (Think DCT).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, now we use absolute convergence tests that tell us if a series with absolute value converges or not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If it does, we say it converges absolutely (because it literally has absolute value symbols around it).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Ratio Test 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When to use: factorials (n!) and powers of (2^n)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The Rule: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Given: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img15.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If p < 1 CON ABS  
+If p > 1 DIV   
+If p = 1 or DNE Inconclusive aka try another test 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What con abs or div? Σa<sub>n</sub> (your given series.)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge absolutely, converge conditionally or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img14.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Root Test
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When to use: roots!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Same rules as ratio test but 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img15.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge absolutely, converge conditionally or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.6 Alternating Series Test
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When to use: when you see (-1) anywhere in your series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
 </span>
