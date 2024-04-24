@@ -35,3 +35,147 @@ C.
 not included in GDP​ calculation, since books bought by the bookstore are intermediate goods.
 Your answer is correct.D.
 included in GDP calculation under consumption.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### How do we know if a series converges?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "display:flex; justif-content:center;align-items:center; gap: 10px;"> 
+If 
+<div style = "object-fit:contain;" > <img src={img24.src} alt=""  /> </div>
+ 
+is true then the series diverges.
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why? Think about it, if the sequence converges to something other than 0 then when we look at the series we will be adding that number infinitely so the sum (the series) will keep on going forever and never converge to a certain number. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+a<sub>n</sub> = ```{1, 1/2, 1/3,...0.001...0.0001...0.00001, 0, 0, 0 }```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+then when we look at the sequence of partial sums
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+we will eventually be adding just 0's.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+S<sub>n</sub> = ```{1 + 1/2 + 1/3 + ...0.001...0.0001 + 0.00001 + 0 + 0 + 0}```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+And if you add 0 to a sum, the sum stays the same. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, it makes sense that if the sequence converges to 0 that the series will eventually only end up adding 0's implying that the sum will actually be a finite number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because these are series they may ask us what the series converges to but they will only ask us that if we are working with telescoping or geometric series because those are the only ones we can actually find the sum of.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How do we know what a series converges to?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+First, we know that if the sequence of partial sums (S<sub>n</sub>) converges then the series converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "display:flex; justif-content:center;align-items:center; gap: 10px;"> 
+So, if 
+<div style = "object-fit:contain;" > <img src={img25.src} alt=""  /> </div>
+ 
+exists then the series converges.
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+but the problem is that sometimes we won't be able to get S<sub>n</sub> (unless we're dealing with specific series like *delete geometric or telescoping).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, another way is to look at it's sequence a<sub>n</sub>.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here is the delio, we can almost never tell what a series converges to but in this section 10.2 we will because we will be dealing with geometric and telescoping series which are series that if they converge, we can find what they converge to. For the rest of the series in the following sections we won't be able to tell what it converges to, only if it converges or diverges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There are two types of specific series: (1) Geometric and (2) Telescoping
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+
+
+
+
+

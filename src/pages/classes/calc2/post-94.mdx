@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
 title: Infinite Series
-date: 04/22/24
+date: 04/23/24
 author: Sarai Marte
 ---
 
@@ -9,8 +9,8 @@ import img1 from '../../../../public/Images/152/10.svg';
 import img2 from '../../../../public/Images/152/11.svg';
 import img3 from '../../../../public/Images/152/12.svg';
 import img4 from '../../../../public/Images/152/13.svg';
-import img5 from '../../../../public/Images/152/14.svg';
-import img6 from '../../../../public/Images/152/15.svg';
+
+
 import img7 from '../../../../public/Images/152/16.svg';
 import img8 from '../../../../public/Images/152/17.svg';
 import img9 from '../../../../public/Images/152/18.svg';
@@ -25,6 +25,20 @@ import img17 from '../../../../public/Images/152/26.svg';
 import img18 from '../../../../public/Images/152/27.svg';
 import img19 from '../../../../public/Images/152/28.svg';
 import img20 from '../../../../public/Images/152/29.svg';
+
+
+import img21 from '../../../../public/Images/152/33.svg';
+import img22 from '../../../../public/Images/152/34.svg';
+import img23 from '../../../../public/Images/152/35.svg';
+import img24 from '../../../../public/Images/152/36.svg';
+import img25 from '../../../../public/Images/152/37.svg';
+import img26 from '../../../../public/Images/152/38.svg';
+import img27 from '../../../../public/Images/152/39.svg';
+import img28 from '../../../../public/Images/152/40.svg';
+import img29 from '../../../../public/Images/152/41.svg';
+import img30 from '../../../../public/Images/152/42.svg';
+import img31 from '../../../../public/Images/152/43.svg';
+import img32 from '../../../../public/Images/152/44.svg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -77,7 +91,7 @@ I'm really asking what is the partial sum of a<sub>n</sub> up until n = 3.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-In math notation, I'm really finding:
+In sigma notation, I'm really finding:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -89,7 +103,7 @@ In math notation, I'm really finding:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-But if the goal is to find the full sum of the sequnce a<sub>n</sub> then that's going to take forever. Because a sequence will go on for eva eva and so will I have to sit here and find the partial sums for eva eva. Imagine if I had to find S<sub>100000</sub>, we don't have all day. So what do we do?
+But if the goal is to find the full sum of the sequnce a<sub>n</sub> then that's going to take forever. Because a sequence will go on forever and so will I have to sit here and find the partial sums for forever. Imagine if I had to find S<sub>100000</sub>, we don't have all day. So what do we do?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -97,7 +111,7 @@ We literally take the sum of the sequence from a starting point to infinity.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style = "display:flex; gap: 10px; flex-wrap:wrap" >
+<div style = "display:flex; flex-direction:column; gap: 20px; flex-wrap:wrap" >
 
 So, instead of finding the sum of the sequence from one point to another finite point n, 
 
@@ -119,6 +133,26 @@ but remember infinity is not a number, so really we are trying to find the sum o
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+which is really,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img25.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+which is the sum of the sequence of partial sums as n gets infinitely bigger aka the series. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, if the sequence of partial sum (S<sub>n</sub>) converges then the series converges (because the series is literally the sum of the sequence of partial sums as n goes to infinity).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This tells us that to find if a series converges we really just need to find if the sequence of partial sums converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## What do we care about?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -127,39 +161,27 @@ As the last lesson, there are only three things we care about, if a series conve
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### How do we know if a series converges?
+### How do we know when a series converges or diverges?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Look at what it's respective sequence does. 
+First, we have three special types of series that when we know something about them, we can conclude they converge.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-If the sequence of partial sum (S<sub>n</sub>) converges then the series will also converge.
+Those are geometric, telescoping and p-series or harmonic series. Those we will go over first.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-*delete Note: Yes, they both may behave the same but that does not mean they will converge to the same thing.
+Second, we will then move onto tests. These tests will tell us if a series converge or not.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This tells us that to find if a series converges we really just need to find if the sequence converges.
+### How do we know what a series converges to, if it converges?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Because these are series they may ask us what the series converges to but they will only ask us that if we are working with telescoping or geometric series because those are the only ones we can actually find the sum of.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### How do we know what a series converges to?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Here is the delio, we can almost never tell what a series converges to but in this section 10.2 we will because we will be dealing with geometric and telescoping series which are series that if they converge, we can find what they converge to. For the rest of the series in the following sections we won't be able to tell what it converges to, only if it converges or diverges.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-There are two types of specific series: (1) Geometric and (2) Telescoping
+We will only be able to find out what a series converges to if we're dealing with telescoping or geometric series (10.2) because either we can find it manually or we have a formula for the sum. After 10.2, we will only be able to tell if the series converges or not.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -167,19 +189,55 @@ There are two types of specific series: (1) Geometric and (2) Telescoping
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style = "object-fit:contain;" > <img src={img5.src} alt=""  /> </div>
+Series where every term contains a common ratio r.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<div style = "object-fit:contain;" > <img src={img6.src} alt=""  /> </div>
+So s<sub>n</sub> = ```{2 + 4 + 8   + ...}```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### How to find sum of geometric series?
+is really, s<sub>n</sub> = ```{a + ar + ar^2 + ...}```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Just simply use this formula: 
+Note: most of the time you won't be given the series in closed form (the list with dots) instead it will be given to you in sigma notation like so,
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img22.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, a = 2 r = 2   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+a is the first term of the series.   
+r is the second term divided by the first (4/2 = 2)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Just by knowing what r is we can find out if the series converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rule: 
+
+If |r| < 1 CON  
+If |r| ≥ 1 DIV  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, because |2| ≥ 1, the series S<sub>n</sub> diverges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How to find the sum of a geometric series?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, if your series happens to converge, you can find what it converges to by using this formula: 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -187,11 +245,51 @@ Just simply use this formula:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-where a is the first term and r is the ratio.
+For example, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img21.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img23.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ## 10.2 Telescoping Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Just watch the videos in the solution lol.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -236,11 +334,147 @@ Do the following series converge of diverge? If they converge, what do they conv
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+## 10.2 P-series (Harmonic Series)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Omg I love these. These are like the easiest series ever.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "display:flex; justif-content:center;align-items:center; gap: 10px;"> 
+These are series of the form 
+<div style = "object-fit:contain;" > <img src={img28.src} alt=""  /> </div>
+ 
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rules:  
+If p > 1 CON  
+If p ≤ 1 DIV  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img29.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img30.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img31.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img32.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## 10.2 Divergence Test (nth term test)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-If the limit as n approaches infinity of an is equal to 0 or does not exist then the series sigma from n = 1 to infinty of a sub n diverges.
+<div style = "display:flex; justif-content:center;align-items:center; gap: 10px;"> 
+If 
+<div style = "object-fit:contain;" > <img src={img24.src} alt=""  /> </div>
+ 
+is true then the series Σa<sub>n</sub> diverges.
+
+</div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Note: It does NOT work the opposite way. Just because a series diverges does not mean the lim as n approaches infinity of the sequence a<sub>n</sub> is something other than 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Do the following series converge or diverge?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img26.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img27.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Okay, so now when the series is not a special series like geometric, telescoping, or harmonic and the divergence test does not tell you if it diverges, then we have the integral test.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -572,4 +806,13 @@ Do the following series converge absolutely, converge conditionally or diverge?
 When to use: when you see (-1) anywhere in your series.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+This test is used for alternating series with negative terms that do not converge absolutely.
+
+If it ends up converging with this test then we say the given series converges conditionally.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+TODO: alternating summation 
+
 </span>

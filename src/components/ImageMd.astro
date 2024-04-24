@@ -1,0 +1,25 @@
+---
+
+const {img} = Astro.props;
+
+---
+
+<div class = "imgMd" style = {{ objectFit: 'cover'}}>
+    <img src={img.src} alt="" style={{ width: 'auto', height: '100%' }} />
+  </div>
+  
+  
+<style>
+    
+    .imgMd{
+            height:390px;
+            width: 100%;
+    }
+
+    /*for mobile*/
+    @media only screen and (max-width:620px){
+        .imgMd{
+            height:200px;
+        }
+    }
+</style>
