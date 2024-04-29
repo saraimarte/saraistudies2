@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
 title: Infinite Series
-date: 04/23/24
+date: 04/29/24
 author: Sarai Marte
 ---
 
@@ -42,6 +42,7 @@ import img32 from '../../../../public/Images/152/44.svg';
 
 
 import img34 from '../../../../public/Images/152/49.svg';
+import img35 from '../../../../public/Images/152/57.svg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -776,8 +777,6 @@ Do the following series converge absolutely, converge conditionally or diverge?
   
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-
   &nbsp;&nbsp;&nbsp;&nbsp;
 
 </details>
@@ -814,7 +813,73 @@ When to use: when you see (-1) anywhere in your series.
 
 This test is used for alternating series with negative terms that do not converge absolutely.
 
-If it ends up converging with this test then we say the given series converges conditionally.
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+AKA test for absolute convergence first with ratio, root, integral, DCT or LCT. You are allowed to use the last 4 because when you test for absolute convergence, it means that you are literally putting absolute value on the series, so the once negative termed series become positive hence you can use the last 4 tests that only work on positive series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the corresponding positive series converges with one of those tests, then we say the given series converges absolutely (because the given series literally converged only *with* absolute value symbols around it).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+And then by the absolute convergence theorem, if a series converges absolutely that implies the series itself (the given series) converges aswell and then you're done!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Butttt if  the series ends up diverging and we know it's an alternating series, the series itself may or may not converge. We check using the alternating series test (AST).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If it ends up converging with the alternating series test then we say the given series converges conditionally (because the given series did not meet the *condition* of converging with absolute values but it did converge without them.)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img35.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  First, we note that the series is alternating because of the (-1).
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Then, we check for absolute convergence.
+  
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  The series with absolute value is 1/n which we know by the p-test where p = 1 < = 1 that the series diverges.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  Because it might be an alternating series, even though the series with absolute value does not converge, the series *without* absolute value may or may not converge. We have to check.
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  How do we check?
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  By checking the conditions for an alternating series that converges, which are...  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  1.a<sub>n</sub> ≥ 0 Positive  
+  2.a<sub>n</sub> ≤ a<sub>n</sub>  Decreasing  
+  3.lim as n → ∞ of a<sub>n</sub> = 0  
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+  If all these conditions are met (which they are, check the video for work), we can say that the given series converges conditionally by the alternating series test (AST) (because it literally did not meet the *condition* of converging absolutely but it did meet the condition of converging (converging w/o absolute value symbols).)
+
+  &nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
