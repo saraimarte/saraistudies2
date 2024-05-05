@@ -64,3 +64,13 @@ details {
 :root{
     font-family: var(--primaryFont);
 }
+/* Disable zooming */
+body {
+    touch-action: manipulation;
+    touch-action: none; /* For older browser compatibility */
+    -ms-touch-action: manipulation; /* For Internet Explorer */
+    -ms-touch-action: none; /* For older versions of Internet Explorer */
+    user-zoom: fixed; /* Prevent user-initiated zooming */
+    -ms-content-zooming: none; /* For Internet Explorer */
+    zoom: 1; /* For Internet Explorer */
+}
