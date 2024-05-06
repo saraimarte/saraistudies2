@@ -1,22 +1,115 @@
 ---
 layout: '@layouts/Blog.astro'
 title: 🟡 Arrays (2D)
-date: 03/13/24
+date: 05/05/24
 author: Sarai Marte
 chapter: Week 5
 
 ---
 
-
 <span style="font-family: var(--primaryFont);">
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## 2 Dimensional Arrays
+## What we know:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We can also make 2D arrays- that simply means we now have rows and columns.
+```java
+
+    int[] arr = new int[2];
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This gives us an array with 2 integers, with 0's by default: [0,0]
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What's new:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    int[][] arr = new int[2][2]; //[row][cols]
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This gives us an array with 2 rows and 2 columns filled with integers (0's by default): 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+[0,0]  
+[0,0]
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Another way to look at this: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What we know:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    int[] arr = {1, 2, 3, 4};
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This gives us: [1, 2, 3, 4]
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## What's new:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+```java
+
+    int[][] arr = { {1, 2}, {3, 4} };
+                   //row 1  //row2
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This gives us:  
+[1, 2]  
+[3, 4]  
+ 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, you can see what a 2D array is.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's literally an an array of arrays.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You have an two arrays within one array. Those two arrays, you can visualize them stacked on top up of one another with each array being a row.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Getting Info from the array
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's start by printing out the values in the array like how we have them visualized.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -24,124 +117,81 @@ We can also make 2D arrays- that simply means we now have rows and columns.
 
     int[][] numbers = new int[2][2];
 
-    for(int i = 0; i < numbers.length; i++ ){
-        System.out.println(numbers[i][i]);
-    }
-
-    //Output: 
-
-
-```
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-```java
-
-    int[][] numbers = new int[10][5];
-
     for (int row = 0; row < numbers.length; row ++) {
+        StdOut.println(" "); //add an 'enter'/space after each row
         for(int column = 0; column < numbers.length; column++){
-            System.out.println(numbers[row][column]);
+            //print out the value and a space after
+            System.out.print(numbers[row][column] + " ");
         }
     }
 
     //Output: 
+    // [0  0]
+    // [0  0]
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Initializing and Declaring
+## How many rows are there? Columns?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Instead of int[] we do int[][]
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-int[][] arr = new int[2][2]
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We call this a two-by-two array, meaning two rows and two columns.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Again, by default, Java initializes the arrays to 0.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-So, right now, we have 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-0 0  
-0 0  
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-We can change those values manually.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-arr[row][col]
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-arr[0][0] = 1;  
-arr[0][1] = 2;  
-arr[1][0] = 3;  
-arr[1][1] = 4;  
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Let's also cover how to change them automatically because what if you have an array of size 100- you won't manually adjust each value. Before that, we have to learn how to go through a 2D array- let's do that and print every row and column of numbers given the variety we just had.
+Let's take this array:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 ```java
 
-    public class fileName {
-        
-        public static void main(String[] args){
-
-            int[][] arr = new int[2][2];
-
-            //row 0 column 0
-            arr[0][0] = 1;
-            arr[0][1] = 2;
-            arr[1][0] = 3;
-            arr[1][1] = 4;
-
-            for (int row = 0; row < arr.length; row++){ //for every row
-                //go through every column
-                StdOut.println(" ");
-                for (int col = 0; col < arr.length; col++){
-                    StdOut.print(arr[row][col] + " ");
-                }
-            }
-
-        }
-
-    }
-
-    //Output 
-  //  1 2 
-   // 3 4 
+    int[][] arr = {{1, 2, 3}, {4, 5, 6}};
 
 
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Problems: 
+How many rows are there?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-1. Given a 2D integer array, change all the negative numbers to zero.
+```java
+
+    arr.length; //2
+    
+
+```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+How many columns are there?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    arr[0].length; //3
+
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Above, you can take any row since all rows have the same amount of columns, and see how how long it is, aka count the columns. We took the first row (index 0) and found it's length.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Practice: 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** Given a 2D integer array, change all the negative numbers to zero.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Solution </summary>
+
 
 ```java
 
@@ -176,4 +226,10 @@ Problems:
 
 
 ```        
+
+</details>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 </span>
