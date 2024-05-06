@@ -1,7 +1,7 @@
 ---
 layout: '@layouts/Blog.astro'
 title: 🟡 (OOP) - Primitive vs Abstract Data Types
-date: 04/19/24
+date: 05/06/24
 author: Sarai Marte
 chapter: Week 
 ---
@@ -532,7 +532,7 @@ Sees if one string is equal to another ignoring the case.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-1.Given any string, output the string backwards.
+**1.** Given any string, output the string backwards.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -574,7 +574,40 @@ Sees if one string is equal to another ignoring the case.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-2.Given any string, output how frequent a certain character shows up.
+**2.** Given any string, write a function that returns the string reversed (Do not display anything/use print)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+  <summary> Solution </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+```java
+
+    public static String reverse(String str){
+
+      String reversedString = "";
+
+      for(int i = str.length() - 1; i >= 0; i--){
+          reversedString += str.charAt(i);
+      }
+
+      return reversedString;
+      //this was on my final SP24 and also F23 Section 2 #1 Second Part of the problem
+      //https://rutgers.app.box.com/s/fdu42d8mcf32lpchmemhif2bk633jfak
+    }
+ 
+
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**3.** Given any string, output how frequent a certain character shows up.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
