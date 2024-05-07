@@ -1,9 +1,11 @@
 ---
 layout: '@layouts/Blog.astro'
 title: Infinite Series
-date: 04/29/24
+date: 05/07/24
 author: Sarai Marte
 ---
+
+import ImageMd from '@components/ImageMd.astro';
 
 import img1 from '../../../../public/Images/152/10.svg';
 import img2 from '../../../../public/Images/152/11.svg';
@@ -46,6 +48,10 @@ import img35 from '../../../../public/Images/152/57.svg';
 import img36 from '../../../../public/Images/152/58.svg';
 import img37 from '../../../../public/Images/152/59.svg';
 import img38 from '../../../../public/Images/152/60.svg';
+
+
+
+import img39 from '../../../../public/Images/152/61.png';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -180,7 +186,7 @@ Those are geometric, telescoping and p-series or harmonic series. Those we will 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Second, we will then move onto tests. These tests will tell us if a series converge or not.
+Second, we will then move onto tests. These tests will tell us if a series converges or not.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -541,6 +547,15 @@ Okay, so now when the series is not a special series like geometric, telescoping
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+# Positive Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The following tests only work for series with positive terms only.  
+(Note for the future: We can make negative series positive, so you *will* be able to use these tests on those series. Yay!)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## 10.3 Integral Test
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -762,7 +777,11 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## 10.5 Absolute Convergence Tests
+# Negative Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## 10.5 Testing for Absolute Convergence & Using the Absolute Convergence Theorem (ACT)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -770,23 +789,112 @@ What happens when we have series with negative terms?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Well, because mathematicians are lazy they just said "hey! we don't have to work with series with negative terms- we can just put absolute value signs around them and boom! now they're positive series".
+Well, because mathematicians are lazy they just said "hey! we don't have to work with series with negative terms- we can just put absolute value signs around them and boom! now they're positive series!".
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-But doesn't that make it a different series?
+So just like -1 becomes +1 when you put absolute value signs around it, so does a series become positive when you put absolute signs around it.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Yes! But the idea is that when you add absolute value to something the worst you can do is make that something bigger. So the concept is that if the series with absolute value converges then so will the series without absolute value (the given series) because that series will always be smaller or equal to it's corresponding positive series. So, if the top series converges the bottom will have to follow the same behavior (Think DCT).
+<ImageMd img = {img39}> </ImageMd>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, now we use absolute convergence tests that tell us if a series with absolute value converges or not.
+Great! Now we went from a negative series to a positive one.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-If it does, we say it converges absolutely (because it literally has absolute value symbols around it).
+But waitttt, doesn't adding absolute value signs around the given series make it a *different* series?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Yes! That's why we call it the ***corresponding* positive series**.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You're right! It's not the same as the series you are given.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+By having the corresponding positive series however, we can now use any of the tests that we learned earlier that only work for positive series, like DCT, LCT and Integral.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+"""  
+Okay great Sarai. We can use the tests we learned on this corsp. positive series.    
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But how is this helpful?? My professor didn't ask me if the positive corresponding series converges or not, they asked me if the series they *gave* me converges or not.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So how does testing this corresponding positive series tell me anything useful about the series I was given???  
+
+"""
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, first, you are no longer testing for convergence of the given series, you're now testing for absolute convergence of the given series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When you use one of the convergence tests like DCT, and you prove that the positive series converges then you can say by the absolute convergence theorem (ACT) that the given series converges **absolutely**. In other words, the given series converges **completely**, **absolutely**, in every way possible both with **and** without absolute values *just* because you found that the corsp. positive series converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Whaaaaaaat? How does this work??
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The idea is that when you add absolute value to something, the worst you can do is make that something bigger. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So the corresponding positive series (that has absolute value signs around it) is bigger than the given negative series. The given negative series will always be smaller or equal to the corrsp. positive series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Then, if the corresponding positive series converges (is being limited to a value) then so will the given series because remember that the given series is smaller or below the corsp. positive series, so if the big series is being limited, and it's bigger or on top of the smaller series then ofcourse the smaller series will eventually be limited too.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Think about it like this: little kids always listen to the big kids.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So if big kid says "let's go this way" then small kid will listen.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In other words, if the big series (in this case the corsp. positive series) converges then the smaller series (given negative series) will have to follow the same behavior and converge as well (Think DCT).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+*Similarly, if the big series (the corsp. positive series) says "let's go to infinity!" (diverges) then the smaller series (the given negative series) will have to follow the same behavior and go to infinity and beyond! (diverge).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+*ALERT: The last part is not the absolute convergence theorem, it's just common sense but it's not always true. Sometimes, we will see later, if a series is alternating, then the given series may converge even if the corresponding positive series diverges. Sometimes little kids don't listen when big kids tell them to go do bad things- like flying off to infinity.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+To conclude, we are now testing for **absolute convergence** because when we're testing, we are *literally* testing on a **series with absolute value signs** hence when we find that it converges, we can say that ACT implies that the given series itself converges aswell. In the conclusion however, we don't just say the given series converges, we say the given series converges absolutely because we could only find out that it converged if we knew it converged with absolute values.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, for some reason Rutgers calls the ratio and root tests, absolute convergence tests but really any test is an absolute convergence test as long as you're using it on a positive series with absolute values.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I believe they call ratio and root absolute convergence tests because they add absolute values to the tests so technically they have you test for absolute convergence automatically even if the series isn't negative.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ratio and root without absolute value signs are just like DCT, LCT, Integral Test but because it has absoolute value signs even if you use it on an already series positive series given to you- you have to say that the given series converges absolutely if the series with abs. value convergs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
