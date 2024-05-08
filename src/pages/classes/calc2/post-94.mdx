@@ -52,6 +52,8 @@ import img38 from '../../../../public/Images/152/60.svg';
 
 
 import img39 from '../../../../public/Images/152/61.png';
+import img40 from '../../../../public/Images/152/62.svg';
+import img41 from '../../../../public/Images/152/63.svg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -821,8 +823,6 @@ By having the corresponding positive series however, we can now use any of the t
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 """  
 Okay great Sarai. We can use the tests we learned on this corsp. positive series.    
 
@@ -838,15 +838,23 @@ So how does testing this corresponding positive series tell me anything useful a
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Well, first, you are no longer testing for convergence of the given series, you're now testing for absolute convergence of the given series.
+Well, there is this tool we use called the **absolute convergence theorem**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-When you use one of the convergence tests like DCT, and you prove that the positive series converges then you can say by the absolute convergence theorem (ACT) that the given series converges **absolutely**. In other words, the given series converges **completely**, **absolutely**, in every way possible both with **and** without absolute values *just* because you found that the corsp. positive series converges.
+It allows us to say that the given series converges absolutely IF the series with absolute value converges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Whaaaaaaat? How does this work??
+Hence, the given series converges completely, *absolutely*, in every way possible
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+because it converges with *and* without absolute value signs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+"Okay, great I can use the absolute value theorem to say that if the corresponding positive series converges, then the given series converges aswell and hence converges absolutely. In other words, it converges completely- both with and without absolute value signs. But how does that actually work Sarai??? What math says that I can say that???"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -854,15 +862,11 @@ The idea is that when you add absolute value to something, the worst you can do 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So the corresponding positive series (that has absolute value signs around it) is bigger than the given negative series. The given negative series will always be smaller or equal to the corrsp. positive series.
+So the corresponding positive series with absolute value signs is bigger than the given negative series.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Then, if the corresponding positive series converges (is being limited to a value) then so will the given series because remember that the given series is smaller or below the corsp. positive series, so if the big series is being limited, and it's bigger or on top of the smaller series then ofcourse the smaller series will eventually be limited too.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Think about it like this: little kids always listen to the big kids.
+If that's true, think about it like this: little kids always listen to the big kids.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -870,23 +874,33 @@ So if big kid says "let's go this way" then small kid will listen.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-In other words, if the big series (in this case the corsp. positive series) converges then the smaller series (given negative series) will have to follow the same behavior and converge as well (Think DCT).
+Similarly, if the bigger series says "i'm tired let's start slowing down" then the smaller series will listen and follow the same behavior.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-*Similarly, if the big series (the corsp. positive series) says "let's go to infinity!" (diverges) then the smaller series (the given negative series) will have to follow the same behavior and go to infinity and beyond! (diverge).
+What's really happening is that when the corresponding positive series converges, the smaller given negative series will have to converge aswell because it will always be smaller than the bigger series and hence will never be able to surpass the bigger series. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-*ALERT: The last part is not the absolute convergence theorem, it's just common sense but it's not always true. Sometimes, we will see later, if a series is alternating, then the given series may converge even if the corresponding positive series diverges. Sometimes little kids don't listen when big kids tell them to go do bad things- like flying off to infinity.
+So if the bigger one stops, so must the smaller one stop.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-To conclude, we are now testing for **absolute convergence** because when we're testing, we are *literally* testing on a **series with absolute value signs** hence when we find that it converges, we can say that ACT implies that the given series itself converges aswell. In the conclusion however, we don't just say the given series converges, we say the given series converges absolutely because we could only find out that it converged if we knew it converged with absolute values.
+Okay! That is how the absolute convergence theorem works.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Now, for some reason Rutgers calls the ratio and root tests, absolute convergence tests but really any test is an absolute convergence test as long as you're using it on a positive series with absolute values.
+To conclude, note that we are no longer testing if our given series converges, now we're testing if our series converges absolutely. Meaning that you simply just take the positive corresponding series, find out it converges and use the ACT to say that since the corsp. positive series converges so does the given series hence the given series converges absolutely.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Note on how Rutgers Math Introduced Ratio and Root Test </summary>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For some reason Rutgers calls the ratio and root tests, absolute convergence tests but really any test is an absolute convergence test as long as you're using it on a positive series with absolute values.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -895,6 +909,10 @@ I believe they call ratio and root absolute convergence tests because they add a
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 Ratio and root without absolute value signs are just like DCT, LCT, Integral Test but because it has absoolute value signs even if you use it on an already series positive series given to you- you have to say that the given series converges absolutely if the series with abs. value convergs.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</details>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -972,31 +990,27 @@ Do the following series converge absolutely, converge conditionally or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-When to use: when you see (-1) anywhere in your series.
+Usually, when dealing with negative series, you test for absolute convergence, if the series converges then the given serries converges absolutely and then you're done.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This test is used for alternating series with negative terms that do not converge absolutely.
+However, if the corresponding postive series diverges, if the given series is alternating, the given series *may* converge even though the series with asbolute value diverges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-AKA test for absolute convergence first with ratio, root, integral, DCT or LCT. You are allowed to use the last 4 because when you test for absolute convergence, it means that you are literally putting absolute value on the series, so the once negative termed series become positive hence you can use the last 4 tests that only work on positive series.
+That is why we have the Alternating Series Test (AST).
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-If the corresponding positive series converges with one of those tests, then we say the given series converges absolutely (because the given series literally converged only *with* absolute value symbols around it).
+We use it when we are working with negative series and we find that the corresponding positive series diverges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-And then by the absolute convergence theorem, if a series converges absolutely that implies the series itself (the given series) converges aswell and then you're done!
+When to tell: when you see (-1) anywhere in your series.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Butttt if  the series ends up diverging and we know it's an alternating series, the series itself may or may not converge. We check using the alternating series test (AST).
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-If it ends up converging with the alternating series test then we say the given series converges conditionally (because the given series did not meet the *condition* of converging with absolute values but it did converge without them.)
+If the corsp. positive series ends up converging with the alternating series test then we say the given series converges conditionally (because the given series did not meet the *condition* of converging with absolute values but it did converge without them.)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -1052,5 +1066,36 @@ If it ends up converging with the alternating series test then we say the given 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+The main question they ask you is to find the smallest possible integer N that satisfies the inequality.
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** Find the smallest integer N such that 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img40.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+approximates the sum 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img41.src} alt=""  /> </div>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+with an error no greater than 1/100. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<details>
+
+  <summary> Solution </summary>
+
+  N = 9
+
+</details>
+  
 </span>
