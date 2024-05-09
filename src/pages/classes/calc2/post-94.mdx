@@ -787,7 +787,11 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-What happens when we have series with negative terms?
+What happens when we have series that include negative terms?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What tests do we use now to prove convergence if DCT, LCT, Integral and the others only work on series that are positive??
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -894,29 +898,77 @@ To conclude, note that we are no longer testing if our given series converges, n
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+### Ratio Test 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 <details>
 
-  <summary> Note on how Rutgers Math Introduced Ratio and Root Test </summary>
+  <summary> Ramblings on how Rutgers Math Introduces Ratio and Root Test </summary>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-For some reason Rutgers calls the ratio and root tests, absolute convergence tests but really any test is an absolute convergence test as long as you're using it on a positive series with absolute values.
+From what I have experienced, I noticed that Rutgers introduces the ratio and root test as absolute convergence tests. This might be misleading to some of you - and it was to me.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-I believe they call ratio and root absolute convergence tests because they add absolute values to the tests so technically they have you test for absolute convergence automatically even if the series isn't negative.
+Any test is an absolute convergence test if you are using it on a positive correpsonding series.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Ratio and root without absolute value signs are just like DCT, LCT, Integral Test but because it has absoolute value signs even if you use it on an already series positive series given to you- you have to say that the given series converges absolutely if the series with abs. value convergs.
+Because remember that you only test for absolute convergence, if the given series is negative.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+And when you see a negative series, you know to find it's correpsonding positive series so that you're able to use tests in the first place.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You will notice that ratio and root tests have absolute value signs but the tests actually don't come with absolute value signs. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Rutgers and a lot of other people just put them on so they can save a step in their work. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+What's the step?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Well, if you're dealing with positive series, ratio and root test the way they show it to you makes no difference, because if the series is already positive, then the absolute value signs does nothing- it's still the same series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+However, if you're dealing with a negative series, the way that makes sense to me, is recognize that it's a negative series, find it's correpsonding positive series by just simply putting absolute value signs around the given series, and then using any test including ratio or root *without* absolute value signs to prove convergence.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why without absolute value signs? Because the whole purpose of the absolute value signs in the ratio and root test is to make the negative series positive, but I already did that by finding the corsp. positive series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The whole reason they add the absolute value signs is to find the correpsonding positive serires *for* you.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So if you use ratio and root the way that Rutgers gives it to you, then you can skip the step of finding the correpsonding positive series of a given negative series because the absolute value signs in the tests do that for you.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You just have to keep in mind that you are no longer testing for regular convergence and are now testing for absolute convergence, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+and that if you are dealing with any other negative series and want to use DCT or LCT, you have to remember to find the corresponding positive series. I feel like when using ratio and root, students don't realize they can use DCT and LCT on negative series because they never consciously understand that the only reason they can use ratio and root test on a negative series is *because* of the absolute value signs already in the tests that automatically makes makes the given negative series into it's correpsonding positive series. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So if you want to use DCT and LCT on negative series, you can! Even if they don't have absolute value signs in the tests themselves. You have to manually find the correpsonding positive series and then go from there.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 </details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-### Ratio Test 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -990,11 +1042,11 @@ Do the following series converge absolutely, converge conditionally or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Usually, when dealing with negative series, you test for absolute convergence, if the series converges then the given serries converges absolutely and then you're done.
+Usually, when dealing with negative series, you test for absolute convergence, if the series converges then the given series converges absolutely and then you're done.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-However, if the corresponding postive series diverges, if the given series is alternating, the given series *may* converge even though the series with asbolute value diverges.
+However, if the corresponding positive series diverges, if the given series is alternating, the given series *may* converge even though the series with asbolute value diverges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
