@@ -6,6 +6,11 @@ author: Sarai Marte
 ---
 
 import ImageMd from '@components/ImageMd.astro';
+import ImageOut from '@components/ImageOut.astro';
+import Alert from '@components/Alert.astro';
+import Note from '@components/Notes.astro';
+
+import Solution from '@components/Solution.astro';
 
 import img1 from '../../../../public/Images/152/10.svg';
 import img2 from '../../../../public/Images/152/11.svg';
@@ -49,20 +54,18 @@ import img36 from '../../../../public/Images/152/58.svg';
 import img37 from '../../../../public/Images/152/59.svg';
 import img38 from '../../../../public/Images/152/60.svg';
 
-
-
 import img39 from '../../../../public/Images/152/61.png';
 import img40 from '../../../../public/Images/152/62.svg';
 import img41 from '../../../../public/Images/152/63.svg';
 import img42 from '../../../../public/Images/152/89.jpg';
 import img43 from '../../../../public/Images/152/90.jpg';
-import img44 from '../../../../public/Images/152/91.jpg';
 import img45 from '../../../../public/Images/152/92.svg';
 import img46 from '../../../../public/Images/152/93.svg';
 import img47 from '../../../../public/Images/152/94.svg';
 import img48 from '../../../../public/Images/152/95.svg';
 import img49 from '../../../../public/Images/152/96.svg';
 import img50 from '../../../../public/Images/152/97.svg';
+import img51 from '../../../../public/Images/152/98.jpg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -107,7 +110,7 @@ then the series is:  &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp; s<
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, if I ask you: **What is S<sub>3</sub>?** You say 6 because (1 + 2 + 3) = 6
+So, if I ask you:**What is S<sub>3</sub>?** You say 6 because (1 + 2 + 3) = 6
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -223,16 +226,9 @@ Do the following series converge of diverge? If they converge, what do they conv
 
 <div style = "object-fit:contain;" > <img src={img19.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
-
-  <summary> Solution </summary>
-  
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: Converges. 11/10**
+**Answer: Converges. 11/10**
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -250,54 +246,34 @@ Do the following series converge of diverge? If they converge, what do they conv
 
   so, commas not plus signs because the sequence of partial sums is a sequence not a series. Series means sum (+). Sequence means list (,).
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
 
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img37.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
   con to 3/2
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img20.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
-
-  <summary> Solution </summary>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-
-    **Answer: Converges. Cos(1)**
+ **Answer: Converges. Cos(1)**
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
   <ImageMd img = {img43}> </ImageMd>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 ## 10.2 Geometric Series
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href = "https://rutgersconnect-my.sharepoint.com/:b:/g/personal/smm651_scarletmail_rutgers_edu/EUsjCm_QaQZKr3FsQ9Ooa84BnTskziIaNuWd7VotYLzoAQ?e=VCPrBA">Geometric Series Solutions</a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -313,7 +289,7 @@ is really, Σa<sub>n</sub>  = ```{a + ar + ar^2 + ...}```
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Note: most of the time you won't be given the series in just a list with dots ```{...}``` instead it will be given to you in sigma notation or closed form like so,
+Most of the time you won't be given the series in just a list with dots ```{...}``` instead it will be given to you in sigma notation or closed form like so,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -322,10 +298,6 @@ Note: most of the time you won't be given the series in just a list with dots ``
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 Let's practice.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-<a href = "https://rutgersconnect-my.sharepoint.com/:b:/g/personal/smm651_scarletmail_rutgers_edu/EUsjCm_QaQZKr3FsQ9Ooa84BnTskziIaNuWd7VotYLzoAQ?e=VCPrBA">Geometric Series Solutions</a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -375,147 +347,87 @@ For example,
 
 <div style = "object-fit:contain;" > <img src={img21.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 1/10 < 1 so the series Converges to 1/9. a = 1/10**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img23.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 1/2 < 1 so the series Converges to 1. a = 1/2**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img45.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 2 > 1 so the series Diverges.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img47.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 1/5 < 1 so the series Converges to 5/4. a = 1.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img48.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 3/4 < 1 so the series Converges to -27/6. a = -189/64.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img36.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: r<sub>1</sub> = 5/6, r<sub>2</sub> = 1/3, both < 1, a<sub>1</sub> = 5/6, a<sub>2</sub> = 1/3, sum<sub>1</sub> = 5, sum<sub>2</sub> = 1/2 so 5 - 1/2 = 9/2. So the series Converges to 9/2.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  Con to 9/2
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img38.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: |r| = 1/9 < 1 so the series Converges 9/10. a = 1.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  con to 9/10 r = -1/9 a = 1
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img49.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: r<sub>1</sub> = 3/7, r<sub>2</sub> = 5/7, both < 1, a<sub>1</sub> = 9/49, a<sub>2</sub> = 25/49 Sum = -41/28. So the series Converges to -41/28.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
+<Note>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
+There is another formula to find the sum of a geometric series.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+<ImageMd img = {img51} />
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's the exact same as the a/1-r formula.
+
+</Note>
 
 ## 10.2 P-series (Harmonic Series)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<a href = "https://rutgersconnect-my.sharepoint.com/:b:/g/personal/smm651_scarletmail_rutgers_edu/EbtFGRrqYJ5OjzMANGGeS2YB4q2wWD-zH73DdauvcqaXEw?e=ZISeRX"> P-Series Solutions </a>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -531,7 +443,8 @@ These are series of the form
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Rules:  
+**Rules for the P-Test:**  
+
 If p > 1 CON  
 If p ≤ 1 DIV  
 
@@ -539,95 +452,39 @@ If p ≤ 1 DIV
 
 <div style = "object-fit:contain;" > <img src={img29.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: p = 1 Div**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: p = 1 Div**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img30.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: p = 2 Con**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: p = 2 Con**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img31.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: p = 1 Div**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: p = 1 Div**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img32.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+  **Answer: p = 3/2 Con**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-    **Answer: p = 3/2 Con**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-<details>
-
-  <summary> Solutions </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  <ImageMd img = {img44}> </ImageMd>
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 ## 10.2 Divergence Test (nth term test)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-
 
 <a href = "https://rutgersconnect-my.sharepoint.com/:b:/g/personal/smm651_scarletmail_rutgers_edu/ET3SHww8jLdPmr8CdaNlBcUBUfXgigJzl-lHhBMedzUiPg?e=WnuQyb"> Divergence Test Solutions </a>
 
@@ -641,11 +498,31 @@ is true then the series Σa<sub>n</sub> diverges.
 
 </div>
 
+<Alert>
+
+The divergence test does NOT work the opposite way. 
+
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Note: It does NOT work the opposite way. Just because a series diverges does not mean the lim as n approaches infinity of the sequence a<sub>n</sub> is something other than 0.
+We know that if the limit is not 0 then the series diverges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+But it does not say that if the limit IS 0 then the series converges. That is not true. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If it's 0 then we don't know anything about the series. We have to try other tests.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Also, if you know a series diverges, you DON'T automatically know that the limit of the sequence is not 0. It only works in one direction.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the limit of the sequnce is not 0 then the series is divergent. It does not say that if the series is divergent then the limit of the sequence is not 0.
+
+</Alert>
 
 Do the following series converge or diverge?
 
@@ -653,78 +530,37 @@ Do the following series converge or diverge?
 
 <div style = "object-fit:contain;" > <img src={img26.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: Diverges by the divergence test. Limit is ∞.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: Diverges by the divergence test. Limit is ∞.**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img27.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: Diverges by the divergence test. Limit is 1.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: Diverges by the divergence test. Limit is 1.**
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img50.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: Diverges by the divergence test. Limit is 1/4.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-  **Answer: Diverges by the divergence test. Limit is 1/4.**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img29.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-<details>
+ **Answer: Divergence Test does not apply because limit is 0. So we try another test, like p-test works here. The series converges by the p-test where p = 1.**
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
-  **Answer: Divergence Test does not apply because limit is 0. So we try another test, like p-test works here. The series converges by the p-test where p = 1.**
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Okay, so now when the series is not a special series like geometric, telescoping, or harmonic and the divergence test does not tell you if it diverges, then we have the integral test.
+Okay, so now when the series is not a special series like geometric, telescoping, or harmonic *and* the divergence test does not tell you if it diverges, then we have the integral test.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -733,9 +569,12 @@ Okay, so now when the series is not a special series like geometric, telescoping
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 The following tests only work for series with positive terms only.  
-(Note for the future: We can make negative series positive, so you *will* be able to use these tests on those series. Yay!)
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Note> 
+
+Note for the future: We can make negative series positive, so you *will* be able to use these tests on those series. Yay!
+
+</Note>
 
 ## 10.3 Integral Test
 
@@ -763,8 +602,8 @@ Find,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Rules:  
-
+**Rules:**  
+ 
 If L = ∞ DIV so given series will div aswell.  
 If L = constant CON so given series will con aswell. 
 
@@ -786,7 +625,7 @@ Only works with series with positive terms.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The rules: 
+**Rules:**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -804,61 +643,21 @@ Do the following series converge or diverge?
 
 <div style = "object-fit:contain;" > <img src={img7.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img8.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 <div style = "object-fit:contain;" > <img src={img9.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
 
-
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Solution>
 
 ### Limit Comparison Test (LCT)
 
@@ -868,7 +667,7 @@ Only works with series with positive terms.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The rules: 
+**Rules:**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -905,18 +704,9 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+<Solution>
 
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
+</Solution>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -924,18 +714,9 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+<Solution>
 
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
+</Solution>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -943,18 +724,9 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+<Solution>
 
-<details>
-
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
+</Solution>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -970,7 +742,7 @@ What happens when we have series that include negative terms?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-What tests do we use now to prove convergence if DCT, LCT, Integral and the others only work on series that are positive??
+What tests do we use now to prove convergence if DCT, LCT, Integral and the other tests only work on series that are positive??
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -982,7 +754,7 @@ So just like -1 becomes +1 when you put absolute value signs around it, so does 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<ImageMd img = {img39}> </ImageMd>
+<ImageOut img = {img39}> </ImageOut>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -1079,11 +851,9 @@ To conclude, note that we are no longer testing if our given series converges, n
 
 ### Ratio Test 
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Note> 
 
-<details>
-
-  <summary> Ramblings on how Rutgers Math Introduces Ratio and Root Test </summary>
+Ramblings on how Rutgers Math Introduces Ratio and Root Test
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -1145,11 +915,7 @@ and that if you are dealing with any other negative series and want to use DCT o
 
 So if you want to use DCT and LCT on negative series, you can! Even if they don't have absolute value signs in the tests themselves. You have to manually find the correpsonding positive series and then go from there.
 
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+</Note>
 
 When to use: factorials (n!) and powers of (2^n)
 
@@ -1167,6 +933,7 @@ Given:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+**Rules: **  
 If p < 1 CON ABS  
 If p > 1 DIV   
 If p = 1 or DNE Inconclusive aka try another test 
@@ -1319,14 +1086,10 @@ approximates the sum
 
 with an error no greater than 1/100. 
 
+<Solution>
+  N = 9
+</Solution>
+  
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<details>
-
-  <summary> Solution </summary>
-
-  N = 9
-
-</details>
-  
 </span>
