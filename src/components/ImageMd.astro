@@ -5,7 +5,8 @@ const {img} = Astro.props;
 ---
 
 <img src={img.src} alt="" />
-  
+
+<slot/>
 <!-- objectFit: 'cover' -->
 
 <style>
