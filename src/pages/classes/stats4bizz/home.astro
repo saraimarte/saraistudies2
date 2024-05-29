@@ -1,0 +1,7 @@
+---
+import ClassHome from '@layouts/ClassHome.astro';
+const blogs = await Astro.glob('./*.mdx');
+---
+<ClassHome className = "Intro to Stat Methods for Business" classCode = "01:960:285" blogs = {blogs}>
+
+</ClassHome>
