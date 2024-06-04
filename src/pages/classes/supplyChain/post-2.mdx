@@ -1,0 +1,261 @@
+---
+layout: '@layouts/Blog.astro'
+title: Forecasting and Demand Planning
+date: 05/29/2024
+author: Sarai Marte
+---
+
+## Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Qualitative
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We use this method when we have a new product where there is no data for yet.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Personal Insight - 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Jury of Executive Opinion - 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Delphi Method - 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sales Force Estimation Method - Who's are the closest people to the customer? The sales people. We will rely on their expertiece to let us know if they think the customers would buy the product.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Customer Survey - We  literally ask the customer themselves if we were to launch a product- how much will they think they buy.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Quantitative 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We need data.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Time Series - we use past data to predict the future.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### (1) Naive Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We repeat the actual sales of the previous period and project that for the next period.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ex. If we sell 250 cartons of milk this period, we will estimate we will sell 250 cartons of milk in the next period.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This forecasting works for products that don't change too much like the demand for milk.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### (2) Simple Moving Average Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Take x amount of periods, find how much we sold during those periods and take the average.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It fails to identify trends like increasing sales.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### (3) Weighted Moving Average Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We do the same thing as the simple average  forecasting except that we give some periods weights and others not. We ddetermine the level of importance. For example, the months that are closer the period i'm forecasting, will have a bigger weight or bigger importance.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Which method is better in identifying trends? 
+(or why is the weighted avg method better at identifying trends?)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The weighted moving average method.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### (4) Exponential Smoothing Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We take the forecast of the last period and the actual sales along with a smoothing factor.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### (5) Linear Trend Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We create an equation that projects the same growth into the future but the problem is that trends change so then the linear trend will not be able to predict the end of that trend.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Cause and Effect -
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We use variables that we know affect the demand and see what the coorelation is between those variables and the amount of demand we will get for that product.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Example. Weather and Icecream.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+#### Single Linear Regression.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Single variable.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Multiple Linear Regression.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Multiple Variables.
+
+## What is Supply Chain Management?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's just a series of steps that are needed to supply a product (phone) or service (car wash service).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Suppliers -> Manufacurer -> Customers  
+Plastic -> Caps -> Tubes with Caps -> Us toothpaste -> sell to distributers -> sell to retail stores-> sells to customers.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Wharehousing
+
+Transporation
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+1.Truck  
+2.Rail  
+3.Air  
+4.Pipeline  
+5.Water  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Supply Chain Disruption
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The chapters in this class are organized under the SCORE model. I don't know why they call it SCORE but here is the following chart: 
+
+## Fundamentals of Forecasting
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Forecasting error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Error = Actual - Forecast 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### As a percentage 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+ 
+### As an absolute value
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+MAD 
+
+"I miss the forecast by an average of 115 (either up or down)"
+"For my forecast i'm always wrong by 115 ?points?"
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Measures of Forecasting Accuracy
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+MAPE is not in homework. MAPE is MAD but with percentage.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Mean squared error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Forecast Bias
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+sum of forecast errors = sum of acutal demand - sum of forecast demand
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+if negative result means that actual demand was less than the forecast.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+we are being too positive.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+if positive result means actual demand was greater than forecast so we should we have been low balling we should be more optomistic.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Running Sum of errors was skipped.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Bullwhip Effect (on test)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is what happens when a group of customers may all of a sudden buy more of a product let's say 10% more so the retailer detects that and notices the demand is going up for this product so they want to take advantage of this and they will order more from my distributor, 25% more than what they usually order. The distributor sees that same thing and they want to take avdvantage of that and order more from the factory let's say 30% more. And then the factory sees that and wants to take advantage of that and order more, let's say 40% more.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is an issue because of lack of communication. They all guessed how much the demand was increasing, it ended up being 40% more when really it was 10%. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If you whip a bullwhip, it amplifies.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The solution to this is communication and collaboration.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Collaborative Planning, Forecasting, & Replensishment (CPFR)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+They share their plans, forecasts and delivery scheudles with one another.&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;
