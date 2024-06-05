@@ -1,0 +1,55 @@
+---
+import '@styles/Global.css';
+import x from '@assets/icons/x.svg';
+import {Image} from "astro:assets";
+const {title} = Astro.props;
+
+---
+
+<br>
+<div class = "container">
+
+    <div class = "header">
+        <div class = "title">Calculator: {title}</div>
+        <div class = "">
+            <Image class = "x" src = {x} alt = ""></Image>
+        </div>
+    </div>
+
+    <div class = "content">
+        <slot></slot>
+
+    </div>
+
+</div>
+
+<style>
+    .container{
+        border:1px solid black;
+        border-radius: 10px;
+        width:100%;
+        min-height:300px;
+        height:min-content;
+        background-color: antiquewhite;
+    }
+    .title{
+        font-weight: bold;
+        font-size: large;
+    }
+    .header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:10px;
+        border-radius: 10px 10px 0px 0px;
+        background-color:rgb(145, 202, 204);
+        width:100%;
+        height:min-content;
+    }
+    .content{
+        padding: 10px;
+        min-height:300px;
+        height:min-content;
+    }
+   
+</style>

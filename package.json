@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@interactjs/types": "^1.10.26",
-    "@types/three": "^0.160.0"
+    "@types/three": "^0.160.0",
+    "jsat": "^0.0.6"
   }
 }

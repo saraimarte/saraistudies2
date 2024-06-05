@@ -1,0 +1,131 @@
+---
+import '@styles/Global.css';
+import CalcComp from '@components/calculators/CalcComp.astro';
+
+---
+
+<CalcComp title = "Cumulative Probability Standard Normal Distribution">
+
+<form>
+    <div class = "row">
+        <label for="z">z:</label><br>
+        <input type="text" id="z" name="z"><br><br>  
+    </div>
+    <input id = "submit" type="button" value="Submit">
+</form>
+
+<p id="output"> </p>
+
+<script type='module'>
+    import {cumulativeStdNormalProbability} from "https://unpkg.com/simple-statistics@7.8.2/index.js?module"
+    var submitBtn = document.getElementById("submit");
+    var p = document.getElementById("output");
+
+    function submitted() {
+        
+        //this line needs to be placed here b/c we want it to read what z was at the moment of submission.
+        var z = parseInt(document.getElementById("z").value);
+        if(z){
+        var num = cumulativeStdNormalProbability(z);
+        p.innerHTML = "Answer: " + num;
+        submitBtn.style.marginBottom = "10px";
+        p.style.fontWeight = "bold";
+        }else {
+            alert("Please Enter a Z value");
+        }
+    }
+    submitBtn.addEventListener("click", submitted);
+
+</script>
+
+</CalcComp>
+
+<br>
+
+<CalcComp title = "Cumulative Probability General Normal Distribution">
+
+    
+<form >
+    <div class = "row">
+        <label for="x">x:</label><br>
+        <input type="text" id="x" name="x"><br><br>
+
+    </div>
+  
+    <div class = "row">
+        <label for="mu">μ:</label><br>
+        <input type="text" id="mu" name="mu"><br><br> 
+    </div>
+ 
+    <div class = "row">
+        <label for="sigma">σ:</label><br>
+        <input type="text" id="sigma" name="sigma"><br><br>
+    </div>
+    <input id = "submit2" type="button" value="Submit">
+</form>
+
+<p id="output2">  </p>
+
+<script type='module'>
+    import {cumulativeStdNormalProbability} from "https://unpkg.com/simple-statistics@7.8.2/index.js?module"
+    var submitBtn2 = document.getElementById("submit2");
+    var p = document.getElementById("output2");
+
+    function submitted() {
+        
+        //this line needs to be placed here b/c we want it to read what z was at the moment of submission.
+        var x = parseInt(document.getElementById("x").value);
+        var mu = parseInt(document.getElementById("mu").value);
+        var sigma = parseInt(document.getElementById("sigma").value);
+
+        if(x && mu && sigma){
+            var z = ( x - mu )/sigma;
+            var num = cumulativeStdNormalProbability(z);
+            p.innerHTML = "Answer: " + num;
+            submitBtn2.style.marginBottom = "10px";
+            p.style.fontWeight = "bold";
+        } else {
+            alert("Fill in all inputs.");
+        }
+    }
+    submitBtn2.addEventListener("click", submitted);
+
+</script>
+
+
+</CalcComp>
+
+<style>
+    form{
+        display: flex;
+        flex-direction: column;
+        gap:1em;
+        min-height:300px;
+        height:100%;
+        justify-content: space-between;
+    }
+    .row{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap:0.5em;
+    }
+    label{
+        font-size:large;
+    }
+    input{
+        width:100%;
+        min-height:50px;
+        padding-left:10px;
+    }
+    #submit, #submit2{
+        background-color:rgb(145, 202, 204);
+        border-radius:10px;
+        font-size: large;
+        font-weight: bold;
+    }
+    #submit:hover{
+        background-color:rgb(127, 180, 182);
+    }
+    
+</style>
