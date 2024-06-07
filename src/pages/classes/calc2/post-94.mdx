@@ -66,6 +66,9 @@ import img48 from '../../../../public/Images/152/95.svg';
 import img49 from '../../../../public/Images/152/96.svg';
 import img50 from '../../../../public/Images/152/97.svg';
 import img51 from '../../../../public/Images/152/98.jpg';
+import img52 from '../../../../public/Images/152/100.svg';
+import img53 from '../../../../public/Images/152/101.svg';
+import img54 from '../../../../public/Images/152/102.svg';
 
 <span style=" font-family: var(--primaryFont);">
 
@@ -100,7 +103,6 @@ It's called partial sums because you will notice we take the sum one n at a time
 s<sub>1</sub> = 1 = 1 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; so, &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; S<sub>n </sub> = ```{1, ...} ```  
 s<sub>2</sub> = 1 + 2 = 3 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  so, &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;S<sub>n </sub> = ```{1, 3, ...} ```  
 s<sub>3</sub> = 1 + 2 + 3 = 6 &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;so, &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; S<sub>n </sub> = ```{1, 3, 6 ...} ``` 
-
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -192,15 +194,15 @@ As the last lesson, there are only three things we care about, if a series conve
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-First, we have three special types of series that when we know something about them, we can conclude they converge.
+First, we have two special types of series that when we know something about them, we can conclude they converge *and* what they converge to.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Those are geometric, telescoping and p-series or harmonic series. Those we will go over first.
+Those are telescoping and geometric series. Those we will go over first.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Second, we will then move onto tests. These tests will tell us if a series converges or not.
+Second, we will then move onto harder series where we will not be able to find what it coverges to if it does converge *and* we will need to use tests to test for convergence.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -208,7 +210,15 @@ Second, we will then move onto tests. These tests will tell us if a series conve
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We will only be able to find out what a series converges to if we're dealing with telescoping or geometric series (10.2) because either we can find it manually or we have a formula for the sum. After 10.2, we will only be able to tell if the series converges or not.
+We will only be able to find out what a series converges to if we're dealing with telescoping or geometric series (10.2) because either we can find it manually (telescoping) or we have a formula for the sum (geometric). After 10.2, we will only be able to tell if the series converges or not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Usually, we cover special stuff at the end of the chapter. This time, we'll cover the special series at the beginning.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Special Series 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -281,10 +291,6 @@ Do the following series converge of diverge? If they converge, what do they conv
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Introduction 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
 <iframe width="100%" height="400" src="https://www.youtube.com/embed/jhr5szmUqts?si=Sv2_1Kbl1CaqwdOf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -336,6 +342,14 @@ If |r| ≥ 1 DIV
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+The way I remember the rules for the <span style = "color:orange; font-weight:bold">geomet</span>ric test is, personally, I like <span style = "color:orange; font-weight:bold">geomet</span>ry <span style = "color:purple; font-weight:bold">less</span> than <span style = "color:green; font-weight:bold">c</span>alc so I think |r| <span style = "color:purple; font-weight:bold"> < </span> 1 <span style = "color:green; font-weight:bold">C</span>ON and then the opposite is true: |r| ≥ 1 DIV. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I explain it in the video below so check it out :)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 Here, because |2| ≥ 1, the series diverges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -350,7 +364,19 @@ Now, if your series happens to converge, you can find what it converges to by us
 
 <div style = "object-fit:contain;" > <img src={img17.src} alt=""  /> </div>
 
+<Note>
+
+There is another formula to find the sum of a geometric series.
+
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+<ImageMd img = {img51} />
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's the exact same as the a/1-r formula.
+
+</Note>
 
 Let's practice,
 
@@ -428,21 +454,19 @@ Let's practice,
 
 </Solution>
 
-<Note>
-
-There is another formula to find the sum of a geometric series.
+# Tests
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<ImageMd img = {img51} />
+Again, besides telescoping and geometric series, for all other series we will deal with, we will only be able to find if they converge or not, not what they converge to. We will also have to use tests to prove convergence kind of like we did with geometric series- we used the geometric test.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-It's the exact same as the a/1-r formula.
+Telescoping series are really the only ones we do manually. For geometric series, we use the geometric test (similar to the p-test below) but it is still considered a special series because we can find the sum using a formula.
 
-</Note>
+&nbsp;&nbsp;&nbsp;&nbsp;
 
-## 10.2 P-series (Harmonic Series)
+## 10.2 P-series (Harmonic Series/P-Test)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -466,6 +490,18 @@ These are series of the form
 
 If p > 1 CON  
 If p ≤ 1 DIV  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Use the movie rating <span style ="color:purple; font-weight:bold">P</span><span style ="color:green; font-weight:bold">G</span>-<span style ="color:orange; font-weight:bold">1</span>3 to remember the rules.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<span style ="color:purple; font-weight:bold"> p </span> <span style ="color:green; font-weight:bold"> > </span> <span style ="color:orange; font-weight:bold"> 1 </span> CON (always start with CON like the geometric test) and then the opposite is true: p ≤ 1 DIV.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+I explain it in the video below aswell.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -846,7 +882,7 @@ Yes! That's why we call it the ***corresponding* positive series**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The correpsonding positive series is not the same as the series you are given but it is related.
+The corresponding positive series is not the same as the series you are given but it is related.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -889,13 +925,11 @@ In other words if we find that the <span style = "color:blue"> corresponding pos
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, we can get info about the <span style = "color:red"> given series </span> by testing it's <span style = "color:blue"> correpsonding positive series</span>!
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+So, we can get info about the <span style = "color:red"> given series </span> by testing it's <span style = "color:blue"> corresponding positive series</span>!
 
 <Note>
 
-### Intuition on the Definition
+### Intuition on the Absolute Convergence Theorem
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -931,13 +965,53 @@ So if the bigger one stops, so must the smaller one stop.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Which allows us to say that the given series converges absolutely since it's correpsonding positive series converges.
+Which allows us to say that the given series converges absolutely since it's corresponding positive series converges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 Okay! That is how the absolute convergence theorem works.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+</Note>
+
+<div style = "object-fit:contain;" > <img src={img54.src} alt=""  /> </div>
+
+<Solution>
+
+**Answer: Converges**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/CiGb8vw5mTY?si=E_ayMMmK4dqU6TH5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</Solution>
+
+## Absolute Convergence Tests (Ratio and Root)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**So far:** if we see a negative series, we make it positive, test the corsp. positive series, use our 2 tools to prove the given series converges.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**Now:** if we see a negative series that includes factorials, powers of n or roots, we can use ratio or root test. Only difference is now, we don't have to find the corsp. positive series because the tests do that for us since they come with absolute value signs around the given series so they save us that step.
+
+<Note>
+
+I never liked how Rutgers introduced the ratio and root test as absolute convergence tests. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It doesn't really make sense, because techincally *any* test is an absolute convergence test if we use that test on a series *with* absolute values.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+For example DCT by itself is not an absolute convergence test, but when we have a negative series and we find it's corresponding positive series(CPS) and use DCT *on* that CPS, then techincally it's an absolute convergence test in that case because we're testing on a series with absolute values- that's what the CPS is- the negative series with absolute value signs around it.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Personally, I treat ratio and root as any other test. I just think of it like they are saving me a step in finding the CPS because the tests come with absolute value signs around it- automatically making the given series it's CPS, but other than that, everything else is the same- we are still testing for absolute convergence.
 
 </Note>
 
@@ -961,75 +1035,7 @@ So, here is a nice little video I made for those of you who absolutely do not un
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<Note> 
 
-Don't read this lol.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-**Ramblings on how Rutgers Math Introduces Ratio and Root Test**
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-From what I have experienced, I noticed that Rutgers introduces the ratio and root test as absolute convergence tests. This might be misleading to some of you - and it was to me.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Any test is an absolute convergence test if you are using it on a positive correpsonding series.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Because remember that you only test for absolute convergence, if the given series is negative.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-And when you see a negative series, you know to find it's correpsonding positive series so that you're able to use tests in the first place.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-You will notice that ratio and root tests have absolute value signs but the tests actually don't come with absolute value signs. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Rutgers and a lot of other people just put them on so they can save a step in their work. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-What's the step?
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Well, if you're dealing with positive series, ratio and root test the way they show it to you makes no difference, because if the series is already positive, then the absolute value signs does nothing- it's still the same series.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-However, if you're dealing with a negative series, the way that makes sense to me, is recognize that it's a negative series, find it's correpsonding positive series by just simply putting absolute value signs around the given series, and then using any test including ratio or root *without* absolute value signs to prove convergence.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Why without absolute value signs? Because the whole purpose of the absolute value signs in the ratio and root test is to make the negative series positive, but I already did that by finding the corsp. positive series.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-The whole reason they add the absolute value signs is to find the correpsonding positive serires *for* you.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-So if you use ratio and root the way that Rutgers gives it to you, then you can skip the step of finding the correpsonding positive series of a given negative series because the absolute value signs in the tests do that for you.
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-You just have to keep in mind that you are no longer testing for regular convergence and are now testing for absolute convergence, 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-and that if you are dealing with any other negative series and want to use DCT or LCT, you have to remember to find the corresponding positive series. I feel like when using ratio and root, students don't realize they can use DCT and LCT on negative series because they never consciously understand that the only reason they can use ratio and root test on a negative series is *because* of the absolute value signs already in the tests that automatically makes makes the given negative series into it's correpsonding positive series. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-So if you want to use DCT and LCT on negative series, you can! Even if they don't have absolute value signs in the tests themselves. You have to manually find the correpsonding positive series and then go from there.
-
-</Note>
 
 When to use: factorials (n!) and powers of (2^n)
 
@@ -1064,19 +1070,14 @@ Do the following series converge absolutely, converge conditionally or diverge?
 
 <div style = "object-fit:contain;" > <img src={img14.src} alt=""  /> </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
+</Solution>
 
-<details>
 
-  <summary> Solution </summary>
-  
-  &nbsp;&nbsp;&nbsp;&nbsp;
+<div style = "object-fit:contain;" > <img src={img53.src} alt=""  /> </div>
 
-  &nbsp;&nbsp;&nbsp;&nbsp;
-
-</details>
-
-&nbsp;&nbsp;&nbsp;&nbsp;
+<Solution>
+</Solution>
 
 ## Root Test
 
@@ -1097,6 +1098,11 @@ Same rules as ratio test but
 Do the following series converge absolutely, converge conditionally or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+<div style = "object-fit:contain;" > <img src={img52.src} alt=""  /> </div>
+
+<Solution>
+</Solution>
 
 ## 10.6 Alternating Series Test
 

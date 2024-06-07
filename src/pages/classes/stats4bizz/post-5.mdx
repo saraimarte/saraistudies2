@@ -1,0 +1,162 @@
+---
+layout: '@layouts/Blog.astro'
+title: Linear Regression
+date: 06/06/2024
+author: Sarai Marte
+---
+
+## The Linear Regression Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**What we know:** y = mx + b
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Where,  
+y = dependent variable  
+x = independent variable   
+m = slope  
+b = y-intercept   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**What's New:** ŷ = b<sub>o</sub> + b<sub>i</sub>(x<sub>i</sub>) 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Think of b**a**by = b**o**bi =  b<sub>o</sub> + b<sub>i</sub> 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Where,    
+ŷ = dependent variable   
+x<sub>i</sub> = independent variable      
+b<sub>i</sub> = slope    
+b<sub>o</sub> = y-intercept   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Goal: Given data, we want to come up with an equation in the form above that best represents the relationship between the two variables. If we have this equation, we will be able to use it to predict future y values for any x value we plug in.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Interpreting Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Let's say the following equation models a certain set of data where the x-values are number of kitkats and y-values are level of happiness.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+ŷ = 60 + 2x<sub>i</sub>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Where,
+
+ŷ = level of happiness  
+x<sub>i</sub> = number of kitkats  
+b<sub>i</sub> = 2  
+b<sub>o</sub> = 60 (when x<sub>i</sub> = 0) 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+b<sub>i</sub> Interpretation: For every kitkat you get, your level of happiness will increase (bc of the + sign) by 2 points.  
+b<sub>o</sub> Interpretation: With 0 kitkats, your level of happiness will be 60 points.   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Using Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Using the informaiton above, what is the estimated level of happiness when the number of kitkats I give you is 40?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Literally, just plug in 40.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+ŷ = 60 + 2(40)  
+ŷ = 140  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Answer: If I give you 40 kitkats, we estimate that your level of happiness will be 140.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+It's estimated and not the true level of happiness because this equation or model is not the actual line- it's just the line that best fits the data. The line that is closests to the actual line.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Which is why the equation has ŷ ("y-hat") and not y. The hat in ŷ means "estimate". y would be the true level of happiness.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Given data, Find Linear Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Line of Best Fit Scatter Plot
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Use Model to Predict Values
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Measures of Variance Variation
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### SST 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### SSR
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### SSE
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Coefficient of Determination (r<sup>2</sup>)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Standard Error of the Estimate
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Assumptions of Regression
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Evaluate Linearity
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Residual Plot: the plot should be random like in a rectangle. If it follows a curve then not good.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There should be no relationship betweeen residual and x. If there is no relationship in the residual graph then that's good. The relationship is random.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Which is good because how can you capture randomness? So, your model is good enough.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If there is a relationship that means we failed to capture data so we need a more complicated model to capture this non-linear pattern.
+That means you failed to identify this relationship.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### Plot Residual Graph
+
+&nbsp;&nbsp;&nbsp;&nbsp;
