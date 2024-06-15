@@ -1,8 +1,10 @@
 ---
 import ClassHome from '@layouts/ClassHome.astro';
 const blogs = await Astro.glob('./*.mdx');
+import macc from '@assets/icons/macc.svg';
+
 ---
-<ClassHome className = "Introduction to Managerial Accounting" classCode = "33:010:275" blogs = {blogs}>
+<ClassHome classIcon = {macc} className = "Introduction to Managerial Accounting" classCode = "33:010:275" blogs = {blogs}>
 
 </ClassHome>
 

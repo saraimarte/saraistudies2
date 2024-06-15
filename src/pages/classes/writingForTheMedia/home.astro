@@ -1,7 +1,9 @@
 ---
 import ClassHome from '../../../layouts/ClassHome.astro';
 const blogs = await Astro.glob('./*.mdx');
+import writingForTheMedia from '@assets/icons/writingForTheMedia.svg';
+
 ---
-<ClassHome className = "Writing For the Media" classCode = "04:567:200" blogs = {blogs}>
+<ClassHome classIcon = {writingForTheMedia} className = "Writing For the Media" classCode = "04:567:200" blogs = {blogs}>
 
 </ClassHome>

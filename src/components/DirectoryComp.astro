@@ -1,13 +1,20 @@
 ---
-const {className,classCode} = Astro.props;
+const {className,classCode, classIcon} = Astro.props;
+import {Image} from "astro:assets";
+
 ---
 
 <div class = "container">
+        <Image id = "img" src={classIcon} alt="" /> 
         <h1 id = "className">{className}</h1>
         <h1 id = "classCode">{classCode}</h1>
 </div>
 
 <style>
+   #img{
+    position: relative;
+    top:10px;
+   }
     .container{
         display: flex;
         flex-direction: row;
@@ -35,6 +42,9 @@ const {className,classCode} = Astro.props;
             gap:0;
             
         }
-     
+     #img{
+        position: relative;
+         top:0px;
+     }
     }
 </style>
