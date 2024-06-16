@@ -4,8 +4,8 @@
 
 :root{
     --border: 1px solid black;
-    --primaryFont:"Averia Serif Libre", serif;
-    /*--primaryFont: 'PT Serif', serif;*/
+    /*--primaryFont:"Averia Serif Libre", serif;*/
+    --primaryFont: 'PT Serif', serif;
     --secondaryFont: None;
     --primaryColor: black;
     --pColor:  rgb(145, 202, 204);
@@ -30,6 +30,7 @@
     margin:0;
     padding:0; 
     box-sizing:border-box;
+    font-size:20px;
 } 
 
 ::selection {
