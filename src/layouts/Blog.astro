@@ -30,7 +30,7 @@ const folderPath3 = '/ratings/';
     <div class = "post-content">
         <div class = "header">
             <h1 class = "title">{title}</h1>
-            <h1 class = "date"> {chapter}</h1>
+            <h1 class = "chapter"> {chapter}</h1>
             <h1 class = "date"> Last Updated: {date}</h1>
             <br>
             <hr>
@@ -67,11 +67,13 @@ const folderPath3 = '/ratings/';
         gap:1em;
         flex-wrap: wrap;
     }
-    .title, .date{
+    .title, .date , .chapter{
         font-family: var(--primaryFont);
         font-weight: 400;
         margin-top:20px;
+        font-size:20px;
     }
+    
     .icon{
         position: relative;
         top:10px;
