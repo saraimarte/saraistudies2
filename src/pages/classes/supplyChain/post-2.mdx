@@ -1,175 +1,150 @@
 ---
 layout: '@layouts/Blog.astro'
 title: Forecasting and Demand Planning
-date: 05/29/2024
+date: 06/18/2024
+chapter: Chapter 2
 author: Sarai Marte
 ---
 
-## Forecasting
+import Note from '@components/Notes.astro';
+import img1 from '../../../../public/Images/301/2.jpg';
+
+# Introduction
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Qualitative
+**Forecasting:** Estimating demand.  
+**Demand Planning:** Planning so that you can meet the demand you forecasted.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We use this method when we have a new product where there is no data for yet.
+# Forecasting
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Personal Insight - 
+## Notes on Demand 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Jury of Executive Opinion - 
+**Independent Demand:** demand that is unrelated to the demand of other items. Demand is forecasted (Toothpaste).  
+**Dependent Demand:** demand that depends on the demand for other items. Demand is calculated (Tube, Cap).
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Delphi Method - 
+Most products are made up of different components.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Sales Force Estimation Method - Who's are the closest people to the customer? The sales people. We will rely on their expertiece to let us know if they think the customers would buy the product.
+For example, toothpaste is made up of different components like the tube and the cap.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Customer Survey - We  literally ask the customer themselves if we were to launch a product- how much will they think they buy.
+The toothpaste is an independent demand item.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Quantitative 
+While the cap and the tube itself are dependent demand items because their demand depends on if the toothpaste company needs them.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We need data.
+As in, your company will only demand the tubes and caps *if* they need them to make their toothpaste.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Time Series - we use past data to predict the future.
+Which is why the demand for tubes and caps *depends* on demand for toothpaste. Hence, they are dependent demand items.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### (1) Naive Forecasting
+<hr/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We repeat the actual sales of the previous period and project that for the next period.
+## Forecasting Techniques 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Ex. If we sell 250 cartons of milk this period, we will estimate we will sell 250 cartons of milk in the next period.
+When to use each and what it's based on...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This forecasting works for products that don't change too much like the demand for milk.
+**Qualitative:** Use when we have a product with no or limited data for it yet (like for new products). Based on opinion and intuition.  
+**Quantitative:** Use when we have data. Based on...data (products that have been in the market already).  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### (2) Simple Moving Average Forecasting
+### Qualitative Models
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Take x amount of periods, find how much we sold during those periods and take the average.
+(1) **Personal Insight:** forecast is based on the most experienced person available.    
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-It fails to identify trends like increasing sales.
+(2) **Jury of Executive Opinion:** forecast is based on the group of people who know most about the product (like a management group).   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### (3) Weighted Moving Average Forecasting
+(3) **Delphi Method:** Same as the Jury of Executive Opinion but here, input of each person is collected separately so there is no influence from others.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We do the same thing as the simple average  forecasting except that we give some periods weights and others not. We ddetermine the level of importance. For example, the months that are closer the period i'm forecasting, will have a bigger weight or bigger importance.
+(4) **Sales Force Estimation Method:** Same as the Jury of Executive Opinion but here, the group is specifically sales people.   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Which method is better in identifying trends? 
-(or why is the weighted avg method better at identifying trends?)
+(5) **Customer Survey:** forcast is based on customer's opinion.   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The weighted moving average method.
+### Quantitative Models
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### (4) Exponential Smoothing Forecasting
+We have to categories of Quantitative techniques:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We take the forecast of the last period and the actual sales along with a smoothing factor.
+**Time Series**: Where we use past data to predict the future.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### (5) Linear Trend Forecasting
+(1) **Naive:** forecasts the demand for the next period to be the same as the actual demand in the last period. Works better with mature products where demand is easily predictable. (Ex. If we sell 250 cartons of milk this period, we will estimate we will sell 250 cartons of milk in the next period.)  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We create an equation that projects the same growth into the future but the problem is that trends change so then the linear trend will not be able to predict the end of that trend.
+(2) **Simple Moving Average:** forecasts the demand for the next period to be the average of the actual demands in the last x amount of periods. More accurate. But fails to identify trends.    
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Cause and Effect -
+(3) **Weighted Moving Average:** same as simple moving average but you're giving every demand from x amount of periods a weight in importance aka the last period's demand may be worth more. This helps identify trends.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We use variables that we know affect the demand and see what the coorelation is between those variables and the amount of demand we will get for that product.
+(4) **Exponential Smoothing:** forecasts the demand for the next period to be based on a formula (D x S) + (F x (1-S)). 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Example. Weather and Icecream.
+Where **D** = last period's actual demand **S** = smoothing factor (given in this class) **F** = last period's <s>estimate</s> forecast of demand.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-#### Single Linear Regression.
+(5) **Linear Trend:** forecasts the demand for the next period to be based on a linear graph that predicts the future. Fails to be affected by seasonal and cyclical variations.        
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Single variable.
+**Cause and Effect**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Multiple Linear Regression.
+(1) **Simple Regression:**  forecasts demand based on a line that best models the relationship betweenn a single independent variable an a dependent variable. (Ex. **Indep.Var** = Weather **Dep.Var** = Demand for Icecream. The graph will show that when the Weather is hot the demand for icecream will be high.)   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Multiple Variables.
-
-## What is Supply Chain Management?
+(2) **Multiple Regression:**  same as simple linear Regression but there is more than 1 independent variable so maybe weather and income levels may affect demand for icecream.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-It's just a series of steps that are needed to supply a product (phone) or service (car wash service).
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Suppliers -> Manufacurer -> Customers  
-Plastic -> Caps -> Tubes with Caps -> Us toothpaste -> sell to distributers -> sell to retail stores-> sells to customers.  
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Wharehousing
-
-Transporation
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-1.Truck  
-2.Rail  
-3.Air  
-4.Pipeline  
-5.Water  
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-Supply Chain Disruption
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-The chapters in this class are organized under the SCORE model. I don't know why they call it SCORE but here is the following chart: 
-
-## Fundamentals of Forecasting
+<hr/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -177,46 +152,133 @@ The chapters in this class are organized under the SCORE model. I don't know why
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Error = Actual - Forecast 
+We learned methods on how to forecast demand but 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### As a percentage 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
- 
-### As an absolute value
+forecasting is just an estimate. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-MAD 
-
-"I miss the forecast by an average of 115 (either up or down)"
-"For my forecast i'm always wrong by 115 ?points?"
+Hence, it will never be 100% accurate.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Measures of Forecasting Accuracy
+Our forecast will have error. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-MAPE is not in homework. MAPE is MAD but with percentage.
+The goal is to minimize that error.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-### Mean squared error
+Error (value) = A - F
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-# Forecast Bias
+Error (%) = [ |(A - F)| / A ] x 100
+
+<Note>
+
+Where, 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-sum of forecast errors = sum of acutal demand - sum of forecast demand
+A = Actual Demand   
+F = Forecasted Demand  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-if negative result means that actual demand was less than the forecast.
+We also denote the forecast error as e<sub>t</sub>. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Where, t = time period. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ex. e<sub>2</sub> means the forecast error for the second month, week, etc. )
+
+</Note>
+
+The way to minimize the error is to analyze it.
+
+&nbsp;&nbsp;&nbsp;&nbsp; 
+
+## Measures of Forecasting Accuracy 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Aka: methods to test how accurate our errors are.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Where, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+A = Actual Demand  
+F = Forecasted Demand      
+n = Number of time periods  
+∑ = "sum of" or "add up"  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(1) Mean Absolute Deviation (MAD)**: MAD = ∑(|A – F|) / n. The average of the errors for n amount of periods. Interpretation Given MAD = 115: "I miss the forecast by an average of [115] (either up or down)" OR "For my forecast, i'm always wrong by [115]"  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(2) Mean Absolute Percent Error (MAPE)**: ∑ ((|A – F|)/ A) / n. MAPE is MAD but as a percentage.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(3) Mean squared error (MSE):** MAD = ∑(|A – F|)<sup>2</sup> / n. Same thing as MAD but we square the errors before dividing by n. Squaring is just another way of making the erros absolute.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<hr/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Forecast Bias
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Not only can we measure error, we can measure bias!
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**Forecast Bias:** when demand is consistently either over or under forecasted.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+There is also a formula: ∑ Error = ∑ A– ∑ F
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If ∑ Error ≠ 0 then there is bias. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Underestimating Demand : ∑ Error < 0. 
+Overestimating Demand: ∑ Error > 0.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Bias is a problem just like error is so we have to measure bias. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Methods to Measure Forecast Bias 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**(1) Running Sum of Forecast Errors (RSFE)** = ∑ e<sub>t</sub> (t = time period. Ex. e<sub>2</sub> means the forecast error for the second month, week, etc. )
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Positive RSFE: means forecasts are too low. Underestimating Actual Demand.  
+Negative RSFE: means forecasts are too high. Overestimating Actual Demand.    
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -232,15 +294,23 @@ if positive result means actual demand was greater than forecast so we should we
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-# The Bullwhip Effect (on test)
+<hr/>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This is what happens when a group of customers may all of a sudden buy more of a product let's say 10% more so the retailer detects that and notices the demand is going up for this product so they want to take advantage of this and they will order more from my distributor, 25% more than what they usually order. The distributor sees that same thing and they want to take avdvantage of that and order more from the factory let's say 30% more. And then the factory sees that and wants to take advantage of that and order more, let's say 40% more.
+# The Bullwhip Effect 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This is an issue because of lack of communication. They all guessed how much the demand was increasing, it ended up being 40% more when really it was 10%. 
+**Problem: The Bullwhip Effect**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is what happens when a group of customers may all of a sudden buy more (or less) of a product. Let's say 10% more. So, the retailer detects that and notices the demand is going up for this product so they want to take advantage of this and they will order more from their distributor, 25% more than what they usually order. The distributor sees that same thing and they want to take advantage of that and order more from the factory/the manufacturing company (us). Let's say 30% more. And then the factory sees that and wants to take advantage of that and order more, let's say 40% more.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This is an issue because of lack of communication. They all guessed how much the demand was increasing, it ended up being 40% more when really demand increased by 10%. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -248,14 +318,23 @@ If you whip a bullwhip, it amplifies.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The solution to this is communication and collaboration.
+**Solution: CPFR**  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-# Collaborative Planning, Forecasting, & Replensishment (CPFR)
+<div style = "object-fit:contain;" > <img src={img1.src} alt=""  /> </div>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-They share their plans, forecasts and delivery scheudles with one another.&nbsp;&nbsp;&nbsp;&nbsp;
+Specifically, Collaborative Planning, Forecasting, & Replensishment (CPFR)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+Customers and Suppliers share their plans, forecasts and delivery schedules with one another.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+That way, they are not left guessing what's happening. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
