@@ -5,19 +5,173 @@ date: 05/30/2024
 author: Sarai Marte
 ---
 
-## Confidence Interval for the Sample Means (σ Known)
+import Solution from '@components/Solution.astro';
+
+## Confidence Interval for [anything]
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Don't Panic!! 
+When we work with sampling distributions we end up sampling let's say the mean multiple times so we end up with a whole bunch of means but what's our true mean?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Confidence Interval (σ Unknown)
+Well, we can use confidence intervals to find the interval where we can be [CL]% confident that our parameter - the true mean- lies within.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Population Standard Deviation σ is not known so we use the sample standard deviation s.
+CL = Confidence Level (Given)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+For example, 
+
+**Parameter:** μ - the true mean (the population mean)  
+**Point Estimate:** x̅ - the estimated mean (the sample mean)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+In this case let's say we want to be 95% confident.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, in our conclusion we would say, 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We are 95% confident that our true mean lies within this interval (lowerBound, upperBound).
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+But how do we create the interval?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+point estimate ± sampling error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Confidence Interval for the Sample Mean (σ Known)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+point estimate ± sampling error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅ ± critical value (standard error)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅  ± zStar(standard error) Note: zStar because σ is known
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅  ± z<sub>α/2</sub>(σ/√n)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+z<sub>α/2</sub> = ABS(NORM.S.INV( α / 2))
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+α = 1 - (CL/100)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** A sociologist is interested in studying the ages of residents in a particular city. The population standard deviation is known to be 5 years. A random sample of 40 individuals resulted in a mean age of 35 years. What is the upper bound of a 95% confidence interval for the average age? (Round to 1 decimal place)
+
+<Solution>
+
+**Answer: 36.5**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We know we need this: point estimate ± sampling error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+n = 40  
+x̅ = 35  
+σ =	5  
+CL (%) = 95   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This means that α = 1 - (95/100) = 0.05.
+
+</Solution>
+
+**2.** A nutritionist is interested in studying the daily calorie intake of children in a specific school. The population standard deviation is known to be 200 calories. A random sample of 60 children resulted in a mean daily calorie intake of 1800 calories. What is the lower bound of a 99% confidence interval for the average daily calorie intake? (Round to 1 decimal place)
+
+<Solution>
+
+**Answer: 1733.5**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</Solution>
+
+**3** A financial analyst is interested in studying the monthly savings of employees in a tech company. The population standard deviation is known to be $300. A random sample of 45 employees resulted in a mean monthly savings of $2,500. What is interval of a 90% confidence interval for the average monthly savings? (Round to 1 decimal place)
+
+<Solution>
+
+**Answer: ( 2426.4 , 2573.6 )**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+</Solution>
+
+## Confidence Interval for the Sampling Mean (σ Unknown)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Population Standard Deviation σ is not known so we use the sample standard deviation s instead. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+point estimate ± sampling error
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅ ± critical value (standard error)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅  ± zStar(standard error) Note: zStar because σ is known
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+x̅  ± t<sub>α/2</sub>(s/√n)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+t<sub>α/2</sub> = T.INV.2T( α , df )
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+df = n - 1
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** Given a sample size n = 25, sample mean x̅ = 25, and sample standard deviation s = 10.5, construct a 95% confidence interval estimate for the population mean. (Round to 4 decimal places)
+
+<Solution>
+
+**Answer: ( 67.9658 , 76.6342 )**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</Solution>
+
+**2.** A market researcher is interested in studying the weekly spending habits of customers at a grocery store. A random sample of 31 customers resulted in a mean weekly spending of $250.50, with a sample standard deviation of $45.20. Construct a 95% confidence interval estimate for the average weekly spending of all customers at the grocery store. (Round to 4 decimal places)
+
+<Solution>
+
+**Answer: ( 233.9205 , 267.0795 )**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</Solution>
 

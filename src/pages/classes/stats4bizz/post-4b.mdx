@@ -1,0 +1,48 @@
+---
+layout: '@layouts/Blog.astro'
+title: Hypothesis Testing
+date: 06/20/2024
+author: Sarai Marte
+---
+
+import Solution from '@components/Solution.astro';
+
+## Hypothesis Test for Mean (σ Uknown)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+H<sub>o</sub>: Null Hypothesis - the norm  
+H<sub>A</sub>: Alternative Hypothesis - what you want to prove or not
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You will need to find 2 things: tStat and P-Value. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+tStat = ( x̅ - μ ) / ( s / √n)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+P-value = T.DIST.2T( ABS(tStat) , df )
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+You then want to compare P-value to what we call alpha (α) which will be given to you. If not, the default is α = 0.05.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**Rules:** 
+
+P-value <  α   : Reject H<sub>o</sub>. There **is** significant evidence to support the alternative hypothesis.   
+P-value >  α   : Fail to Reject H<sub>o</sub>. There is **not** significant evidence to support the alternative hypothesis.   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** A pharmaceutical company is testing a new drug and wants to determine if the average recovery time for patients using this drug is **different from** the standard recovery time of 29 days. The company collects a random sample of 25 patients who have used the drug and finds that their mean recovery time is 29.1 days, with a sample standard deviation of 0.217 days. Using a significance level of 0.01, they want to test if there is evidence that the true mean recovery time for patients using the new drug is different from 29 days.
+
+<Solution>
+
+**Answer: P-value: 0.030179 We fail to reject the H<sub>o</sub>** 
+
+</Solution>
