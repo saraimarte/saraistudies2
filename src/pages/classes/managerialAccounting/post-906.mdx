@@ -6,6 +6,10 @@ author: Sarai Marte
 chapter: Chapter 10
 ---
 
+import ImageMd from '@components/ImageMd.astro';
+import ImageOut from '@components/ImageOut.astro';
+import img1 from '../../../../public/Images/275/27518.png';
+
 <span style= "font-family: var(--primaryFont);">
 
 <details>
@@ -36,15 +40,15 @@ chapter: Chapter 10
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  These questions will give you a bunch of random numbers you won't understand. The only things you need are your a, b and r^2.
+  These questions will give you a bunch of random numbers you won't understand. The only things you need are your a, b and r<sup>2</sup> 
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  You use r^2 to tell which a and b to use if they give you multiple regression data
+  You use r<sup>2</sup> to tell which a and b to use if they give you multiple regression data
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  The higher the r^2 the better the results so you want to use those results to make your equation.
+  The higher the r<sup>2</sup> the better the results so you want to use those results to make your equation.
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -218,7 +222,7 @@ Sarai's company manufactures cars. The company's manufacturing cost allocation b
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The Watch&Co company has the following data regarding the costs of making specific amounts of watches.
+**1.** The Watch&Co company has the following data regarding the costs of making specific amounts of watches.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -342,8 +346,6 @@ The Watch&Co company has the following data regarding the costs of making specif
   </tr>
 </table>
 
-
-
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 What are the estimated companys total costs for the next month given that they expect to use 453 machine hours, still have 1,200 ft of space, and distribute 1,420 units?
@@ -365,7 +367,6 @@ What are the estimated companys total costs for the next month given that they e
 <li style="list-style:none">D) $17,342  </li>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
-
 
 <details>
   <summary>Solution</summary>
@@ -416,40 +417,39 @@ What are the estimated companys total costs for the next month given that they e
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-You will know when to use the regression method because the questions won't give you pure data on costs and drivers- they will instead give you a bunch of weird looking numbers like this 
+You will know when to use the regression method because the questions won't give you raw data on costs and drivers- they will instead give you a summary of that data: 
+
+<ImageOut img = {img1} />
+
+and you'll be like "omg what is all this stuff ???"
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-<img style = "width:100%" src = "https://www.real-statistics.com/wp-content/uploads/2022/04/weighted-least-squares-regression.png"/>
+But don't you worry- this method is easier because the only thing you need are the three numbers highlighted.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-https://www.real-statistics.com/wp-content/uploads/2022/04/weighted-least-squares-regression.png
+The coefficient in <span style = "background-color:#61CBF3; padding:5px; border-radius:8px;">blue</span> is the y-intercept which we know is our 'a' and our fixed costs.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-and you'll be like omg what is all this stuff???
+The coeffcient in <span style = "background-color:#D86DCD; padding:5px; border-radius:8px;">pink</span> is always the slope of whatever variable x you have. Also, in this case, your variable cost per unit. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-But don't you worry- this method is honestly easier because they give you the fixed and variable costs. The only thing with these problems is you have to know how to read the table.
+The statisic in <span style = "background-color:#8ED973; padding:5px; border-radius:8px;">green</span> is the r<sup>2</sup> which tells you how good the summary data is. This comes in handy when they give you 2 summaries to make an equation and you have to figure out which one to use- which is the one with the bigger r<sup>2</sup>.   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-In line 18 column N you see "coeff" which stands for coefficients. The coefficient in line 19 is your intercept which we know is our 'a' and our fixed costs. The coeffcient on line 20 is b is your variable cost per unit aka the slope.
+Everything else is irrelevant. So when doing these problems just ignore all the numbers except the ones highlighted.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-The only other number you have to pay attention to is the r^2 which tells you how good the line is.
+In this case, our cost equation would be Y = <span style = "background-color:#61CBF3; padding:5px; border-radius:8px;">-0.84</span> + <span style = "background-color:#D86DCD; padding:5px; border-radius:8px;">2</span>X
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Everything else is irrelevant. So when doing these problems just ignore all the numbers except for r^2 and the coefficients which you need to make your equation. 
-
-&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-The following are the most recent regression results from Sarai's company. Here, there are two different drivers that Sarai's company uses to measure their costs.  
+**1.** The following are the most recent regression results from Sarai's company. Here, there are two different drivers that Sarai's company uses to measure their costs.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -481,7 +481,7 @@ The following are the most recent regression results from Sarai's company. Here,
     </tr>
 
     <tr>
-      <td style="padding-left: 20px;" colspan="4">r^2 = 0.74</td>
+      <td style="padding-left: 20px;" colspan="4">r<sup>2</sup> = 0.74</td>
     </tr>
 
     </tbody>
@@ -516,7 +516,7 @@ The following are the most recent regression results from Sarai's company. Here,
      &nbsp;&nbsp;&nbsp;&nbsp;
 
     <tr>
-      <td style="padding-left: 20px;" colspan="4">r^2 = 0.43</td>
+      <td style="padding-left: 20px;" colspan="4">r<sup>2</sup> = 0.43</td>
     </tr>
   </tbody>
 </table>
@@ -557,15 +557,15 @@ What are the estimated costs if Sarai's company has inccured 1000 hours of assem
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  You can make a equation out of both these results but the result you should always pick is the one with the highest r^2.
+  You can make a equation out of both these results but the result you should always pick is the one with the highest r<sup>2</sup> 
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  r^2 tells you how good the line fits to the data.
+  r<sup>2</sup> tells you how good the line fits to the data.
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
-  When you use assembly worker's hours as the variable that drives up or down your costs- r^2 is 0.74 meaning the numbers in this result fits the true data by 74% while if you use the number of watches as a cost driver the regression results only fit 43% of the data so we will use the regresion results that give us a more accurate estimation of costs and that is the one that fits the data more.
+  When you use assembly worker's hours as the variable that drives up or down your costs- r<sup>2</sup> is 0.74 meaning the numbers in this result fits the true data by 74% while if you use the number of watches as a cost driver the regression results only fit 43% of the data so we will use the regresion results that give us a more accurate estimation of costs and that is the one that fits the data more.
 
   &nbsp;&nbsp;&nbsp;&nbsp;
 
