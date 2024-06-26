@@ -1,27 +1,30 @@
 ---
-import { Image } from "astro:assets";
-import SearchIcon from '../assets/icons/search.svg';
 ---
 
 
-<div>
-    <Image id = "searchIcon" src = {SearchIcon} alt = ""/> 
-    <input placeholder = "this site is a work in processs, get it? process? not progress? bc of the WIP inventory account? no? ok. sorry" type = "text" name = "class" class = "search" /> 
-</div>
+<div id="search"></div>
+<script>
+    window.addEventListener('DOMContentLoaded', (event) => {
+        // @ts-ignore
+        new PagefindUI({ element: "#search", showSubResults: true , pageSize:1, showImages: false});
+    });
+</script>
 
 <style>
-    .search {
-         all: unset;
-        }
+    #search {
+ 
+    }
     div{
+        
+        background-color:white;
         box-sizing: border-box;
         display: flex;
         justify-content: center;
         align-items: center;
         width:100%;
-        height:30px;
+        height:100%;
         padding:0 20px;
-        }
+    }
 
     #searchIcon{
         border-top:var(--border);

@@ -5,19 +5,22 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro build",
+    "build": "astro check && astro build && pagefind --site dist && cp -r dist/pagefind",
     "preview": "astro preview",
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/check": "^0.7.0",
     "@astrojs/mdx": "^2.0.4",
     "astro": "^4.1.1",
     "lil-gui": "^0.19.1",
-    "three": "^0.160.0"
+    "three": "^0.160.0",
+    "typescript": "^5.5.2"
   },
   "devDependencies": {
     "@interactjs/types": "^1.10.26",
     "@types/three": "^0.160.0",
-    "jsat": "^0.0.6"
+    "jsat": "^0.0.6",
+    "pagefind": "^1.1.0"
   }
 }

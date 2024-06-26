@@ -13,16 +13,16 @@ import Search from '../components/Search.astro';
     <div class = "row2">
         <Search/>
     </div>
-
 </div>
-
 
 <style>
 
     .topNav{
         display:flex;
-        gap:0.5em;
         flex-direction:column;
+        height:min-content;
+        z-index:1;
+        gap:0.5em;
     }
 
     #logo{
@@ -36,11 +36,11 @@ import Search from '../components/Search.astro';
         justify-content: space-between;
         align-items: center;
         padding:0 20px;
-
     }
-
     .row2{
         width:100%;
+        min-height:100%;
+        
     }
 
 </style>

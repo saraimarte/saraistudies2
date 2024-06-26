@@ -16,8 +16,9 @@ import folderIcon3 from '../../public/folderIcons/1x/ratings.png';
 		<meta name="viewport" content="width=device-width" user-scalable=no />
 		<meta name="generator" content={Astro.generator} />
 		<title>sarai studies</title>
-
-    </head>
+        <link href="/pagefind/pagefind-ui.css" rel="stylesheet">
+        <script src="/pagefind/pagefind-ui.js" is:inline></script>
+    </head> 
 	<body>
         <div x-data="{closedScreen:false}" class="container" >
             <a href = {folderPath1} id = "folder1" class = "folder myLink" x-bind:class = "{'folderVisible': !closedScreen}">
@@ -38,11 +39,13 @@ import folderIcon3 from '../../public/folderIcons/1x/ratings.png';
                     <slot>
                 </div>
             </div>
+            
 		</div>
         <!--newPath -->
 
         <BottomNav path1 = {path1} path2 = {path2} path3 = {path3} path4 = {path4} path5 = {path5} path6 = {path6} path7 = {path7} path8 = {path8} path9 = {path9} path10 = {path10} path11 = {path11} path12 = {path12} path13 = {path13}></BottomNav>
-	</body>
+	
+    </body>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js" defer></script>
 
     <script type="module">
@@ -207,7 +210,7 @@ import folderIcon3 from '../../public/folderIcons/1x/ratings.png';
         padding: 20px 0px 0px 0px;
         grid-gap:1em;
         height:100%;
-
+        overflow: auto;
 	}
     
     .content{
