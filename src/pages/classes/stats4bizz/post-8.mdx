@@ -5,15 +5,32 @@ date: 06/13/24
 author: Sarai Marte
 ---
 
-Time Series Graph is just plotting time and data.
+import Solution from '@components/Solution.astro';
+import ImageOut from '@components/ImageOut.astro';
+
+import img1 from '../../../../public/Images/285/5.png';
+
+Time Series data is a special type of data- one that is collected over a period of time. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Here, the x variable is always time. 
+The graph is just a plot of time and data.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Just like with any graph, you can see trends. 
+The x variable is always time. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Also, when we predict values, we call Ŷ, the "fitted value" or the "forecast".
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# The Components of a Time Series Graph 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Time series graphs may have some of these components.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -21,6 +38,282 @@ We call an up and down graph, one that can not be explained, an irregular compon
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+# Smoothing Data 
 
+&nbsp;&nbsp;&nbsp;&nbsp;
 
+We can smooth graphs so that they look <span style = "color:#E97132; font-weight:bold;"> more linear</span>, and we are able to see trends better.
 
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<ImageOut img = {img1}/>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Moving Average Smoothing
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.**  The following data represents the plantain imports from Dominican Republic from 2008 to 2020. Fit a three-year moving average to this data. What is the average in 2015? (Round to 2 decimal places)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table style="width: 20%; border-collapse: collapse; margin: 20px 0;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Year</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Imports</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2008</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">10219.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2009</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">10896.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2010</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">10969.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2011</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">11325.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2012</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">11110.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2013</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">7918.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2014</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">7846.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2015</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">7758.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2016</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">7195.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2017</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">9694.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2018</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">10979.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2019</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">12741.00</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2020</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">12891.00</td>
+    </tr>
+</table>
+
+<Solution>
+
+**Answer: 7599.67**
+
+</Solution>
+
+## Exponential Smoothing
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How much do we smooth it by? By w. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+w = smoothing coefficient 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+How do we smooth it? Better shown than told...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** The data below represent the hours per day spent by doctors doing paper work from 2010 to 2019. Using a smoothing coefficient of W = 0.50, exponentially smooth the series. What is the smoothed value in 2014? What is your exponentially smoothed forecast for 2020? (Round to 2 decimal places)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table style="width: 20%; border-collapse: collapse; margin: 20px 0;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">X</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Y</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2010</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2011</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.3</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2012</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.4</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2013</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.6</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2014</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2015</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.3</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2016</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2017</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2018</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2019</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+</table>
+
+<Solution>
+
+**Answer: 3.48; 3.21**
+
+</Solution>
+
+# Fitting and Forecasting 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Just like we had the linear regression and quadratic models...we now have the linear trend and quadratic trend model.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+They are the exact same time except this time the years are recoded. As in, if we have years 2000, 2001 and 2002 then we will *recode* those years to be 0, 1 and 2. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Why do we do this? 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Because if we use the regular x values (the years) we will get the wrong summary output.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Linear Trend Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** The following is a linear trend equation:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ŷ<sub>i</sub> = 100 + 10X<sub>i</sub>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The data used was from 2008 through 2017 coded 0 to 9. What is the forecast for 2018? 
+
+<Solution>
+
+**Answer: 200**
+
+</Solution>
+
+## Quadratic Trend Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** The following is a quadratic trend equation:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Ŷ<sub>i</sub> = 50 + 15X<sub>i</sub> + 10X<sub>i</sub><sup>2</sup>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The data used was from 2014 through 2024 coded 0 to 10. What is the forecast for 2025? 
+
+<Solution>
+
+**Answer: 1425**
+
+</Solution>
+
+## Exponential Trend Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** The following is an exponential trend equation:
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+log(Ŷ<sub>i</sub>) = 2.24 + 0.03X<sub>i</sub>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The data used was from 2002 through 2012 coded 0 to 10. What is the forecast for 2013? (Round 2 decimal places.)
+
+<Solution>
+
+**Answer: 371.54**
+
+</Solution>
+
+# How to choose the right model?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Other than analysing the p-value and residuals how can I tell which model to use?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We look at the differences...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Autoregressive Model
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We have three models to choose from. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+(1) **First-Order Model:**  Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1)  
+(2) **Second-Order Model:** Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1) + A<sub>2</sub>(Ŷ<sub>i</sub>-2)   
+(3) **Third-Order Model:**  Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1) + A<sub>2</sub>(Ŷ<sub>i</sub>-2) + A<sub>3</sub>(Ŷ<sub>i</sub>-3)  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Here, A<sub>0</sub>: intercept. (Ŷ<sub>i</sub>-1): x-value. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We choose the model based on the better adj.R<sup>2</sup> and p-value.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Better shown than told...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+# Forecasting with Quarterly/Seasonal Data
+
+&nbsp;&nbsp;&nbsp;&nbsp;
