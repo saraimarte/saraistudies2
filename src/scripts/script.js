@@ -30,7 +30,6 @@ scene.add(webpagePlane);
 // Set the position of the webpage plane
 webpagePlane.position.set(0.03, 0.28, 0.05);
 
-
 /**
  * Loaders
  */
@@ -39,22 +38,20 @@ const textureLoader = new THREE.TextureLoader()
 
 // Draco loader
 const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('draco/')
+dracoLoader.setDecoderPath('/draco/') // Ensure this path is correct
 
 // GLTF loader
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
 
-
-
 //Desk
-const bakedTexture = textureLoader.load('../../public/textures/desk8.png')
+const bakedTexture = textureLoader.load('/textures/desk8.png')
 bakedTexture.flipY = false
 bakedTexture.colorSpace = THREE.SRGBColorSpace
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
 
 gltfLoader.load(
-    '../../public/desk.glb',
+    '/desk.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
@@ -66,7 +63,7 @@ gltfLoader.load(
 )
 
 gltfLoader.load(
-    '../../public/mouse.glb',
+    '/mouse.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
@@ -78,7 +75,7 @@ gltfLoader.load(
 )
 
 gltfLoader.load(
-    '../../public/paper.glb',
+    '/paper.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
@@ -92,7 +89,7 @@ gltfLoader.load(
 const bgMaterial = new THREE.MeshBasicMaterial({color: 0x1E2019})
 
 gltfLoader.load(
-    '../../public/floor.glb',
+    '/floor.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
@@ -103,33 +100,30 @@ gltfLoader.load(
     }
 )
 
-
-
 //Glass
-const bakedGlass = textureLoader.load('../../public/textures/glassNew.png')
+const bakedGlass = textureLoader.load('/textures/glassNew.png')
 const glassMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
 
 //Screen
-const bakedScreen = textureLoader.load('../../public/textures/monitor.png')
+const bakedScreen = textureLoader.load('/textures/monitor.png')
 bakedScreen.flipY = false
 bakedScreen.colorSpace = THREE.SRGBColorSpace
 const screenMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
 
 //Computer
-const compTexture = textureLoader.load('../../public/textures/comp.jpg')
+const compTexture = textureLoader.load('/textures/comp.jpg')
 compTexture.flipY = false
 compTexture.colorSpace = THREE.SRGBColorSpace
 const compTextureMaterial = new THREE.MeshBasicMaterial({ map: compTexture })
 
 //Poweron
-const bakedPowerOn = textureLoader.load('../../public/textures/poweron.jpg')
+const bakedPowerOn = textureLoader.load('/textures/poweron.jpg')
 bakedPowerOn.flipY = false
 bakedPowerOn.colorSpace = THREE.SRGBColorSpace
 const powerOnMaterial = new THREE.MeshBasicMaterial({ map: bakedPowerOn })
 
-
 gltfLoader.load(
-    '../../public/computer.glb',
+    '/computer.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
@@ -137,18 +131,18 @@ gltfLoader.load(
             child.material = bakedMaterial
         })
         scene.add(gltf.scene)
-    // Get each object
-    const screen = gltf.scene.children.find((child) => child.name === 'screen' )
-    const powerbtn = gltf.scene.children.find((child) => child.name === 'powerbtn')
-    const glass = gltf.scene.children.find((child) => child.name === 'glass' )
-    // Apply materials
-    glass.material = glassMaterial
-    powerbtn.material = powerOnMaterial
-    screen.material = screenMaterial
-
+        
+        // Get each object
+        const screen = gltf.scene.children.find((child) => child.name === 'screen' )
+        const powerbtn = gltf.scene.children.find((child) => child.name === 'powerbtn')
+        const glass = gltf.scene.children.find((child) => child.name === 'glass' )
+        
+        // Apply materials
+        glass.material = glassMaterial
+        powerbtn.material = powerOnMaterial
+        screen.material = screenMaterial
     }
 )
-
 
 /**
  * Sizes
@@ -171,8 +165,6 @@ window.addEventListener('resize', () =>
     // Update renderer
     renderer.setSize(sizes.width, sizes.height)
     renderer.setPixelRatio(window.devicePixelRatio)
-
-    //renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
 })
 
 /**
@@ -199,8 +191,6 @@ const renderer = new THREE.WebGLRenderer({
 renderer.setSize(sizes.width, sizes.height)
 renderer.setPixelRatio(window.devicePixelRatio)
 
-//renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2))
-
 /**
  * Animate
  */
@@ -221,7 +211,6 @@ const tick = () =>
 }
 
 tick()
-
 
 // Raycaster and mouse
 const raycaster = new THREE.Raycaster();
@@ -255,5 +244,3 @@ function handleRaycast(clientX, clientY) {
         window.location.href = '../home';
     }
 }
-
-
