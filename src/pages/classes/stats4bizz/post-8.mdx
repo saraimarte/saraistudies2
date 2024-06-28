@@ -292,6 +292,10 @@ We look at the differences...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+We use this model for time series data that is autocorrelated- meaning it's data points are highly correlated or influenced by previous data points. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 We have three models to choose from. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -299,6 +303,12 @@ We have three models to choose from.
 (1) **First-Order Model:**  Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1)  
 (2) **Second-Order Model:** Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1) + A<sub>2</sub>(Ŷ<sub>i</sub>-2)   
 (3) **Third-Order Model:**  Ŷ<sub>i</sub> = A<sub>0</sub> + A<sub>1</sub>(Ŷ<sub>i</sub>-1) + A<sub>2</sub>(Ŷ<sub>i</sub>-2) + A<sub>3</sub>(Ŷ<sub>i</sub>-3)  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+(1) **First-Order Model:** A data point is highly influenced by it's previous data point (1st before it).  
+(2) **Second-Order Model:** A data point is highly influenced by it's 2nd previous data point (2nd before it).   
+(3) **Third-Order Model:**  A data point is highly influenced by it's 3rd previous data point (3rd before it).  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 

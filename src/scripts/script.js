@@ -4,13 +4,12 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js'
 import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader.js'
 
-/**
- * Base
- */
-// Debug
+
+/*
 const gui = new GUI({
     width: 400
 })
+*/
 
 // Canvas
 const canvas = document.querySelector('canvas.webgl')
@@ -18,17 +17,20 @@ const canvas = document.querySelector('canvas.webgl')
 // Scene
 const scene = new THREE.Scene()
 
-// Webpage Plane
-const webpageWidth = 0.86; // Increase the width
+scene.background = new THREE.Color(0xF2F3F4); // Replace with your desired color
+
+
+// Clickable Webpage Plane
+const webpageWidth = 0.88; // Increase the width
 const webpageHeight = 0.64; // Increase the height
 const webpageGeometry = new THREE.PlaneGeometry(webpageWidth, webpageHeight);
-const webpageTexture = new THREE.TextureLoader().load('/website.png'); // Updated image path
+const webpageTexture = new THREE.TextureLoader().load('/website.png', function (texture) {
+    texture.encoding = THREE.sRGBEncoding; // Correct texture encoding
+});
 const webpageMaterial = new THREE.MeshBasicMaterial({ map: webpageTexture, side: THREE.DoubleSide });
 const webpagePlane = new THREE.Mesh(webpageGeometry, webpageMaterial);
 scene.add(webpagePlane);
-
-// Set the position of the webpage plane
-webpagePlane.position.set(0.03, 0.28, 0.05);
+webpagePlane.position.set(0.03, 0.29, 0.0550); // Set the position of the webpage plane
 
 /**
  * Loaders
@@ -38,17 +40,29 @@ const textureLoader = new THREE.TextureLoader()
 
 // Draco loader
 const dracoLoader = new DRACOLoader()
-dracoLoader.setDecoderPath('/draco/') // Ensure this path is correct
+dracoLoader.setDecoderPath('/draco/') 
 
 // GLTF loader
 const gltfLoader = new GLTFLoader()
 gltfLoader.setDRACOLoader(dracoLoader)
+
+
+//Models 
 
 //Desk
 const bakedTexture = textureLoader.load('/textures/desk8.png')
 bakedTexture.flipY = false
 bakedTexture.colorSpace = THREE.SRGBColorSpace
 const bakedMaterial = new THREE.MeshBasicMaterial({ map: bakedTexture })
+const deskColor = 0xf9f9f9; 
+const stemColor = 0xffffff; 
+const glassColor = 0xffffff; 
+const mouseColor = 0xffffff; 
+
+const deskMaterial = new THREE.MeshBasicMaterial({ color: deskColor });
+const stemMaterial = new THREE.MeshBasicMaterial({ color: stemColor });
+const glassMaterial = new THREE.MeshBasicMaterial({ color: glassColor });
+const mouseMaterial = new THREE.MeshBasicMaterial({ color: mouseColor });
 
 gltfLoader.load(
     '/desk.glb',
@@ -56,7 +70,7 @@ gltfLoader.load(
     {
         gltf.scene.traverse((child) =>
         {
-            child.material = bakedMaterial
+            child.material = deskMaterial
         })
         scene.add(gltf.scene)
     }
@@ -68,47 +82,15 @@ gltfLoader.load(
     {
         gltf.scene.traverse((child) =>
         {
-            child.material = bakedMaterial
+            child.material = mouseMaterial
         })
         scene.add(gltf.scene)
     }
 )
 
-gltfLoader.load(
-    '/paper.glb',
-    (gltf) =>
-    {
-        gltf.scene.traverse((child) =>
-        {
-            child.material = bakedMaterial
-        })
-        scene.add(gltf.scene)
-    }
-)
-
-const bgMaterial = new THREE.MeshBasicMaterial({color: 0x1E2019})
-
-gltfLoader.load(
-    '/floor.glb',
-    (gltf) =>
-    {
-        gltf.scene.traverse((child) =>
-        {
-            child.material = bgMaterial
-        })
-        scene.add(gltf.scene)
-    }
-)
 
 //Glass
 const bakedGlass = textureLoader.load('/textures/glassNew.png')
-const glassMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
-
-//Screen
-const bakedScreen = textureLoader.load('/textures/monitor.png')
-bakedScreen.flipY = false
-bakedScreen.colorSpace = THREE.SRGBColorSpace
-const screenMaterial = new THREE.MeshBasicMaterial({ map: bakedGlass })
 
 //Computer
 const compTexture = textureLoader.load('/textures/comp.jpg')
@@ -122,13 +104,15 @@ bakedPowerOn.flipY = false
 bakedPowerOn.colorSpace = THREE.SRGBColorSpace
 const powerOnMaterial = new THREE.MeshBasicMaterial({ map: bakedPowerOn })
 
+
+
 gltfLoader.load(
     '/computer.glb',
     (gltf) =>
     {
         gltf.scene.traverse((child) =>
         {
-            child.material = bakedMaterial
+            child.material = stemMaterial
         })
         scene.add(gltf.scene)
         
@@ -136,13 +120,139 @@ gltfLoader.load(
         const screen = gltf.scene.children.find((child) => child.name === 'screen' )
         const powerbtn = gltf.scene.children.find((child) => child.name === 'powerbtn')
         const glass = gltf.scene.children.find((child) => child.name === 'glass' )
-        
+
         // Apply materials
         glass.material = glassMaterial
         powerbtn.material = powerOnMaterial
-        screen.material = screenMaterial
+
     }
 )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
  * Sizes
@@ -168,10 +278,10 @@ window.addEventListener('resize', () =>
 })
 
 /**
- * Camera
+ * Camera/perspective
  */
 // Base camera
-const camera = new THREE.PerspectiveCamera(15, sizes.width / sizes.height, 0.1, 100)
+const camera = new THREE.PerspectiveCamera(16, sizes.width / sizes.height, 0.1, 100)
 camera.position.x = 0
 camera.position.y = 0
 camera.position.z = 6
@@ -180,7 +290,8 @@ scene.add(camera)
 // Controls
 const controls = new OrbitControls(camera, canvas)
 controls.enableDamping = true
-
+controls.minDistance = 5; // Minimum zoom distance
+controls.maxDistance = 6; // Maximum zoom distance
 /**
  * Renderer
  */
