@@ -128,6 +128,32 @@ We can smooth graphs so that they look <span style = "color:#E97132; font-weight
 
 </Solution>
 
+**2.**  For a time series with 10 observations, we can have 9 averages in moving averages with duration L = 3. True or False?
+
+<Solution>
+
+**Answer: False.**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Number of averages = N - (L - 1)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If N = 10 and L = 3 then 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+10 - (3 - 1) = 8
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, the number of averages is 8 not 9.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</Solution>
+
 ## Exponential Smoothing
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -144,7 +170,7 @@ How do we smooth it? Better shown than told...
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-**1.** The data below represent the hours per day spent by doctors doing paper work from 2010 to 2019. Using a smoothing coefficient of W = 0.50, exponentially smooth the series. What is the smoothed value in 2014? What is your exponentially smoothed forecast for 2020? (Round to 2 decimal places)
+**1.** The data below represent the hours per day spent by doctors doing paper work from 2010 to 2019. Using a smoothing coefficient of W = 0.50, exponentially smooth the series. What is the smoothed value in 2014? (Round to 2 decimal places)
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -197,7 +223,7 @@ How do we smooth it? Better shown than told...
 
 <Solution>
 
-**Answer: 3.48; 3.21**
+**Answer: 3.48**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -205,15 +231,74 @@ How do we smooth it? Better shown than told...
 
 </Solution>
 
+**2.** The data below represent the hours per day spent by doctors doing paper work from 2010 to 2019. Using a smoothing coefficient of W = 0.50, exponentially smooth the series. What is your exponentially smoothed forecast for 2020? (Round to 2 decimal places)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table style="width: 20%; border-collapse: collapse; margin: 20px 0;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">X</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Y</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2010</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2011</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.3</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2012</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.4</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2013</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.6</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2014</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2015</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.3</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2016</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2017</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2018</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2019</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.2</td>
+    </tr>
+</table>
+
+<Solution>
+
+**Answer: 3.21**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</Solution>
+
 # Fitting and Forecasting 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Just like we had the linear regression, quadratic models...we now have the linear, quadratic trend and exponential/logarithmic models.  
+Just like we had the linear, quadratic and exponential models...we now have the linear, quadratic, exponential *trend* models.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-They are the exact same time except this time the years are recoded. As in, if we have years 2000, 2001 and 2002 then we will *recode* those years to be 0, 1 and 2. 
+They are the exact same thing except this time the years are recoded. As in, if we have years 2000, 2001 and 2002 then we will *recode* those years to be 0, 1 and 2 and use those code names as our x-values instead of the given times.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -221,7 +306,7 @@ Why do we do this?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Because if we use the regular x values (the years) we will get the wrong summary output.
+Because if we use the regular x values (the years) we will get the wrong summary output and hence the wrong equation/model.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -314,6 +399,110 @@ Other than analysing the p-value and residuals how can I tell which model to use
 &nbsp;&nbsp;&nbsp;&nbsp;
 
 We look at the differences...
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**1.** Using the following data, which model is the best to use to predict future revenues? 
+
+<table style="width: 20%; border-collapse: collapse; margin: 20px 0;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Year</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Revenues</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2016</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">202.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2017</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">203.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2018</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">206</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2019</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">210</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2020</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">215.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2021</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">222.5</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2022</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">231</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2023</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">241</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2024</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">252.5</td>
+    </tr>
+</table>
+
+<Solution>
+
+**Answer: The Quadratic Model** 
+
+</Solution>
+
+**2.** Using the following data, what is the first difference for period 4, the second difference for period 4 and the percentage difference for period 6? (Round to 2 decimal places)
+
+<table style="width: 20%; border-collapse: collapse; margin: 20px 0;">
+    <tr>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Time Period</th>
+        <th style="border: 1px solid #ddd; padding: 8px; text-align: left; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Data</th>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">0</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2.01</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">1</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2.4</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2.84</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2.9</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">4</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">2.42</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">5</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.02</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">6</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.29</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">7</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.4</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">8</td>
+        <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">4.32</td>
+    </tr>
+</table>
+
+<Solution>
+
+**Answer: -0.48, -0.54, 8.94%** 
+
+</Solution>
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 

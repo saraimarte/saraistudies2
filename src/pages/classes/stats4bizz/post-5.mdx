@@ -127,6 +127,46 @@ Residual Analysis
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+### What is Autocoorelation?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We need 2 things: (1) Durbin-Watson Statistic (DStat) and (2) the Durbin-Watson Table.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+### How can we measure how autocoorelated our residuals are?
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**Rules:**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If DStat < Lower Bound (dL) then there **is** evidence of positive autocorrelation among the residuals.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If DStat > Upper Bound (dU) then there **is not** evidence of positive autocorrelation among the residuals.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If DStat is between dL and dU then you can't conclude anything. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+So, for that we need to find DStat (Durbin-Watson Statistic) and our dL and dU.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+DStat = Σ(ei - ei-1)<sup>2</sup> / Σ(ei)<sup>2</sup>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Once you have your Dstat, you can use n and k to determine what your dU and dL is using the Durbin-Watson table.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ### Inferences About Slope and Coorelation Coefficient
 
 &nbsp;&nbsp;&nbsp;&nbsp;
