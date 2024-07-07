@@ -2,11 +2,11 @@
     {
       "name": "slide1",
       "caption": "this is the caption for slide 1",
-      "image": "../../public/sliders/275/slider1/2754.png"
+      "image": "/sliders/275/slider1/2754.png"
     },
     {
     "name": "slide1",
     "caption": "this is the caption for slide 2",
-    "image": "../../public/sliders/275/slider1/2753.png"
+    "image": "/sliders/275/slider1/2753.png"
     }
   ]
