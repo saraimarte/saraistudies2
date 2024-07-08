@@ -1,0 +1,46 @@
+---
+
+---
+
+<br>
+
+<details>
+
+    <summary> Example </summary>
+    
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+    <slot/>
+
+    &nbsp;&nbsp;&nbsp;&nbsp;
+  
+</details>
+  
+<br>
+
+<style>
+    
+::selection {
+    /* Change highlight background color to black */
+    background:rgb(145, 202, 204);
+    /* Change highlight text color to red */
+    color: black;
+}
+
+summary{
+    user-select: none;
+    color:black;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+    background-color: rgb(145, 202, 204);;
+    padding:5px 10px;
+    color:black;
+    font-family: var(--primaryFont);
+
+}
+
+</style>
