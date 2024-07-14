@@ -148,6 +148,10 @@ In sigma notation, I'm really finding:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+That is what we call a finite series because it is the sum up until a certain Number.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 ## How do we find the sum of the *whole* sequence?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -174,7 +178,7 @@ We can find the sum of the sequence from one point to infinity.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-but remember infinity is not a number, so really we are trying to find the sum of the sequence as it approaches infinity.
+but remember infinity is not a number, so we're really trying to find the sum of the sequence as it approaches infinity.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -190,15 +194,19 @@ which is really,
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-which is the sum of the sequence of partial sums as n gets infinitely bigger aka the series. 
+and *that* is the sum of the sequence of partial sums as n gets infinitely bigger... aka the series. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-So, if the sequence of partial sum (S<sub>n</sub>) converges then the series converges (because the series is literally the sum of the sequence of partial sums as n goes to infinity).
+So, if the sequence of partial sum (S<sub>n</sub>) converges then the series converges (because the series is literally the sum of the sequence of partial sums (S<sub>n</sub>) as n (the sums) go to infinity).
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-This tells us that to find if a series converges we really just need to find if the sequence of partial sums converges.
+We call that an infinite series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+This tells us that to find if a series converges we really just need to find if the sequence of partial sums (S<sub>n</sub>) converges.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
@@ -1363,27 +1371,39 @@ Do the following series converge or diverge?
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Usually, when dealing with negative series, you test for absolute convergence, if the series converges then the given series converges absolutely and then you're done.
+**What we know:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-However, if the corresponding positive series diverges, if the given series is alternating, the given series *may* converge even though the series with asbolute value diverges.
+Recall: when dealing with negative series, you test the corresponding positive series for absolute convergence.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-That is why we have the Alternating Series Test (AST).
+If the corresponding positive series converges then the given series converges absolutely and by the ACT the given series converges itself and then you're done. 
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-We use it when we are working with negative series and we find that the corresponding positive series diverges.
+However, if the corresponding positive series diverges then the given series also diverges and then you're done...**BUT there is an exception**.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-When to tell: when you see (-1) anywhere in your series.
+**What's new:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-If the corsp. positive series ends up converging with the alternating series test then we say the given series converges conditionally (because the given series did not meet the *condition* of converging with absolute values but it did converge without them.)
+If the corresponding positive series diverges *but* the **given series is alternating**, the given series *may* still converge.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+When to tell the given series is alternating? When you see (-1) anywhere in your series.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If we determine that the given series is alternating and determine that the corresponding positive series diverges, then we can use the alternating series test (AST) to test if the given series converges itself or not.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+If the given series does converge then we say the series converges conditionally because the given series did not meet the *condition* of converging with absolute values but it did converge without them.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
