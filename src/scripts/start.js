@@ -34,22 +34,7 @@ const mesh = new THREE.Mesh(geometry, material)
 scene.add(mesh)
 */
 
-//!SECTION
-/**
- * Model
- */
 
-gltfLoader.load(
-    '../../public/computer.glb',
-    (gltf) =>
-    {
-        console.log(gltf.scene)
-    }
-)
-
-/**
- * Materials
- */
 // Baked material
 const bakedMaterial = new THREE.MeshBasicMaterial({ color: 0xfffff })
 const monitorMaterial = new THREE.MeshBasicMaterial({ color: 0xffffe5 })
@@ -92,7 +77,7 @@ const sizes = {
 const camera = new THREE.PerspectiveCamera(75, sizes.width / sizes.height);
 scene.add(camera);
 
-camera.position.z = 3;n 
+camera.position.z = 3;
 
 // Renderer
 const renderer = new THREE.WebGL1Renderer({

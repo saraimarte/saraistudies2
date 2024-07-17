@@ -5,41 +5,270 @@ date: 06/13/24
 author: Sarai Marte
 ---
 
+import Solution from '@components/Solution.astro';
+
+import Note from '@components/Notes.astro';
+
 # F-Test
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Before, we talked about population means.  
+Before, we tested population means and slopes with either the z or t test.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-Now, we can talk about population variances.   
+Testing if the mean is what is is:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-In other words before we had zStat and tStat, now we have fStat.
+H<sub>o</sub>: u = 365   
+H<sub>a</sub>: u ≠ 365   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## Two Tail Test (Variances are different)
+Testing if slope exists:
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-## One Tail Test (One variance is greater than the other)
+H<sub>o</sub>: B<sub>1</sub> = 0   
+H<sub>a</sub>: B<sub>1</sub>≠ 0   
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+Now, we test population variances (σ²) with the f-test.   
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## Two Tail f-test (Variances are different)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The following is the summary statistics that represent the starting annual salary of math and english teachers in thousands of dollars.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Sample I (math teachers): x̄<sub>1</sub> = 40.23, S<sup>2</sup><sub>1</sub> = 12.9625, n<sub>1</sub>  = 14
+Sample I (english teachers): x̄<sub>2</sub> =  39.20 , S<sup>2</sup><sub>2</sub> = 8.5504, n<sub>2</sub> = 16
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Test whether the two population **variances** **are different**.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**A.** What are the hypothesis?  
+**B.** What is the value of the test statistic? (Round 4 decimal places)  
+**C.** What is the critical value for testing whether there is evidence of a difference in the variances? (Round 4 decimal places)  
+**D.** There is enough evidence showing that two population variances are different. True or False?  
+
+<Solution>
+
+
+**A.** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+H<sub>o</sub>: σ²<sub>1</sub> = σ²<sub>2</sub>  
+H<sub>a</sub>: σ²<sub>1</sub> ≠ σ²<sub>2</sub>  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Key Word: "different." Different always means two tail test. Becaues it's either this or that. 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**B. 1.5160** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**C. 2.9249** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**D. False** Since we fail to reject the H<sub>o</sub>, we don't have enough evidence for the H<sub>a</sub> that is H<sub>a</sub>: σ²<sub>1</sub> ≠ σ²<sub>2</sub> (that the variances *are* different).  
+
+</Solution>
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+## One Tail f-test (One variance is greater than the other)
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+The following is the summary statistics published by the government to see whether there is evidence showing that the variance of the amount of time required to reach a police officer in Town A is **greater than** that in town B. 
+
+<table style="width: 30%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;"></th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Town A</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Town B</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Mean</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">20.273</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">25.389</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Sample Variance</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">3.151</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">6.354</td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Sample Size</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">19</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">14</td>
+        </tr>
+    </tbody>
+</table>
+
+Given that σ²<sub>1</sub> is the variance of the amount of time required to reach a police officer in town B and σ²<sub>2</sub> is the variance of the amount of time needed to reach a police officer in Town A- answer the following questions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**A.** What are the hypothesis?  
+**B.** What is the value of the test statistic? (Round 4 decimal places)  
+**C.** What is the critical value at the 5% level of significance? (Round 4 decimal places)  
+**D.** Given α = 0.05. There is evidence showing that the variance of the amount of time required to reach a police officer in town B is greater than that in town A. True or False?  
+
+<Solution>
+
+**A.** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**H<sub>o</sub>: σ²<sub>2</sub> ≤ σ²<sub>1</sub>**  
+**H<sub>a</sub>: σ²<sub>2</sub> > σ²<sub>1</sub>**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+Key word: "greater than." That means it's not either this or that so it's not a two tail test it is a one tail test.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**B. 2.0165** When they say test-statistic, and we are testing variances then they are referring to the fStat.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**C. 2.3143** Recall: Critical value for one tail test NOT two tail test.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**D. False.** Since we fail to reject the H<sub>o</sub>, we don't have enough evidence for the H<sub>a</sub> that is **H<sub>a</sub>: σ²<sub>2</sub> > σ²<sub>1</sub>.**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+</Solution>
 
 # ANOVA Test
 
+<Note>
+
+**Assumptions:**   
+**1.** The variances in the groups are homogeneous.  
+**2.** Each population is normally distributed.  
+**3.** Samples are randomly selected.  
+
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+The following is **NOT an assumption:** the sample sizes of the groups are random. 
+</Note>
 
 Here, we compare more than 2 population means.
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
-To perform this test you need to know how to calculate SST, SSA, SSW.
+To perform this test you need to know how to calculate SST, SSA, SSW and know some terms.  
 
 &nbsp;&nbsp;&nbsp;&nbsp;
+
+The following is an ANOVA summary table for an experiment with groups, with five values in each group.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+<table style="width: 100%; border-collapse: collapse; margin: 20px 0;">
+    <thead>
+        <tr>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">Source of Variation</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">SS</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">df</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">MS</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">F</th>
+            <th style="border: 1px solid #ddd; padding: 8px; text-align: center; background-color: #f2f2f2; padding-left: 20px; padding-right: 20px;">F crit</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Between Groups (SSA)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">78</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Within Groups (SSW)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">24</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+        </tr>
+        <tr>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">Total (SST)</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">238</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;">28</td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+            <td style="border: 1px solid #ddd; padding: 8px; text-align: right; padding-left: 20px; padding-right: 20px;"></td>
+        </tr>
+    </tbody>
+</table>
+
+At the 5% level of signifiance, state the decision rule for testing the null hypothesis that **all groups have equal population means**. Answer the following questions.
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**A.** The null hypothesis should be μ<sub>1</sub> =  μ<sub>2</sub> = ... =μ<sub>5</sub>, where μ<sub>i</sub> is the population mean in group i. True or False?   
+**B.** What is the test statistic? (Round 2 decimal places)  
+**C.** What is the critical value? (Round 2 decimal places)  
+**D.** There is sufficient evidence to conclude that there is a difference in the population means of the groups. True or false?  
+
+<Solution>
+
+**A. True** 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+That is what ANOVA test is- it's simply checking if all the population means are equal to eachother. The alternative hypothesis would be H<sub>a</sub>: Not all means are equal OR At least 1 mean is different from the others.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+We also know that c is the number of groups there are and for each group there will be a mean so we will compare up until u<sub>c</sub> and since the number of groups is 5 then we will compare up until the u<sub>5</sub> mean.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**B. 2.93**
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**C. 2.78** Recall: Critical value for ANOVA is easy because there is only 1 since ANOVA only does two tail tests.  
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
+**D. False.** Since we fail to reject the H<sub>o</sub> which is that all means are equal, we don't have enough evidence for the H<sub>a</sub> that is **H<sub>a</sub>: Not all means are equal.**
+
+</Solution>
 
 # Tukey-Kramer Procedure
 
@@ -49,6 +278,12 @@ If you perform an ANOVA test and it tells you that there **is** a mean that is d
 
 &nbsp;&nbsp;&nbsp;&nbsp;
 
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 # Levenue Test
+
+&nbsp;&nbsp;&nbsp;&nbsp;
+
 
 &nbsp;&nbsp;&nbsp;&nbsp;
